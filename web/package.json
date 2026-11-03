@@ -1,0 +1,38 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "node scripts/prisma-generate.mjs && next build",
+    "start": "next start",
+    "lint": "eslint",
+    "setup": "node scripts/prisma-generate.mjs && prisma db push --skip-generate --accept-data-loss && npm run db:seed",
+    "db:generate": "node scripts/prisma-generate.mjs",
+    "db:push": "prisma db push --skip-generate && node scripts/prisma-generate.mjs",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:reset": "prisma db push --force-reset --skip-generate && npm run db:seed",
+    "db:studio": "prisma studio",
+    "test": "tsx --test \"tests/unit/**/*.test.ts\"",
+    "test:data": "npm run db:seed && tsx --env-file-if-exists=.env --import ./scripts/smoke-data/register.mjs scripts/smoke-data/run.ts && npm run db:seed"
+  },
+  "dependencies": {
+    "@prisma/client": "6.19.3",
+    "next": "16.4.3",
+    "prisma": "6.19.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "4.3.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "tailwindcss": "^4",
+    "tsx": "4.23.15",
+    "typescript": "^5"
+  }
+}

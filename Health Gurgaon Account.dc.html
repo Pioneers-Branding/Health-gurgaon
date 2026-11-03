@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Mukta:wght@400;500;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet"><style>body{margin:0;background:#fff;font-family:'Lexend',sans-serif;color:#2B1D14}a{color:#0F766E;text-decoration:none}a:hover{color:#2B1D14}input,select,button,textarea{font-family:inherit}*{box-sizing:border-box}:focus-visible{outline:3px solid #0F766E;outline-offset:2px;box-shadow:0 0 0 2px #fff}button:disabled{cursor:default}</style></helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+
+<div style="background:#2B1D14;color:#FBF4E8;font-size:12.5px"><div style="max-width:1240px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:0 12px;flex-wrap:wrap"><a href="Health%20Gurgaon%20Find%20Care.dc.html#emergency" style="display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center;min-height:44px;color:#FBF4E8"><b style="background:#B42318;color:#fff;padding:2px 9px;border-radius:999px;font-weight:600;white-space:nowrap">Emergency? Call 112</b><span style="font-weight:300;color:#e8dccb;white-space:nowrap">Ambulance 108</span><span style="font-weight:300;color:#e8dccb;white-space:nowrap">Not for emergencies · 24×7 emergency departments →</span></a><span style="color:#e8dccb;white-space:nowrap">EN | हिं · A+ Larger text · Gurugram ▾</span></div></div>
+<header style="background:#fff;border-bottom:1px solid #efe3cf;position:sticky;top:0;z-index:20"><div style="max-width:1240px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="Health%20Gurgaon%20Homepage.dc.html" style="display:flex;align-items:center;gap:9px;color:#2B1D14"><svg width="34" height="34" viewBox="0 0 100 100"><circle cx="84" cy="50" r="9" fill="#0F766E"></circle><circle cx="74.04" cy="74.04" r="9" fill="#F0B43C"></circle><circle cx="50" cy="84" r="9" fill="#0F766E"></circle><circle cx="25.96" cy="74.04" r="9" fill="#F0B43C"></circle><circle cx="16" cy="50" r="9" fill="#0F766E"></circle><circle cx="25.96" cy="25.96" r="9" fill="#F0B43C"></circle><circle cx="50" cy="16" r="9" fill="#0F766E"></circle><circle cx="74.04" cy="25.96" r="9" fill="#F0B43C"></circle><rect x="36" y="42" width="8" height="20" rx="1.5" fill="#2B1D14"></rect><rect x="46" y="32" width="9" height="30" rx="1.5" fill="#2B1D14"></rect><rect x="57" y="45" width="7" height="17" rx="1.5" fill="#2B1D14"></rect><rect x="48.5" y="36" width="4" height="4" fill="#F0B43C"></rect></svg><span style="font-weight:700;font-size:21px;letter-spacing:-.045em">Health<span style="color:#0F766E">Gurgaon</span></span></a>
+<nav style="display:flex;gap:2px;flex-wrap:wrap;font-size:14px"><a href="Health%20Gurgaon%20Find%20Care.dc.html#results" style="color:#2B1D14;display:inline-flex;align-items:center;min-height:44px;padding:0 11px">Find care</a><a href="Health%20Gurgaon%20Top%20Lists%20and%20Stories.dc.html#lists" style="color:#2B1D14;display:inline-flex;align-items:center;min-height:44px;padding:0 11px">Top lists</a><a href="Health%20Gurgaon%20Local%20and%20Events.dc.html#localities" style="color:#2B1D14;display:inline-flex;align-items:center;min-height:44px;padding:0 11px">Localities</a><a href="Health%20Gurgaon%20Local%20and%20Events.dc.html#calendar" style="color:#2B1D14;display:inline-flex;align-items:center;min-height:44px;padding:0 11px">Events</a><a href="Health%20Gurgaon%20Community.dc.html#forum" style="color:#2B1D14;display:inline-flex;align-items:center;min-height:44px;padding:0 11px">Community</a><a href="Health%20Gurgaon%20Community.dc.html#rwa" style="color:#2B1D14;display:inline-flex;align-items:center;min-height:44px;padding:0 11px">Healthy Neighbourhoods</a></nav>
+<div style="display:flex;gap:8px"><a href="Health%20Gurgaon%20Content%20and%20Trust.dc.html#report" style="display:inline-flex;align-items:center;min-height:44px;border:1.5px solid #2B1D14;color:#2B1D14;border-radius:999px;padding:0 16px;font-weight:500;font-size:13.5px">Contribute</a><a href="{{ acctHref }}" style="display:inline-flex;align-items:center;min-height:44px;background:#2B1D14;color:#FBF4E8;border-radius:999px;padding:0 17px;font-weight:500;font-size:13.5px">{{ acctLabel }}</a></div>
+</div></header>
+<div style="background:#FBF4E8;border-bottom:1px solid #efe3cf"><div style="max-width:1240px;margin:0 auto;padding:8px 24px;display:flex;gap:6px;align-items:center;flex-wrap:wrap"><span style="font:500 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b;margin-right:6px">PROTOTYPE · ACCOUNT</span><sc-for list="{{ screens }}" as="s" hint-placeholder-count="4"><button onClick="{{ s.onClick }}" style="{{ s.style }}">{{ s.label }}</button></sc-for></div></div>
+
+<main style="flex:1">
+
+<sc-if value="{{ isSignin }}" hint-placeholder-val="{{ true }}">
+<div style="background:#FBF4E8"><div style="max-width:1240px;margin:0 auto;padding:16px 24px 28px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;justify-content:space-between;gap:0 16px;flex-wrap:wrap;align-items:center"><div style="font-size:13px;color:#6e5a4b;font-weight:300"><a href="Health%20Gurgaon%20Homepage.dc.html" style="display:inline-flex;align-items:center;min-height:44px">Gurugram</a> › Sign in</div><div style="display:flex;gap:0 20px;flex-wrap:wrap"><label style="display:flex;gap:10px;align-items:center;font:400 11px 'Spline Sans Mono',monospace;color:#6e5a4b;cursor:pointer;min-height:44px"><input type="checkbox" checked="{{ returning }}" onChange="{{ toggleReturning }}" style="width:18px;height:18px;accent-color:#0F766E;margin:0;flex:none">PREVIEW AS A RETURNING RESIDENT</label><label style="display:flex;gap:10px;align-items:center;font:400 11px 'Spline Sans Mono',monospace;color:#6e5a4b;cursor:pointer;min-height:44px"><input type="checkbox" checked="{{ fromDoc }}" onChange="{{ toggleFromDoc }}" style="width:18px;height:18px;accent-color:#0F766E;margin:0;flex:none">PREVIEW: ARRIVED FROM DR. ANANYA RAO’S PROFILE</label></div></div>
+<h1 style="margin:0;font-weight:700;font-size:38px;line-height:1.08;letter-spacing:-.04em;text-wrap:balance">{{ heroTitle }}</h1>
+<p style="margin:0;font-weight:300;font-size:16px;line-height:1.6;color:#5a473a;max-width:640px">{{ heroSub }}</p>
+</div></div>
+<div style="max-width:1240px;margin:0 auto;padding:28px 24px 56px;display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start">
+<section aria-labelledby="hg-step-title" style="flex:3 1 520px;min-width:0;max-width:760px;border:1.5px solid #2B1D14;border-radius:20px;padding:clamp(16px,4.5vw,22px);display:flex;flex-direction:column;gap:16px">
+<sc-if value="{{ signedOutMsg }}" hint-placeholder-val="{{ false }}"><div id="hg-signedout" role="status" style="background:#E6F1EC;color:#1E7A4F;border-radius:14px;padding:12px 14px;font-size:14.5px;line-height:1.5">✓ You’ve signed out on this phone. Your saved items are kept for when you sign in again.</div></sc-if>
+<sc-if value="{{ showFromDoc }}" hint-placeholder-val="{{ false }}"><div style="background:#FBF4E8;border-radius:14px;padding:12px 14px;font-size:14.5px;line-height:1.5;color:#3d2e22">You were looking at <b style="font-weight:600">Dr. Ananya Rao</b>. After you sign in, we’ll take you back there.</div></sc-if>
+<sc-if value="{{ showFromPage }}" hint-placeholder-val="{{ false }}"><div style="background:#FBF4E8;border-radius:14px;padding:12px 14px;font-size:14.5px;line-height:1.5;color:#3d2e22">After you sign in, we’ll take you back to the page you were on.</div></sc-if>
+<ol aria-label="Sign-in steps" style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px"><sc-for list="{{ steps }}" as="st" hint-placeholder-count="3"><li aria-current="{{ st.current }}" style="display:flex;flex-direction:column;gap:6px;min-width:0"><span style="{{ st.bar }}"></span><span style="{{ st.label }}">{{ st.t }}</span></li></sc-for></ol>
+
+<sc-if value="{{ stepPhone }}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{ sendCode }}" style="display:flex;flex-direction:column;gap:16px">
+<h2 id="hg-step-title" style="margin:0;font-weight:700;font-size:22px;letter-spacing:-.025em">Your mobile number</h2>
+<div id="hg-phone-field" style="display:flex;flex-direction:column;gap:8px">
+<label for="hg-phone" style="font-weight:500;font-size:15px">Mobile number <span style="font-weight:300;color:#5a473a">(India, +91)</span></label>
+<div style="{{ phoneBox }}"><span aria-hidden="true" style="display:flex;align-items:center;padding:0 14px;border-right:1px solid #e8dcc8;font-size:18px;font-weight:500;color:#3d2e22;background:#FBF4E8;border-radius:12px 0 0 12px">+91</span><input id="hg-phone" type="tel" inputMode="numeric" autoComplete="tel-national" value="{{ phone }}" onChange="{{ onPhone }}" placeholder="10-digit number" aria-describedby="{{ phoneDesc }}" aria-invalid="{{ phoneInvalid }}" style="flex:1;min-width:0;border:0;padding:0 14px;font-size:19px;letter-spacing:.04em;min-height:54px;background:transparent;color:#2B1D14;border-radius:0 12px 12px 0;outline-offset:-4px"></div>
+<sc-if value="{{ noPhoneErr }}" hint-placeholder-val="{{ true }}"><span id="hg-phone-help" style="{{ phoneHintStyle }}">{{ phoneHint }}</span></sc-if>
+<sc-if value="{{ phoneErr }}" hint-placeholder-val="{{ false }}"><span id="hg-phone-err" role="alert" style="color:#B42318;font-size:14px;font-weight:500;line-height:1.5">{{ phoneErr }}</span></sc-if>
+</div>
+<fieldset style="border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;min-width:0"><legend style="font-weight:500;font-size:15px;padding:0;margin-bottom:8px">Send the code by</legend>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><sc-for list="{{ viaOpts }}" as="o" hint-placeholder-count="2"><label style="{{ o.style }}"><input type="radio" name="hg-via" checked="{{ o.on }}" onChange="{{ o.pick }}" style="width:20px;height:20px;accent-color:#0F766E;margin:0">{{ o.label }}</label></sc-for></div>
+<span style="font-weight:300;font-size:13.5px;line-height:1.55;color:#5a473a">{{ viaNote }}</span>
+</fieldset>
+<button type="submit" style="align-self:flex-start;background:#0F766E;color:#fff;border:0;border-radius:999px;padding:0 26px;min-height:52px;font-size:16px;font-weight:600;cursor:pointer">{{ sendLabel }}</button>
+<div style="display:flex;flex-direction:column;gap:0"><span style="font-weight:300;font-size:13.5px;line-height:1.55;color:#5a473a">We use your number only to send your sign-in code, and any messages you choose to turn on.</span><a href="Health%20Gurgaon%20Content%20and%20Trust.dc.html#trust" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:500">How we handle your number →</a></div>
+</form>
+</sc-if>
+
+<sc-if value="{{ stepCode }}" hint-placeholder-val="{{ false }}">
+<form onSubmit="{{ verify }}" style="display:flex;flex-direction:column;gap:16px">
+<h2 id="hg-step-title" style="margin:0;font-weight:700;font-size:22px;letter-spacing:-.025em">Enter the code we sent you</h2>
+<div style="display:flex;gap:2px 12px;flex-wrap:wrap;align-items:center"><span id="hg-code-sent" role="status" style="font-size:15px;line-height:1.55;color:#3d2e22">{{ sentLead }} <b style="font-weight:600;white-space:nowrap">{{ masked }}</b>{{ sentTail }}</span><button type="button" onClick="{{ changeNumber }}" style="background:none;border:0;color:#0F766E;font-size:14.5px;font-weight:500;cursor:pointer;padding:0 4px;min-height:44px">Change number</button></div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<label for="hg-code" style="font-weight:500;font-size:15px">6-digit code</label>
+<input id="hg-code" type="text" inputMode="numeric" autoComplete="one-time-code" value="{{ code }}" onChange="{{ onCode }}" aria-describedby="{{ codeDesc }}" aria-invalid="{{ codeInvalid }}" style="{{ codeStyle }}">
+<span id="hg-code-hint" style="font:400 11px/1.6 'Spline Sans Mono',monospace;color:#6e5a4b">PROTOTYPE: ANY 6 DIGITS WORK. TRY 000000 TO SEE A WRONG CODE.</span>
+<sc-if value="{{ codeErr }}" hint-placeholder-val="{{ false }}"><span id="hg-code-err" role="alert" style="color:#B42318;font-size:14px;font-weight:500;line-height:1.5">{{ codeErr }}</span></sc-if>
+</div>
+<button type="submit" disabled="{{ locked }}" style="{{ verifyStyle }}">Verify and sign in</button>
+<div style="border-top:1px solid #efe3cf;padding-top:14px;display:flex;flex-direction:column;gap:10px">
+<span style="font-weight:500;font-size:15px">Didn’t get the code?</span>
+<sc-if value="{{ waiting }}" hint-placeholder-val="{{ true }}"><span style="font-size:14px;line-height:1.5;color:#5a473a">You can ask for a new code in <b style="font-weight:600;font-variant-numeric:tabular-nums">{{ waitText }}</b>. Codes can take up to a minute to arrive.</span></sc-if>
+<sc-if value="{{ canResend }}" hint-placeholder-val="{{ false }}"><div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" onClick="{{ resendSame }}" style="background:#fff;border:1.5px solid #2B1D14;color:#2B1D14;border-radius:999px;padding:0 18px;min-height:48px;font-size:14.5px;font-weight:500;cursor:pointer">{{ resendSameLabel }}</button><button type="button" onClick="{{ resendOther }}" style="background:#fff;border:1.5px solid #e8dcc8;color:#2B1D14;border-radius:999px;padding:0 18px;min-height:48px;font-size:14.5px;cursor:pointer">{{ resendOtherLabel }}</button></div></sc-if>
+<span style="font-weight:300;font-size:13.5px;line-height:1.55;color:#5a473a">Check the number above is right and your phone has signal. We will never call you or ask you to share this code.</span>
+</div>
+</form>
+</sc-if>
+
+<sc-if value="{{ stepChoices }}" hint-placeholder-val="{{ false }}">
+<form onSubmit="{{ finishChoices }}" style="display:flex;flex-direction:column;gap:14px">
+<div role="status" style="background:#E6F1EC;color:#1E7A4F;border-radius:14px;padding:12px 14px;font-size:14.5px;line-height:1.5">✓ Code accepted. You’re signed in as <b style="font-weight:600;white-space:nowrap">{{ masked }}</b>.</div>
+<h2 id="hg-step-title" style="margin:0;font-weight:700;font-size:22px;letter-spacing:-.025em">Would you like any messages?</h2>
+<span style="font-weight:300;font-size:14.5px;line-height:1.6;color:#3d2e22">These are optional and they all start off. Turn on only what’s useful to you. You can change them any time in WhatsApp &amp; email.</span>
+<sc-for list="{{ optList }}" as="o" hint-placeholder-count="2"><label style="{{ o.style }}"><input type="checkbox" checked="{{ o.on }}" onChange="{{ o.toggle }}" style="width:22px;height:22px;accent-color:#0F766E;margin:2px 0 0;flex:none"><span style="display:flex;flex-direction:column;gap:4px;min-width:0"><span style="font-weight:600;font-size:15.5px;line-height:1.35">{{ o.name }}</span><span style="font-weight:300;font-size:14px;line-height:1.5;color:#3d2e22"><b style="font-weight:500">What it’s for:</b> {{ o.why }}</span><span style="font-weight:300;font-size:14px;line-height:1.5;color:#3d2e22"><b style="font-weight:500">How often:</b> {{ o.often }}</span></span></label></sc-for>
+<sc-if value="{{ optLocal }}" hint-placeholder-val="{{ false }}"><label style="display:flex;flex-direction:column;gap:6px;font-weight:500;font-size:15px">Which locality?<select value="{{ optLoc }}" onChange="{{ onOptLoc }}" style="border:1.5px solid #e8dcc8;border-radius:12px;padding:0 12px;min-height:48px;font-size:15px;background:#fff;max-width:320px;color:#2B1D14"><sc-for list="{{ locOptions }}" as="l" hint-placeholder-count="5"><option value="{{ l }}">{{ l }}</option></sc-for></select></label></sc-if>
+<fieldset style="border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;min-width:0"><legend style="font-weight:500;font-size:15px;padding:0;margin-bottom:8px">Language for messages and codes</legend><div style="display:flex;gap:8px;flex-wrap:wrap"><sc-for list="{{ optLangOpts }}" as="o" hint-placeholder-count="2"><label style="{{ o.style }}"><input type="radio" name="hg-lang1" checked="{{ o.on }}" onChange="{{ o.pick }}" style="width:20px;height:20px;accent-color:#0F766E;margin:0"><span lang="{{ o.lang }}" style="{{ o.font }}">{{ o.label }}</span></label></sc-for></div></fieldset>
+<span style="font-weight:300;font-size:13.5px;line-height:1.55;color:#5a473a">Every message ends with “Reply STOP to stop”. We note what you agree to, with the date and where, in your consent record.</span>
+<button type="submit" style="align-self:flex-start;background:#0F766E;color:#fff;border:0;border-radius:999px;padding:0 26px;min-height:52px;font-size:16px;font-weight:600;cursor:pointer">{{ finishLabel }}</button>
+</form>
+</sc-if>
+
+<sc-if value="{{ stepDone }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;gap:14px;align-items:center"><span aria-hidden="true" style="width:48px;height:48px;border-radius:50%;background:#1E7A4F;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;flex:none">✓</span><div style="display:flex;flex-direction:column;gap:2px;min-width:0"><h2 id="hg-step-title" style="margin:0;font-weight:700;font-size:22px;letter-spacing:-.025em">Signed in as <span style="white-space:nowrap">{{ masked }}</span></h2><span style="font-size:14px;color:#3d2e22">On this phone, for 30 days. No password is stored.</span></div></div>
+<div role="status" style="background:#FBF4E8;border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;font-size:14.5px;line-height:1.55"><sc-for list="{{ doneLines }}" as="d" hint-placeholder-count="2"><span>{{ d }}</span></sc-for></div>
+<sc-if value="{{ showChips }}" hint-placeholder-val="{{ false }}"><div style="display:flex;flex-direction:column;gap:6px"><span style="font-weight:600;font-size:14.5px">Your choices</span><div style="display:flex;gap:6px;flex-wrap:wrap"><sc-for list="{{ doneChips }}" as="c" hint-placeholder-count="3"><span style="{{ c.style }}">{{ c.t }}</span></sc-for></div><a href="#consent" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:500">Change these in WhatsApp &amp; email →</a></div></sc-if>
+<sc-if value="{{ backDone }}" hint-placeholder-val="{{ true }}"><div style="display:flex;gap:10px;flex-wrap:wrap"><sc-if value="{{ backToDoc }}" hint-placeholder-val="{{ true }}"><a href="Health%20Gurgaon%20Find%20Care.dc.html#doctor" style="display:inline-flex;align-items:center;min-height:50px;background:#0F766E;color:#fff;border-radius:999px;padding:0 22px;font-size:15px;font-weight:600">← Back to Dr. Ananya Rao</a></sc-if><sc-if value="{{ backByHistory }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ goBack }}" style="background:#0F766E;color:#fff;border:0;border-radius:999px;padding:0 22px;min-height:50px;font-size:15px;font-weight:600;cursor:pointer">← Back to where you were</button></sc-if><button type="button" onClick="{{ goSaved }}" style="background:#fff;border:1.5px solid #2B1D14;color:#2B1D14;border-radius:999px;padding:0 20px;min-height:50px;font-size:15px;font-weight:500;cursor:pointer">Go to Saved &amp; followed</button></div></sc-if>
+<sc-if value="{{ noBackDone }}" hint-placeholder-val="{{ false }}"><div style="display:flex;gap:10px;flex-wrap:wrap"><button type="button" onClick="{{ goSaved }}" style="background:#0F766E;color:#fff;border:0;border-radius:999px;padding:0 22px;min-height:50px;font-size:15px;font-weight:600;cursor:pointer">Go to Saved &amp; followed</button><sc-if value="{{ showGoActivity }}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{ goActivity }}" style="background:#fff;border:1.5px solid #2B1D14;color:#2B1D14;border-radius:999px;padding:0 20px;min-height:50px;font-size:15px;font-weight:500;cursor:pointer">{{ goActivityLabel }}</button></sc-if></div></sc-if>
+<span style="font-weight:300;font-size:13.5px;line-height:1.55;color:#5a473a">Using a shared phone? Sign out from My account when you’re done.</span>
+<span style="font:400 10.5px/1.6 'Spline Sans Mono',monospace;color:#6e5a4b">{{ protoNote }}</span>
+</sc-if>
+</section>
+
+<aside style="flex:2 1 320px;min-width:0;display:flex;flex-direction:column;gap:14px">
+<div style="background:#2B1D14;color:#FBF4E8;border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:12px">
+<h2 style="margin:0;font:500 11px 'Spline Sans Mono',monospace;color:#F0B43C;letter-spacing:.06em">WHAT HAPPENS TO YOUR NUMBER</h2>
+<sc-for list="{{ numberPromises }}" as="p" hint-placeholder-count="6"><div style="display:flex;gap:12px;align-items:flex-start;font-size:14.5px;line-height:1.5"><span aria-hidden="true" style="color:#F0B43C;font-weight:700;flex:none">✓</span><span>{{ p }}</span></div></sc-for>
+<a href="Health%20Gurgaon%20Content%20and%20Trust.dc.html#trust" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;color:#F0B43C;font-weight:500;font-size:14px">Our privacy promise, in the Trust centre →</a>
+</div>
+<div style="border:1px solid #efe3cf;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:10px">
+<h2 style="margin:0;font-weight:600;font-size:17px;line-height:1.35">You don’t need an account to search or read</h2>
+<span style="font-weight:300;font-size:14px;line-height:1.6;color:#3d2e22">Finding care, events, the Health Report and community answers are open to everyone, without signing in.</span>
+<span style="font-weight:600;font-size:14.5px;margin-top:4px">Sign in only when you want to:</span>
+<ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px"><sc-for list="{{ whyList }}" as="w" hint-placeholder-count="6"><li style="display:flex;gap:10px;align-items:baseline;font-size:14px;line-height:1.5"><span aria-hidden="true" style="width:7px;height:7px;border-radius:50%;background:#0F766E;flex:none;transform:translateY(-2px)"></span>{{ w }}</li></sc-for></ul>
+</div>
+<div style="background:#FBEDEB;border-radius:16px;padding:14px 16px;font-size:14px;line-height:1.5"><b style="font-weight:600;color:#B42318">Not for emergencies.</b> Call 112, or 108 for an ambulance. You never need to sign in for that.</div>
+</aside>
+</div>
+</sc-if>
+
+<sc-if value="{{ acctHead }}" hint-placeholder-val="{{ false }}">
+<div style="background:#FBF4E8;border-bottom:1px solid #e8dcc8"><div style="max-width:1240px;margin:0 auto;padding:12px 24px 0;display:flex;flex-direction:column;gap:10px">
+<div style="font-size:13px;color:#6e5a4b;font-weight:300"><a href="Health%20Gurgaon%20Homepage.dc.html" style="display:inline-flex;align-items:center;min-height:44px">Gurugram</a> › <a href="#saved" style="display:inline-flex;align-items:center;min-height:44px">My account</a> › {{ screenLabel }}</div>
+<div style="display:flex;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;align-items:flex-end">
+<div style="display:flex;gap:14px;align-items:center;min-width:0">
+<span aria-hidden="true" style="width:52px;height:52px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex:none"><svg width="26" height="26" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4.2" fill="#0F766E"></circle><path d="M3.8 21.5c0-4.6 3.7-7.6 8.2-7.6s8.2 3 8.2 7.6z" fill="#0F766E"></path></svg></span>
+<div style="display:flex;flex-direction:column;gap:4px;min-width:0"><h1 style="margin:0;font-weight:700;font-size:34px;line-height:1.1;letter-spacing:-.04em">{{ pageTitle }}</h1><span style="font-size:14px;line-height:1.5;color:#3d2e22">Signed in as <b style="font-weight:600;white-space:nowrap">{{ acctNo }}</b>{{ areaNote }}</span></div>
+</div>
+<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span style="display:inline-flex;align-items:center;gap:7px;font-size:13.5px;color:#3d2e22;background:#fff;border-radius:999px;padding:0 14px;min-height:40px"><svg aria-hidden="true" width="14" height="16" viewBox="0 0 14 16"><rect x="1" y="7" width="12" height="8.5" rx="2" fill="#0F766E"></rect><path d="M3.8 7V5a3.2 3.2 0 0 1 6.4 0v2" fill="none" stroke="#0F766E" strokeWidth="1.8"></path></svg>Only you can see this page</span><button type="button" onClick="{{ signOut }}" style="background:#fff;border:1.5px solid #2B1D14;color:#2B1D14;border-radius:999px;padding:0 18px;min-height:44px;font-size:14px;font-weight:500;cursor:pointer">Sign out</button></div>
+</div>
+<nav aria-label="My account" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;max-width:720px"><sc-for list="{{ acctTabs }}" as="t" hint-placeholder-count="3"><a href="{{ t.href }}" aria-current="{{ t.current }}" aria-label="{{ t.aria }}" style="{{ t.style }}">{{ t.label }}<sc-if value="{{ t.hasBadge }}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="background:#F0B43C;color:#2B1D14;border-radius:999px;min-width:22px;padding:1px 7px;font-size:12px;font-weight:700;line-height:1.5;text-align:center">{{ t.badge }}</span></sc-if></a></sc-for></nav>
+</div></div>
+</sc-if>
+
+<sc-if value="{{ isSaved }}" hint-placeholder-val="{{ false }}">
+<div style="max-width:1240px;margin:0 auto;padding:22px 24px 56px;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;justify-content:space-between;gap:4px 20px;flex-wrap:wrap;align-items:center"><p style="margin:0;font-weight:300;font-size:15px;line-height:1.6;color:#3d2e22;max-width:720px">Everything you saved shows its latest checks and what changed since you saved it, with who confirmed it and when.</p><sc-if value="{{ showEmptyToggle }}" hint-placeholder-val="{{ true }}"><label style="display:flex;gap:10px;align-items:center;font:400 11px 'Spline Sans Mono',monospace;color:#6e5a4b;cursor:pointer;min-height:44px"><input type="checkbox" checked="{{ empty }}" onChange="{{ toggleEmpty }}" style="width:18px;height:18px;accent-color:#0F766E;margin:0">PREVIEW A NEW ACCOUNT (NOTHING SAVED)</label></sc-if></div>
+
+<section aria-labelledby="hg-new-h" style="border:2px solid #2B1D14;border-radius:20px;padding:16px 20px;display:flex;flex-direction:column;gap:2px;min-width:0">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:4px 16px;flex-wrap:wrap;padding-bottom:8px"><h2 id="hg-new-h" style="margin:0;font-weight:700;font-size:22px;letter-spacing:-.025em">What’s new for you</h2><span style="font:500 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b;letter-spacing:.06em">CHECKED FOR YOU · 27 OCT 2026</span></div>
+<sc-for list="{{ news }}" as="n" hint-placeholder-count="4"><div style="display:flex;gap:10px 14px;align-items:center;flex-wrap:wrap;border-top:1px solid #efe3cf;padding:12px 0"><span aria-hidden="true" style="{{ n.dot }}"></span><div style="flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="font-weight:500;font-size:15px;line-height:1.4">{{ n.t }}</span><span style="font-weight:300;font-size:13.5px;line-height:1.5;color:#5a473a">{{ n.d }}</span></div><sc-if value="{{ n.isLink }}" hint-placeholder-val="{{ false }}"><a href="{{ n.href }}" style="{{ n.btn }}">{{ n.cta }}</a></sc-if><sc-if value="{{ n.isBtn }}" hint-placeholder-val="{{ true }}"><button type="button" id="{{ n.id }}" onClick="{{ n.go }}" style="{{ n.btn }}">{{ n.cta }}</button></sc-if></div></sc-for>
+<sc-if value="{{ noNews }}" hint-placeholder-val="{{ false }}"><span style="border-top:1px solid #efe3cf;padding:14px 0;font-weight:300;font-size:14px;line-height:1.55;color:#5a473a">Nothing new yet. Save a doctor, lab or camp, and we’ll show you here when something about it changes.</span></sc-if>
+<div style="margin-top:6px;background:#FBF4E8;border-radius:16px;padding:6px 14px;display:flex;flex-direction:column;gap:0">
+<div style="display:flex;gap:12px;align-items:center;justify-content:space-between"><span id="hg-sw-saved" style="min-width:0;font-weight:600;font-size:14.5px;line-height:1.4;padding:8px 0">{{ savedSwTitle }}</span><button type="button" id="hg-sw-btn" role="switch" aria-checked="{{ savedSwOn }}" aria-labelledby="hg-sw-saved" aria-describedby="hg-sw-note" onClick="{{ toggleSavedSw }}" style="{{ swSaved.btn }}"><span aria-hidden="true" style="{{ swSaved.track }}"><span style="{{ swSaved.knob }}"></span></span><span aria-hidden="true" style="{{ swSaved.text }}">{{ swSaved.label }}</span></button></div>
+<div style="display:flex;gap:0 14px;align-items:center;justify-content:space-between;flex-wrap:wrap"><span id="hg-sw-note" style="font-weight:300;font-size:13px;line-height:1.5;color:#5a473a;max-width:640px">{{ savedSwNote }}</span><a href="#consent" style="display:inline-flex;align-items:center;min-height:44px;font-size:13.5px;font-weight:500">All my messages →</a></div>
+<sc-if value="{{ swMsg }}" hint-placeholder-val="{{ false }}"><span role="status" style="color:#1E7A4F;font-size:14px;line-height:1.5;padding:0 0 8px">{{ swMsg }}</span></sc-if>
+</div>
+</section>
+
+<section aria-labelledby="hg-saved-places" style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:4px 16px;flex-wrap:wrap"><h2 id="hg-saved-places" style="margin:0;font-weight:700;font-size:22px;letter-spacing:-.025em">Saved places <span style="font-weight:400;color:#6e5a4b">({{ provCount }})</span></h2><a href="Health%20Gurgaon%20Find%20Care.dc.html#results" style="display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:500">Find care →</a></div>
+<sc-if value="{{ hasProvs }}" hint-placeholder-val="{{ true }}"><span style="font-weight:300;font-size:13.5px;line-height:1.5;color:#5a473a;margin-top:-6px">Changed ones first. We re-check every listing at least every 90 days, or sooner if someone reports it.</span></sc-if>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:14px;align-items:start">
+<sc-for list="{{ provs }}" as="p" hint-placeholder-count="3">
+<sc-if value="{{ p.shown }}" hint-placeholder-val="{{ true }}">
+<article id="{{ p.anchor }}" style="{{ p.card }}">
+<div style="display:flex;gap:12px;align-items:flex-start"><span aria-hidden="true" style="width:48px;height:48px;border-radius:50%;background:#FBF4E8;display:flex;align-items:center;justify-content:center;font-weight:600;color:#0F766E;flex:none">{{ p.initials }}</span><div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:0"><span style="font:500 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b;letter-spacing:.06em">{{ p.kind }} · SAVED {{ p.savedOn }}</span><h3 style="margin:0;font-size:inherit"><a href="{{ p.href }}" style="display:inline-flex;align-items:center;min-height:44px;font-weight:600;font-size:17px;line-height:1.3;letter-spacing:-.015em;color:#2B1D14">{{ p.name }}</a></h3><span style="font-weight:300;font-size:13.5px;line-height:1.45;color:#5a473a">{{ p.what }}</span></div></div>
+<div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><sc-for list="{{ p.badges }}" as="b" hint-placeholder-count="2"><span style="background:#E6F1EC;color:#1E7A4F;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:600">✓ {{ b }}</span></sc-for><span style="{{ p.labelStyle }}">{{ p.label }}</span><span style="font:400 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b;padding:4px 0">LAST CHECKED {{ p.checked }}</span></div>
+<div style="{{ p.box }}"><span style="{{ p.tagStyle }}">{{ p.tag }}</span><span style="font-weight:500;font-size:14.5px;line-height:1.45">{{ p.change }}</span><span style="font-weight:300;font-size:12.5px;line-height:1.5;color:#3d2e22">{{ p.src }}</span></div>
+<sc-for list="{{ p.more }}" as="c" hint-placeholder-count="1"><div style="display:flex;gap:10px;align-items:flex-start"><span aria-hidden="true" style="{{ c.dot }}">{{ c.icon }}</span><div style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-size:13.5px;line-height:1.5">{{ c.t }}</span><span style="{{ c.srcStyle }}">{{ c.src }}</span></div></div></sc-for>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:2px"><a href="{{ p.href }}" style="display:inline-flex;align-items:center;min-height:44px;background:#2B1D14;color:#FBF4E8;border-radius:999px;padding:0 18px;font-size:14px;font-weight:500">{{ p.open }}</a><button type="button" id="{{ p.rmId }}" onClick="{{ p.remove }}" aria-label="{{ p.removeAria }}" style="background:#fff;border:1.5px solid #e8dcc8;color:#2B1D14;border-radius:999px;padding:0 18px;min-height:44px;font-size:14px;cursor:pointer">Remove</button></div>
+</article>
+</sc-if>
+<sc-if value="{{ p.removed }}" hint-placeholder-val="{{ false }}"><div role="status" style="border:1.5px dashed #d9c6a5;border-radius:16px;padding:6px 6px 6px 16px;display:flex;justify-content:space-between;align-items:center;gap:4px 12px;flex-wrap:wrap;font-size:14px;line-height:1.5;min-width:0"><span style="min-width:0;padding:8px 0">Removed <b style="font-weight:600">{{ p.name }}</b> from Saved.</span><button type="button" id="{{ p.undoId }}" onClick="{{ p.undo }}" aria-label="{{ p.undoAria }}" style="background:#2B1D14;color:#FBF4E8;border:0;border-radius:999px;padding:0 20px;min-height:44px;font-size:14px;font-weight:500;cursor:pointer">Undo</button></div></sc-if>
+</sc-for>
+</div>
+<sc-if value="{{ noProvs }}" hint-placeholder-val="{{ false }}"><div style="background:#FBF4E8;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:8px"><span style="font-weight:600;font-size:16.5px">No saved places yet</span><span style="font-weight:300;font-size:14px;line-height:1.6;color:#3d2e22;max-width:640px">Tap “Save” on any doctor, hospital, lab or chemist. It shows up here with its latest checks, and we’ll show you here when its details change.</span><a href="Health%20Gurgaon%20Find%20Care.dc.html#results" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;background:#0F766E;color:#fff;border-radius:999px;padding:0 20px;font-size:14px;font-weight:600">Find care</a></div></sc-if>
+</section>
+
+<section aria-labelledby="hg-saved-events" style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:4px 16px;flex-wrap:wrap"><h2 id="hg-saved-events" style="margin:0;font-weight:700;font-size:22px;letter-spacing:-.025em">Saved events <span style="font-weight:400;color:#6e5a4b">({{ eventCount }})</span></h2><a href="Health%20Gurgaon%20Local%20and%20Events.dc.html#calendar" style="display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:500">Events calendar →</a></div>
+<sc-if value="{{ eventShown }}" hint-placeholder-val="{{ true }}">
+<article id="sv-eye" style="border:1px solid #efe3cf;border-radius:20px;padding:18px;display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap;min-width:0">
+<div aria-hidden="true" style="width:64px;flex:none;border-radius:14px;background:#2B1D14;color:#FBF4E8;display:flex;flex-direction:column;align-items:center;padding:9px 0"><span style="font:500 10.5px 'Spline Sans Mono',monospace;color:#F0B43C">SUN</span><span style="font-weight:700;font-size:24px;line-height:1.1">15</span><span style="font:400 10.5px 'Spline Sans Mono',monospace">NOV</span></div>
+<div style="flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:6px">
+<div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span style="background:#E6F1EC;color:#1E7A4F;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:600">✓ Verified with organiser</span><span style="background:#FBF4E8;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:500">Free</span><span style="background:#FBF4E8;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:500">Residents aged 55+</span><span style="font:400 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b">IN 19 DAYS · SAVED 14 OCT</span></div>
+<h3 style="margin:0;font-size:inherit"><a href="Health%20Gurgaon%20Local%20and%20Events.dc.html#event" style="display:inline-flex;align-items:center;min-height:44px;font-weight:600;font-size:17px;letter-spacing:-.015em;line-height:1.3;color:#2B1D14">Free eye check-up camp for senior citizens</a></h3>
+<span style="font-size:14.5px;line-height:1.5">Sunday 15 Nov 2026 · 9 am – 1 pm</span>
+<span style="font-weight:300;font-size:13.5px;line-height:1.5;color:#3d2e22">Sector 57 Community Centre, near the main market · ground floor, step-free · organised by the Sector 57 RWA</span>
+<div style="background:#E6F1EC;border-radius:14px;padding:10px 14px;display:flex;flex-direction:column;gap:3px"><span style="font:500 10.5px 'Spline Sans Mono',monospace;color:#1E7A4F;letter-spacing:.06em">VERIFIED SINCE YOU SAVED IT</span><span style="font-size:14px;line-height:1.5">We called the organiser, the RWA secretary, to confirm the date and place.</span><span style="font-weight:300;font-size:12.5px;line-height:1.5;color:#3d2e22">Source: phone call, 14 Oct 2026.</span></div>
+<span style="font-weight:300;font-size:13px;line-height:1.55;color:#5a473a">To book a slot, use “Register with the organiser” on the event page. We don’t take registrations ourselves.</span>
+</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;flex:1 1 100%"><button type="button" id="hg-cal-btn" onClick="{{ toggleCal }}" aria-pressed="{{ calPressed }}" style="{{ calStyle }}">{{ calLabel }}</button><a href="Health%20Gurgaon%20Local%20and%20Events.dc.html#event" style="display:inline-flex;align-items:center;justify-content:center;min-height:44px;background:#2B1D14;color:#FBF4E8;border-radius:999px;padding:0 18px;font-size:14px;font-weight:500">Event details</a><button type="button" id="hg-rm-eye" onClick="{{ removeEvent }}" aria-label="Remove the eye check-up camp from Saved" style="background:#fff;border:1.5px solid #e8dcc8;color:#2B1D14;border-radius:999px;padding:0 18px;min-height:44px;font-size:14px;cursor:pointer">Remove</button></div>
+<sc-if value="{{ calMsg }}" hint-placeholder-val="{{ false }}"><span role="status" style="flex:1 1 100%;color:#1E7A4F;font-size:14px;line-height:1.5">{{ calMsg }}</span></sc-if>
+</article>
+</sc-if>
+<sc-if value="{{ eventRemovedRow }}" hint-placeholder-val="{{ false }}"><div role="status" style="border:1.5px dashed #d9c6a5;border-radius:16px;padding:6px 6px 6px 16px;display:flex;justify-content:space-between;align-items:center;gap:4px 12px;flex-wrap:wrap;font-size:14px;line-height:1.5"><span style="min-width:0;padding:8px 0">Removed <b style="font-weight:600">Free eye check-up camp for senior citizens</b> from Saved.</span><button type="button" id="hg-undo-eye" onClick="{{ undoEvent }}" aria-label="Undo: put the eye check-up camp back" style="background:#2B1D14;color:#FBF4E8;border:0;border-radius:999px;padding:0 20px;min-height:44px;font-size:14px;font-weight:500;cursor:pointer">Undo</button></div></sc-if>
+<sc-if value="{{ noEvents }}" hint-placeholder-val="{{ false }}"><div style="background:#FBF4E8;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:8px"><span style="font-weight:600;font-size:16.5px">No saved events</span><span style="font-weight:300;font-size:14px;line-height:1.6;color:#3d2e22;max-width:640px">Save a camp or talk from the events calendar to keep its date, place and verification together here. If it moves or is cancelled, you’ll see that here too.</span><a href="Health%20Gurgaon%20Local%20and%20Events.dc.html#calendar" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;background:#0F766E;color:#fff;border-radius:999px;padding:0 20px;font-size:14px;font-weight:600">See what’s on</a></div></sc-if>
+</section>
+
+<section aria-labelledby="hg-following" style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;flex-direction:column;gap:4px"><h2 id="hg-following" style="margin:0;font-weight:700;font-size:22px;letter-spacing:-.025em">Following <span style="font-weight:400;color:#6e5a4b">({{ followCount }})</span></h2><span style="font-weight:300;font-size:14px;line-height:1.55;color:#3d2e22;max-width:760px">See what’s new without searching again. For each one, you choose whether we may send you WhatsApp alerts. Nothing is sent unless you say yes, and every alert ends with “Reply STOP to stop”.</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:14px;align-items:start">
+<sc-for list="{{ follows }}" as="f" hint-placeholder-count="3">
+<sc-if value="{{ f.shown }}" hint-placeholder-val="{{ true }}">
+<article id="{{ f.anchor }}" style="border:1px solid #efe3cf;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0">
+<span style="font:500 10.5px 'Spline Sans Mono',monospace;color:#0F766E;letter-spacing:.06em">{{ f.kind }} · FOLLOWING SINCE {{ f.since }}</span>
+<h3 style="margin:0;font-size:inherit"><a href="{{ f.href }}" style="display:inline-flex;align-items:center;min-height:44px;font-weight:600;font-size:16.5px;line-height:1.35;color:#2B1D14">{{ f.name }}</a></h3>
+<span style="font-weight:300;font-size:13.5px;line-height:1.5;color:#5a473a">{{ f.sub }}</span>
+<span style="font-size:14px;line-height:1.55;color:#2B1D14"><b style="font:500 10.5px 'Spline Sans Mono',monospace;background:#F0B43C;color:#2B1D14;border-radius:999px;padding:2px 8px;margin-right:6px;letter-spacing:.04em">NEW</b>{{ f.news }}</span>
+<div style="border-top:1px solid #efe3cf;padding-top:10px;margin-top:4px;display:flex;flex-direction:column;gap:8px">
+<span id="{{ f.labelId }}" style="font-weight:500;font-size:14px">WhatsApp alerts about {{ f.what }}</span>
+<div role="group" aria-labelledby="{{ f.labelId }}" style="display:flex;flex-wrap:wrap;gap:6px"><button type="button" id="{{ f.offId }}" onClick="{{ f.setOff }}" aria-pressed="{{ f.isOff }}" style="{{ f.offStyle }}">No alerts</button><button type="button" id="{{ f.onId }}" onClick="{{ f.setWa }}" aria-pressed="{{ f.isOn }}" style="{{ f.waStyle }}">Send alerts</button></div>
+<span style="{{ f.noteStyle }}">{{ f.note }}</span>
+<sc-if value="{{ f.asking }}" hint-placeholder-val="{{ false }}"><div role="group" aria-labelledby="{{ f.askId }}" style="border:1.5px solid #0F766E;background:#FBF4E8;border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:10px"><span id="{{ f.askId }}" tabIndex="-1" style="font-weight:600;font-size:15px;line-height:1.4">{{ f.askTitle }}</span><span style="font-weight:300;font-size:14px;line-height:1.55;color:#2B1D14">{{ f.askBody }}</span><div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" onClick="{{ f.confirm }}" style="background:#0F766E;color:#fff;border:0;border-radius:999px;padding:0 20px;min-height:44px;font-size:14.5px;font-weight:600;cursor:pointer">Yes, send alerts</button><button type="button" onClick="{{ f.cancel }}" style="background:#fff;border:1.5px solid #e8dcc8;color:#2B1D14;border-radius:999px;padding:0 18px;min-height:44px;font-size:14.5px;cursor:pointer">Not now</button></div></div></sc-if>
+<sc-if value="{{ f.msg }}" hint-placeholder-val="{{ false }}"><span role="status" style="color:#1E7A4F;font-size:14px;line-height:1.5">{{ f.msg }}</span></sc-if>
+<div style="display:flex;justify-content:space-between;gap:4px 8px;flex-wrap:wrap;align-items:center"><a href="#consent" style="display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:500">All my messages and consent →</a><button type="button" id="{{ f.unId }}" onClick="{{ f.unfollow }}" aria-label="{{ f.unfollowAria }}" style="background:#fff;border:1.5px solid #e8dcc8;color:#2B1D14;border-radius:999px;padding:0 18px;min-height:44px;font-size:14px;cursor:pointer">Unfollow</button></div>
+</div>
+</article>
+</sc-if>
+<sc-if value="{{ f.removed }}" hint-placeholder-val="{{ false }}"><div role="status" style="border:1.5px dashed #d9c6a5;border-radius:16px;padding:6px 6px 6px 16px;display:flex;justify-content:space-between;align-items:center;gap:4px 12px;flex-wrap:wrap;font-size:14px;line-height:1.5;min-width:0"><span style="min-width:0;padding:8px 0">{{ f.goneText }}</span><button type="button" id="{{ f.undoId }}" onClick="{{ f.undo }}" aria-label="{{ f.undoAria }}" style="background:#2B1D14;color:#FBF4E8;border:0;border-radius:999px;padding:0 20px;min-height:44px;font-size:14px;font-weight:500;cursor:pointer">Undo</button></div></sc-if>
+</sc-for>
+</div>
+<sc-if value="{{ noFollows }}" hint-placeholder-val="{{ false }}"><div style="background:#FBF4E8;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:8px"><span style="font-weight:600;font-size:16.5px">You’re not following anything yet</span><span style="font-weight:300;font-size:14px;line-height:1.6;color:#3d2e22;max-width:640px">Follow your locality, a community topic or a discussion, and what’s new shows up here. You decide later whether you also want any alerts.</span><div style="display:flex;gap:8px;flex-wrap:wrap"><a href="Health%20Gurgaon%20Local%20and%20Events.dc.html#localities" style="display:inline-flex;align-items:center;min-height:44px;background:#0F766E;color:#fff;border-radius:999px;padding:0 20px;font-size:14px;font-weight:600">Find your locality</a><a href="Health%20Gurgaon%20Community.dc.html#forum" style="display:inline-flex;align-items:center;min-height:44px;border:1.5px solid #2B1D14;color:#2B1D14;border-radius:999px;padding:0 20px;font-size:14px;font-weight:500">Browse community topics</a></div></div></sc-if>
+</section>
+</div>
+</sc-if>
+
+<sc-if value="{{ isActivity }}" hint-placeholder-val="{{ false }}">
+<div style="max-width:1240px;margin:0 auto;padding:22px 24px 56px;display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start">
+<div style="flex:3 1 600px;min-width:0;display:flex;flex-direction:column;gap:36px">
+
+<section aria-labelledby="hg-attn-h" style="border:2px solid #2B1D14;border-radius:20px;padding:16px 20px;display:flex;flex-direction:column;gap:2px;min-width:0">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:4px 16px;flex-wrap:wrap;padding-bottom:8px"><h2 id="hg-attn-h" style="margin:0;font-weight:700;font-size:22px;letter-spacing:-.025em">{{ attnTitle }}</h2><span style="font:500 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b;letter-spacing:.06em">UPDATED 27 OCT 2026</span></div>
+<sc-for list="{{ attn }}" as="a" hint-placeholder-count="2"><div style="display:flex;gap:10px 14px;align-items:center;flex-wrap:wrap;border-top:1px solid #efe3cf;padding:12px 0"><span aria-hidden="true" style="width:28px;height:28px;border-radius:50%;background:#F0B43C;color:#2B1D14;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13.5px;flex:none">{{ a.n }}</span><div style="flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="font-weight:500;font-size:15px;line-height:1.4">{{ a.t }}</span><span style="font-weight:300;font-size:13.5px;line-height:1.5;color:#5a473a">{{ a.d }}</span></div><sc-if value="{{ a.isBtn }}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{ a.go }}" style="display:inline-flex;align-items:center;min-height:44px;background:#0F766E;color:#fff;border:0;border-radius:999px;padding:0 18px;font-size:14px;font-weight:600;cursor:pointer">{{ a.cta }}</button></sc-if><sc-if value="{{ a.isLink }}" hint-placeholder-val="{{ false }}"><a href="{{ a.href }}" style="display:inline-flex;align-items:center;min-height:44px;background:#0F766E;color:#fff;border-radius:999px;padding:0 18px;font-size:14px;font-weight:600">{{ a.cta }}</a></sc-if></div></sc-for>
+<sc-if value="{{ noAttn }}" hint-placeholder-val="{{ false }}"><span style="border-top:1px solid #efe3cf;padding:12px 0;font-weight:300;font-size:14px;line-height:1.55;color:#3d2e22">{{ noAttnText }}</span></sc-if>
+<span style="font-weight:300;font-size:13px;line-height:1.5;color:#5a473a;padding-top:2px">{{ attnFoot }}</span>
+</section>
+
+<nav aria-label="On this page" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:-12px 0"><span style="font:500 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b;letter-spacing:.06em;margin-right:4px">ON THIS PAGE</span><sc-for list="{{ jumps }}" as="j" hint-placeholder-count="5"><button type="button" onClick="{{ j.go }}" style="border:1.5px solid #e8dcc8;background:#fff;color:#2B1D14;border-radius:999px;padding:0 14px;min-height:44px;font-size:14px;cursor:pointer;font-family:inherit">{{ j.label }}</button></sc-for></nav>
+
+<section id="hg-reviews" aria-labelledby="hg-reviews-h" style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:4px 16px;flex-wrap:wrap"><h2 id="hg-reviews-h" style="margin:0;font-weight:700;font-size:22px;letter-spacing:-.025em">My reviews <span style="font-weight:400;color:#6e5a4b">({{ reviewCount }})</span></h2><a href="Health%20Gurgaon%20Content%20and%20Trust.dc.html#review" style="display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:500">Write a review →</a></div>
+<span style="font-weight:300;font-size:14px;line-height:1.55;color:#3d2e22;max-width:760px;margin-top:-6px">A moderator checks every review for privacy before it goes live. Providers can reply in public, but they can’t edit or remove your review, and they never learn who you are.</span>
+<sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+<article id="{{ r.anchor }}" style="{{ r.card }}">
+<div style="display:flex;justify-content:space-between;gap:6px 12px;flex-wrap:wrap;align-items:flex-start"><div style="display:flex;flex-direction:column;gap:0;min-width:0"><span style="font:500 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b;letter-spacing:.04em;line-height:1.6">{{ r.meta }}</span><h3 style="margin:0;font-size:inherit"><a href="{{ r.href }}" style="display:inline-flex;align-items:center;min-height:44px;font-weight:600;font-size:17px;line-height:1.3;color:#2B1D14">{{ r.name }}</a></h3><span style="font-weight:300;font-size:13.5px;line-height:1.45;color:#5a473a">{{ r.sub }}</span></div><span style="{{ r.pillStyle }}">{{ r.pill }}</span></div>
+<sc-if value="{{ r.hasReasons }}" hint-placeholder-val="{{ false }}"><div style="background:#FFF4D6;border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:6px"><span style="font:500 10.5px 'Spline Sans Mono',monospace;color:#7A5200;letter-spacing:.06em">WHY A MODERATOR SENT IT BACK · 23 OCT</span><sc-for list="{{ r.reasons }}" as="x" hint-placeholder-count="2"><span style="display:flex;gap:10px;align-items:baseline;font-size:14px;line-height:1.5"><span aria-hidden="true" style="color:#9A5418;font-weight:700;flex:none">!</span><span>{{ x }}</span></span></sc-for><span style="font-weight:300;font-size:13.5px;line-height:1.5;color:#3d2e22">{{ r.suggestion }}</span></div></sc-if>
+<sc-if value="{{ r.showText }}" hint-placeholder-val="{{ true }}"><blockquote style="margin:0;border-left:3px solid #e8dcc8;padding:2px 0 2px 14px;font-weight:300;font-size:15px;line-height:1.7;color:#2B1D14"><sc-for list="{{ r.segs }}" as="g" hint-placeholder-count="3"><span style="{{ g.style }}">{{ g.t }}</span></sc-for></blockquote></sc-if>
+<span style="font-size:13.5px;line-height:1.5;color:#5a473a">{{ r.shownAs }}</span>
+<sc-if value="{{ r.hasReply }}" hint-placeholder-val="{{ false }}"><div style="background:#FBF4E8;border-radius:14px;padding:12px 14px;font-size:14px;font-weight:300;line-height:1.55"><b style="font-weight:600">Reply from the clinic · {{ r.replyWhen }}:</b> {{ r.reply }}</div></sc-if>
+<div style="display:flex;flex-direction:column;gap:3px;border-top:1px solid #efe3cf;padding-top:10px"><span style="font:500 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b;letter-spacing:.06em">WHAT HAPPENS NEXT</span><span style="font-size:14px;line-height:1.55">{{ r.next }}</span></div>
+<sc-if value="{{ r.hasNote }}" hint-placeholder-val="{{ false }}"><div id="{{ r.noteId }}" tabIndex="-1" role="status" style="background:#E6F1EC;color:#1E7A4F;border-radius:14px;padding:10px 14px;font-size:14px;line-height:1.5">{{ r.note }}</div></sc-if>
+<sc-if value="{{ r.editing }}" hint-placeholder-val="{{ false }}"><div style="border:1.5px solid #2B1D14;border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:10px">
+<label for="{{ r.edId }}" style="font-weight:600;font-size:15px">Edit your review</label>
+<textarea id="{{ r.edId }}" value="{{ rvDraft }}" onChange="{{ onRvDraft }}" rows="5" aria-describedby="{{ r.edDesc }}" aria-invalid="{{ rvInvalid }}" style="{{ draftBox }}"></textarea>
+<span id="{{ r.edHintId }}" role="status" style="{{ draftCheckStyle }}">{{ draftCheck }}</span>
+<sc-if value="{{ rvErr }}" hint-placeholder-val="{{ false }}"><span id="{{ r.edErrId }}" role="alert" style="color:#B42318;font-size:14px;font-weight:500;line-height:1.5">{{ rvErr }}</span></sc-if>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" onClick="{{ r.send }}" style="background:#0F766E;color:#fff;border:0;border-radius:999px;padding:0 20px;min-height:48px;font-size:14.5px;font-weight:600;cursor:pointer">Send to a moderator</button><button type="button" onClick="{{ r.cancelEdit }}" style="background:#fff;border:1.5px solid #e8dcc8;color:#2B1D14;border-radius:999px;padding:0 18px;min-height:48px;font-size:14.5px;cursor:pointer">Cancel</button></div>
+<span style="font-weight:300;font-size:13.5px;line-height:1.5;color:#5a473a">{{ r.editNote }}</span>
+</div></sc-if>
+<sc-if value="{{ r.confirming }}" hint-placeholder-val="{{ false }}"><div role="group" aria-labelledby="{{ r.wdHId }}" style="border:1.5px solid #B42318;border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:10px"><span id="{{ r.wdHId }}" tabIndex="-1" style="font-weight:600;font-size:15.5px">Withdraw this review?</span><span style="font-weight:300;font-size:14px;line-height:1.55">{{ r.withdrawText }}</span><div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" onClick="{{ r.withdraw }}" style="background:#B42318;color:#fff;border:0;border-radius:999px;padding:0 20px;min-height:48px;font-size:14.5px;font-weight:600;cursor:pointer">Withdraw review</button><button type="button" onClick="{{ r.keep }}" style="background:#fff;border:1.5px solid #e8dcc8;color:#2B1D14;border-radius:999px;padding:0 18px;min-height:48px;font-size:14.5px;cursor:pointer">Keep it</button></div></div></sc-if>
+<sc-if value="{{ r.withdrawn }}" hint-placeholder-val="{{ false }}"><div role="status" style="display:flex;justify-content:space-between;align-items:center;gap:6px 12px;flex-wrap:wrap;background:#FBF4E8;border-radius:14px;padding:6px 6px 6px 14px;font-size:14px;line-height:1.5"><span style="min-width:0;padding:8px 0">Withdrawn today. It is no longer on the profile.</span><button type="button" id="{{ r.undoId }}" onClick="{{ r.undo }}" aria-label="{{ r.undoAria }}" style="background:#2B1D14;color:#FBF4E8;border:0;border-radius:999px;padding:0 18px;min-height:44px;font-size:14px;font-weight:500;cursor:pointer">Undo</button></div></sc-if>
+<sc-if value="{{ r.showActions }}" hint-placeholder-val="{{ true }}"><div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" id="{{ r.editBtnId }}" onClick="{{ r.edit }}" aria-label="{{ r.editAria }}" style="{{ r.editStyle }}">{{ r.editLabel }}</button><button type="button" id="{{ r.wdBtnId }}" onClick="{{ r.askWithdraw }}" aria-label="{{ r.withdrawAria }}" style="background:#fff;border:1.5px solid #e8dcc8;color:#2B1D14;border-radius:999px;padding:0 18px;min-height:44px;font-size:14px;cursor:pointer">Withdraw</button></div></sc-if>
+</article>
+</sc-for>
+<sc-if value="{{ noReviews }}" hint-placeholder-val="{{ false }}"><div style="background:#FBF4E8;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:8px"><span style="font-weight:600;font-size:16.5px">No reviews yet</span><span style="font-weight:300;font-size:14px;line-height:1.6;color:#3d2e22;max-width:640px">Review a doctor, clinic, lab or chemist you’ve visited. You can follow the moderator’s check here, and edit or withdraw your review at any time.</span><a href="Health%20Gurgaon%20Content%20and%20Trust.dc.html#review" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;background:#0F766E;color:#fff;border-radius:999px;padding:0 20px;font-size:14px;font-weight:600">Write a review</a></div></sc-if>
+<a href="Health%20Gurgaon%20Content%20and%20Trust.dc.html#trust" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:500">How we check reviews →</a>
+</section>
+
+<section id="hg-reports" aria-labelledby="hg-reports-h" style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:4px 16px;flex-wrap:wrap"><h2 id="hg-reports-h" style="margin:0;font-weight:700;font-size:22px;letter-spacing:-.025em">My reports &amp; corrections <span style="font-weight:400;color:#6e5a4b">({{ reportCount }})</span></h2><a href="Health%20Gurgaon%20Content%20and%20Trust.dc.html#report" style="display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:500">{{ reportLinkLabel }}</a></div>
+<div style="background:#E6F1EC;border-radius:16px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start"><span aria-hidden="true" style="width:28px;height:28px;border-radius:50%;background:#1E7A4F;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex:none">✓</span><div style="display:flex;flex-direction:column;gap:3px;min-width:0"><span style="font-weight:600;font-size:15px;color:#1E7A4F">Our promise: facts are checked within 3 working days</span><span style="font-weight:300;font-size:14px;line-height:1.55;color:#2B1D14">An editor checks with the provider or a primary source, such as the medical council register. You can follow every step here, and we never tell the provider who reported.</span></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:14px;align-items:start">
+<sc-for list="{{ reports }}" as="rp" hint-placeholder-count="3">
+<article style="border:1px solid #efe3cf;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:12px;min-width:0">
+<div style="display:flex;justify-content:space-between;gap:6px 12px;flex-wrap:wrap;align-items:flex-start"><div style="display:flex;flex-direction:column;gap:3px;min-width:0"><span style="font:500 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b;letter-spacing:.04em">{{ rp.ref }} · {{ rp.field }}</span><h3 style="margin:0;font-weight:600;font-size:16px;line-height:1.35">{{ rp.item }}</h3></div><span style="{{ rp.pillStyle }}">{{ rp.pill }}</span></div>
+<span style="font-weight:300;font-size:14px;line-height:1.55;color:#3d2e22"><b style="font-weight:500;color:#2B1D14">You told us:</b> {{ rp.note }}</span>
+<ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column"><sc-for list="{{ rp.steps }}" as="st" hint-placeholder-count="3"><li style="display:flex;gap:12px;min-width:0"><div aria-hidden="true" style="display:flex;flex-direction:column;align-items:center;flex:none;width:24px"><span style="{{ st.dot }}">{{ st.icon }}</span><span style="{{ st.line }}"></span></div><div style="display:flex;flex-direction:column;gap:2px;padding-bottom:12px;min-width:0"><span style="display:flex;gap:2px 8px;align-items:baseline;flex-wrap:wrap"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">{{ st.sr }}</span><span style="{{ st.titleStyle }}">{{ st.t }}</span><span style="{{ st.tagStyle }}">{{ st.tag }}</span></span><span style="font-weight:300;font-size:13.5px;line-height:1.55;color:#3d2e22">{{ st.d }}</span></div></li></sc-for></ol>
+<sc-if value="{{ rp.hasLink }}" hint-placeholder-val="{{ false }}"><a href="{{ rp.linkHref }}" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:500;margin-top:-6px">{{ rp.linkLabel }}</a></sc-if>
+</article>
+</sc-for>
+<sc-if value="{{ hasConcern }}" hint-placeholder-val="{{ true }}">
+<article style="grid-column:1/-1;border:1.5px solid #2B1D14;border-radius:20px;padding:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px 28px;align-items:start;min-width:0">
+<div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+<div style="display:flex;justify-content:space-between;gap:6px 12px;flex-wrap:wrap;align-items:flex-start"><div style="display:flex;flex-direction:column;gap:3px;min-width:0"><span style="font:500 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b;letter-spacing:.04em">HG-CC-0112 · A CONCERN ABOUT BILLING</span><h3 style="margin:0;font-weight:600;font-size:16px;line-height:1.35">Clear Scan Diagnostics, Sector 50</h3></div><span style="background:#2B1D14;color:#F0B43C;border-radius:999px;padding:4px 11px;font-size:12.5px;font-weight:600;white-space:nowrap">Separate review path</span></div>
+<span style="font-weight:300;font-size:14px;line-height:1.55;color:#3d2e22"><b style="font-weight:500;color:#2B1D14">You told us:</b> “I was charged twice for one ultrasound, and the desk wouldn’t give me a receipt.”</span>
+<div style="background:#FBF4E8;border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:4px"><span style="font-weight:600;font-size:14.5px">Why this went somewhere else</span><span style="font-weight:300;font-size:14px;line-height:1.55;color:#2B1D14">This is a concern about billing or care, not a fact we can check. So it did not go to the editors who correct listings. It went to a separate review path with a small team. It is never published, and we never tell the provider who raised it.</span></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+<ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column"><sc-for list="{{ concernSteps }}" as="st" hint-placeholder-count="3"><li style="display:flex;gap:12px;min-width:0"><div aria-hidden="true" style="display:flex;flex-direction:column;align-items:center;flex:none;width:24px"><span style="{{ st.dot }}">{{ st.icon }}</span><span style="{{ st.line }}"></span></div><div style="display:flex;flex-direction:column;gap:2px;padding-bottom:12px;min-width:0"><span style="display:flex;gap:2px 8px;align-items:baseline;flex-wrap:wrap"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">{{ st.sr }}</span><span style="{{ st.titleStyle }}">{{ st.t }}</span><span style="{{ st.tagStyle }}">{{ st.tag }}</span></span><span style="font-weight:300;font-size:13.5px;line-height:1.55;color:#3d2e22">{{ st.d }}</span></div></li></sc-for></ol>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-weight:600;font-size:14.5px">If you want to take it further</span><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:8px"><div style="background:#FBF4E8;border-radius:14px;padding:12px;font-size:13.5px;line-height:1.45"><b style="font-weight:600">District Consumer Commission</b><br><span style="font-weight:300">Billing disputes and poor service</span></div><div style="background:#FBF4E8;border-radius:14px;padding:12px;font-size:13.5px;line-height:1.45"><b style="font-weight:600">The facility’s grievance officer</b><br><span style="font-weight:300">Most hospitals and centres must have one</span></div><div style="background:#FBF4E8;border-radius:14px;padding:12px;font-size:13.5px;line-height:1.45"><b style="font-weight:600">Haryana Medical Council</b><br><span style="font-weight:300">Professional conduct of registered doctors</span></div></div></div>
+</div>
+</article>
+</sc-if>
+</div>
+<sc-if value="{{ noReports }}" hint-placeholder-val="{{ false }}"><div style="background:#FBF4E8;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:8px"><span style="font-weight:600;font-size:16.5px">No reports yet</span><span style="font-weight:300;font-size:14px;line-height:1.6;color:#3d2e22;max-width:640px">Spotted a wrong fee, phone number or opening hours? Tell us, and follow every step of the check here.</span><a href="Health%20Gurgaon%20Content%20and%20Trust.dc.html#report" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;background:#0F766E;color:#fff;border-radius:999px;padding:0 20px;font-size:14px;font-weight:600">Report a mistake</a></div></sc-if>
+</section>
+
+<section id="hg-events" aria-labelledby="hg-events-h" style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:4px 16px;flex-wrap:wrap"><h2 id="hg-events-h" style="margin:0;font-weight:700;font-size:22px;letter-spacing:-.025em">Events I submitted <span style="font-weight:400;color:#6e5a4b">({{ myEventCount }})</span></h2><a href="Health%20Gurgaon%20Local%20and%20Events.dc.html#submit" style="display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:500">Submit an event →</a></div>
+<span style="font-weight:300;font-size:14px;line-height:1.55;color:#3d2e22;max-width:760px;margin-top:-6px">We call every organiser before an event is marked verified, usually within 2 working days. Until then, residents see it labelled “Awaiting review”.</span>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:14px;align-items:start">
+<sc-for list="{{ myEvents }}" as="e" hint-placeholder-count="3">
+<article style="{{ e.card }}">
+<div style="display:flex;justify-content:space-between;gap:6px 12px;flex-wrap:wrap;align-items:flex-start"><span style="font:500 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b;letter-spacing:.04em;padding-top:4px">{{ e.ref }}</span><span style="{{ e.pillStyle }}">{{ e.pill }}</span></div>
+<div style="display:flex;flex-direction:column;gap:3px;min-width:0"><h3 style="margin:0;font-weight:600;font-size:16px;line-height:1.35">{{ e.title }}</h3><span style="font-size:14px;line-height:1.5">{{ e.when }}</span><span style="font-weight:300;font-size:13.5px;line-height:1.5;color:#3d2e22">{{ e.where }}</span></div>
+<ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column"><sc-for list="{{ e.steps }}" as="st" hint-placeholder-count="3"><li style="display:flex;gap:12px;min-width:0"><div aria-hidden="true" style="display:flex;flex-direction:column;align-items:center;flex:none;width:24px"><span style="{{ st.dot }}">{{ st.icon }}</span><span style="{{ st.line }}"></span></div><div style="display:flex;flex-direction:column;gap:2px;padding-bottom:12px;min-width:0"><span style="display:flex;gap:2px 8px;align-items:baseline;flex-wrap:wrap"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">{{ st.sr }}</span><span style="{{ st.titleStyle }}">{{ st.t }}</span><span style="{{ st.tagStyle }}">{{ st.tag }}</span></span><span style="font-weight:300;font-size:13.5px;line-height:1.55;color:#3d2e22">{{ st.d }}</span></div></li></sc-for></ol>
+<a href="{{ e.actionHref }}" style="{{ e.actionStyle }}">{{ e.actionLabel }}</a>
+</article>
+</sc-for>
+</div>
+<sc-if value="{{ noMyEvents }}" hint-placeholder-val="{{ false }}"><div style="background:#FBF4E8;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:8px"><span style="font-weight:600;font-size:16.5px">No events submitted</span><span style="font-weight:300;font-size:14px;line-height:1.6;color:#3d2e22;max-width:640px">Running a free health camp, talk or screening? Send it to us. You’ll see each step here, from our call to the organiser to it appearing in the calendar.</span><a href="Health%20Gurgaon%20Local%20and%20Events.dc.html#submit" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;background:#0F766E;color:#fff;border-radius:999px;padding:0 20px;font-size:14px;font-weight:600">Submit an event</a></div></sc-if>
+</section>
+
+<section id="hg-dispute" aria-labelledby="hg-dispute-h" style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:4px 16px;flex-wrap:wrap"><h2 id="hg-dispute-h" style="margin:0;font-weight:700;font-size:22px;letter-spacing:-.025em">{{ disputeHead }} <span style="font-weight:400;color:#6e5a4b">({{ disputeCount }})</span></h2><a href="Health%20Gurgaon%20Content%20and%20Trust.dc.html#dispute" style="display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:500">Dispute a ranking or mention →</a></div>
+<span style="font-weight:300;font-size:14px;line-height:1.55;color:#3d2e22;max-width:760px;margin-top:-6px">An editor reviews every dispute about a ranking or a neighbour mention within 5 working days. The outcome is published; who raised it never is.</span>
+<sc-if value="{{ hasDispute }}" hint-placeholder-val="{{ true }}">
+<article style="border:1px solid #efe3cf;border-radius:20px;padding:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px 28px;align-items:start;min-width:0">
+<div style="display:flex;flex-direction:column;gap:8px;min-width:0"><div style="display:flex;justify-content:space-between;gap:6px 12px;flex-wrap:wrap;align-items:flex-start"><span style="font:500 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b;letter-spacing:.04em;padding-top:4px">HG-DS-0402 · NEIGHBOUR MENTIONS</span><span style="background:#E6F1EC;color:#1E7A4F;border-radius:999px;padding:4px 11px;font-size:12.5px;font-weight:600;white-space:nowrap">✓ Upheld</span></div><h3 style="margin:0;font-weight:600;font-size:16px;line-height:1.35">Mentions counted for a dentist in Sector 56</h3><span style="font-weight:300;font-size:14px;line-height:1.55;color:#3d2e22"><b style="font-weight:500;color:#2B1D14">Your reason:</b> some mentions were about a different dentist with a similar name.</span><a href="Health%20Gurgaon%20Content%20and%20Trust.dc.html#dispute" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:500">See it in the public disputes log →</a></div>
+<ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;min-width:0"><sc-for list="{{ disputeSteps }}" as="st" hint-placeholder-count="3"><li style="display:flex;gap:12px;min-width:0"><div aria-hidden="true" style="display:flex;flex-direction:column;align-items:center;flex:none;width:24px"><span style="{{ st.dot }}">{{ st.icon }}</span><span style="{{ st.line }}"></span></div><div style="display:flex;flex-direction:column;gap:2px;padding-bottom:12px;min-width:0"><span style="display:flex;gap:2px 8px;align-items:baseline;flex-wrap:wrap"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">{{ st.sr }}</span><span style="{{ st.titleStyle }}">{{ st.t }}</span><span style="{{ st.tagStyle }}">{{ st.tag }}</span></span><span style="font-weight:300;font-size:13.5px;line-height:1.55;color:#3d2e22">{{ st.d }}</span></div></li></sc-for></ol>
+</article>
+</sc-if>
+<sc-if value="{{ noDispute }}" hint-placeholder-val="{{ false }}"><div style="background:#FBF4E8;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:8px"><span style="font-weight:600;font-size:16.5px">No disputes</span><span style="font-weight:300;font-size:14px;line-height:1.6;color:#3d2e22;max-width:640px">If you think a ranking or a neighbour mention is wrong, an editor will check it against the published method. You can follow it here.</span><a href="Health%20Gurgaon%20Content%20and%20Trust.dc.html#dispute" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;background:#0F766E;color:#fff;border-radius:999px;padding:0 20px;font-size:14px;font-weight:600">Dispute a ranking or mention</a></div></sc-if>
+</section>
+</div>
+
+<aside style="flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:14px">
+<div style="background:#FBF4E8;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0">
+<fieldset style="border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;min-width:0"><legend style="font-weight:600;font-size:16px;line-height:1.4;padding:0;margin-bottom:8px">How your reviews and posts are signed</legend><sc-for list="{{ displayOpts }}" as="o" hint-placeholder-count="3"><label style="{{ o.style }}"><input type="radio" name="hg-display" checked="{{ o.on }}" onChange="{{ o.pick }}" style="width:20px;height:20px;accent-color:#0F766E;margin:0;flex:none"><span>{{ o.label }}</span></label></sc-for></fieldset>
+<span style="font-weight:300;font-size:13.5px;line-height:1.55;color:#3d2e22">Never your name, number or address. A change updates all your reviews and posts within an hour.</span>
+<sc-if value="{{ displayMsg }}" hint-placeholder-val="{{ false }}"><span role="status" style="color:#1E7A4F;font-size:14px;line-height:1.5">{{ displayMsg }}</span></sc-if>
+</div>
+<section id="hg-who" aria-labelledby="hg-who-h" style="border:1.5px solid #2B1D14;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0">
+<h2 id="hg-who-h" style="margin:0;font-weight:700;font-size:19px;letter-spacing:-.02em">Who can see your contact details</h2>
+<span style="font-weight:300;font-size:13.5px;line-height:1.55;color:#3d2e22">Your number, and your email if you gave one, are never shown on reviews, posts or reports.</span>
+<div style="display:flex;flex-direction:column"><sc-for list="{{ whoRows }}" as="w" hint-placeholder-count="6"><div style="display:flex;flex-direction:column;gap:3px;border-top:1px solid #efe3cf;padding:10px 0"><div style="display:flex;justify-content:space-between;gap:4px 10px;flex-wrap:wrap;align-items:center"><span style="font-weight:600;font-size:14px;line-height:1.4">{{ w.who }}</span><span style="{{ w.badgeStyle }}">{{ w.badge }}</span></div><span style="font-weight:300;font-size:13px;line-height:1.5;color:#3d2e22">{{ w.d }}</span></div></sc-for></div>
+<span style="font-weight:300;font-size:13px;line-height:1.5;color:#5a473a">Each time a moderator, editor or admin opens your details, it’s written to the audit log with their name and the reason.</span>
+<a href="Health%20Gurgaon%20Website%20Plan.dc.html" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:500">Roles and permissions →</a>
+</section>
+<section aria-labelledby="hg-sla-h" style="background:#FBF4E8;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:6px;min-width:0">
+<h2 id="hg-sla-h" style="margin:0;font-weight:700;font-size:19px;letter-spacing:-.02em">How long things take</h2>
+<dl style="margin:0;display:flex;flex-direction:column"><sc-for list="{{ sla }}" as="x" hint-placeholder-count="5"><div style="display:flex;flex-direction:column;gap:1px;border-top:1px solid #e8dcc8;padding:8px 0"><dt style="font:500 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b;letter-spacing:.06em">{{ x.k }}</dt><dd style="margin:0;font-weight:500;font-size:14px;line-height:1.45">{{ x.v }}</dd></div></sc-for></dl>
+</section>
+</aside>
+</div>
+</sc-if>
+
+<sc-if value="{{ isConsentLive }}" hint-placeholder-val="{{ false }}">
+<div style="max-width:1240px;margin:0 auto;padding:22px 24px 56px;display:flex;flex-direction:column;gap:36px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:16px;align-items:start">
+<div style="background:#2B1D14;color:#FBF4E8;border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:12px;min-width:0">
+<h2 style="margin:0;font:500 11px 'Spline Sans Mono',monospace;color:#F0B43C;letter-spacing:.06em">YOUR MESSAGES, YOUR CHOICE</h2>
+<span style="font-weight:600;font-size:20px;line-height:1.35;letter-spacing:-.015em">You only get what you turn on. Reply STOP to any message to stop it.</span>
+<span style="font-weight:300;font-size:14.5px;line-height:1.55;color:#e8dccb">{{ onSummary }}</span>
+<sc-if value="{{ anyWa }}" hint-placeholder-val="{{ true }}"><button type="button" id="hg-stopall" onClick="{{ stopAll }}" style="align-self:flex-start;background:#F0B43C;color:#2B1D14;border:0;border-radius:999px;padding:0 22px;min-height:48px;font-size:15px;font-weight:600;cursor:pointer">Stop all WhatsApp messages</button></sc-if>
+<sc-if value="{{ noneWa }}" hint-placeholder-val="{{ false }}"><span style="font-size:14.5px;line-height:1.5;color:#cfe9e3">✓ No WhatsApp messages are switched on. We won’t message your number.</span></sc-if>
+<sc-if value="{{ stopAllMsg }}" hint-placeholder-val="{{ false }}"><div role="status" style="background:#3a2a1e;border-radius:14px;padding:6px 6px 6px 14px;display:flex;justify-content:space-between;align-items:center;gap:6px 12px;flex-wrap:wrap;font-size:14px;line-height:1.5"><span style="min-width:0;padding:8px 0">{{ stopAllMsg }}</span><button type="button" id="hg-nu-stopall" onClick="{{ undoStopAll }}" aria-label="Undo: turn those WhatsApp messages back on" style="background:#FBF4E8;color:#2B1D14;border:0;border-radius:999px;padding:0 18px;min-height:44px;font-size:14px;font-weight:500;cursor:pointer">Undo</button></div></sc-if>
+</div>
+<div style="border:1px solid #efe3cf;border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:12px;min-width:0">
+<fieldset style="border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;min-width:0"><legend style="font-weight:600;font-size:16px;line-height:1.4;padding:0;margin-bottom:8px">Language for messages and sign-in codes</legend><div style="display:flex;gap:8px;flex-wrap:wrap"><sc-for list="{{ langOpts }}" as="o" hint-placeholder-count="2"><label style="{{ o.style }}"><input type="radio" name="hg-lang2" checked="{{ o.on }}" onChange="{{ o.pick }}" style="width:20px;height:20px;accent-color:#0F766E;margin:0"><span lang="{{ o.lang }}" style="{{ o.font }}">{{ o.label }}</span></label></sc-for></div></fieldset>
+<sc-if value="{{ langMsg }}" hint-placeholder-val="{{ false }}"><span role="status" style="color:#1E7A4F;font-size:14px;line-height:1.5">{{ langMsg }}</span></sc-if>
+<div style="background:#E7F6E9;border-radius:4px 16px 16px 16px;padding:12px 14px;display:flex;flex-direction:column;gap:6px;min-width:0"><span style="font:500 10.5px 'Spline Sans Mono',monospace;color:#1E7A4F;letter-spacing:.04em">WHAT A WEEKLY REPORT MESSAGE LOOKS LIKE</span><span lang="{{ previewLang }}" style="{{ previewStyle }}">{{ previewText }}</span></div>
+<span style="font-weight:300;font-size:13px;line-height:1.5;color:#5a473a">Sent only from HealthGurgaon’s verified business account. We never message you from a personal number, and never ask for a code or a payment.</span>
+</div>
+</div>
+
+<section aria-labelledby="hg-msgs-h" style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;flex-direction:column;gap:4px"><h2 id="hg-msgs-h" style="margin:0;font-weight:700;font-size:22px;letter-spacing:-.025em">Messages you can get <span style="font-weight:400;color:#6e5a4b">({{ onCount }} of 5 on)</span></h2><span style="font-weight:300;font-size:14px;line-height:1.55;color:#3d2e22;max-width:780px">Each one is off until you turn it on, and turning one off takes one tap. You choose WhatsApp or email for each.</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:14px;align-items:start">
+<sc-for list="{{ msgTypes }}" as="m" hint-placeholder-count="5">
+<article style="{{ m.card }}">
+<div style="display:flex;justify-content:space-between;gap:8px 14px;flex-wrap:wrap;align-items:flex-start"><div style="display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 200px"><h3 style="margin:0;font-weight:600;font-size:17px;line-height:1.3;letter-spacing:-.01em">{{ m.name }}</h3><span style="{{ m.stateStyle }}">{{ m.state }}</span></div><button type="button" id="{{ m.tgId }}" onClick="{{ m.toggle }}" aria-label="{{ m.aria }}" style="{{ m.btnStyle }}">{{ m.btnLabel }}</button></div>
+<sc-if value="{{ m.hasSponsor }}" hint-placeholder-val="{{ false }}"><span style="align-self:flex-start;background:#2B1D14;color:#F0B43C;border-radius:6px;padding:3px 9px;font:500 10.5px/1.5 'Spline Sans Mono',monospace">SPONSORED BY ARAVALI MULTISPECIALITY HOSPITAL · SPONSORS NEVER GET YOUR NUMBER</span></sc-if>
+<dl style="margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 14px;align-items:baseline">
+<dt style="font:500 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b;letter-spacing:.04em">WHY</dt><dd style="margin:0;font-size:14px;line-height:1.55">{{ m.why }}</dd>
+<dt style="font:500 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b;letter-spacing:.04em">HOW OFTEN</dt><dd style="margin:0;font-size:14px;line-height:1.55">{{ m.often }}</dd>
+<sc-if value="{{ m.hasCovers }}" hint-placeholder-val="{{ false }}"><dt style="font:500 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b;letter-spacing:.04em">ABOUT</dt><dd style="margin:0;font-size:14px;line-height:1.55">{{ m.covers }}</dd></sc-if>
+<sc-if value="{{ m.on }}" hint-placeholder-val="{{ false }}"><dt style="font:500 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b;letter-spacing:.04em">SENT BY</dt><dd style="margin:0;display:flex;flex-direction:column;gap:4px;min-width:0"><sc-if value="{{ m.hasEmail }}" hint-placeholder-val="{{ false }}"><div role="group" aria-label="{{ m.chanAria }}" style="display:flex;gap:6px;flex-wrap:wrap"><sc-for list="{{ m.chanOpts }}" as="o" hint-placeholder-count="2"><button type="button" aria-pressed="{{ o.on }}" onClick="{{ o.pick }}" style="{{ o.style }}">{{ o.label }}</button></sc-for></div></sc-if><span style="font-size:14px;line-height:1.5;overflow-wrap:anywhere">{{ m.destText }}</span><sc-if value="{{ m.noEmail }}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{ m.useEmail }}" style="align-self:flex-start;background:none;border:0;color:#0F766E;font-size:14px;font-weight:500;cursor:pointer;padding:0;min-height:44px">Get it by email instead</button></sc-if></dd></sc-if>
+<dt style="font:500 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b;letter-spacing:.04em">RECORD</dt><dd style="margin:0;font-weight:300;font-size:13.5px;line-height:1.55;color:#3d2e22">{{ m.record }}</dd>
+<sc-if value="{{ m.hasLast }}" hint-placeholder-val="{{ false }}"><dt style="font:500 10.5px 'Spline Sans Mono',monospace;color:#6e5a4b;letter-spacing:.04em">LAST SENT</dt><dd style="margin:0;font-weight:300;font-size:13.5px;line-height:1.55;color:#3d2e22">{{ m.last }}</dd></sc-if>
+</dl>
+<sc-if value="{{ m.asking }}" hint-placeholder-val="{{ false }}"><div role="group" aria-labelledby="{{ m.askId }}" style="border:1.5px solid #0F766E;background:#FBF4E8;border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:10px"><span id="{{ m.askId }}" tabIndex="-1" style="font-weight:600;font-size:15px;line-height:1.4">{{ m.askTitle }}</span><sc-if value="{{ m.askSelect }}" hint-placeholder-val="{{ false }}"><label style="display:flex;flex-direction:column;gap:6px;font-weight:500;font-size:14px">Which locality?<select value="{{ askLoc }}" onChange="{{ onAskLoc }}" style="border:1.5px solid #e8dcc8;border-radius:12px;padding:0 12px;min-height:44px;font-size:15px;background:#fff;max-width:320px;color:#2B1D14"><sc-for list="{{ locOptions }}" as="l" hint-placeholder-count="5"><option value="{{ l }}">{{ l }}</option></sc-for></select></label></sc-if><span style="font-weight:300;font-size:14px;line-height:1.55;color:#2B1D14">{{ m.askBody }}</span><div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" onClick="{{ m.confirm }}" style="background:#0F766E;color:#fff;border:0;border-radius:999px;padding:0 20px;min-height:44px;font-size:14.5px;font-weight:600;cursor:pointer">Yes, turn it on</button><button type="button" onClick="{{ m.cancel }}" style="background:#fff;border:1.5px solid #e8dcc8;color:#2B1D14;border-radius:999px;padding:0 18px;min-height:44px;font-size:14.5px;cursor:pointer">Cancel</button></div></div></sc-if>
+<sc-if value="{{ m.msg }}" hint-placeholder-val="{{ false }}"><div role="status" style="display:flex;justify-content:space-between;align-items:center;gap:6px 12px;flex-wrap:wrap;background:#FBF4E8;border-radius:14px;padding:6px 6px 6px 14px;font-size:14px;line-height:1.5"><span style="min-width:0;padding:8px 0">{{ m.msg }}</span><sc-if value="{{ m.canUndo }}" hint-placeholder-val="{{ false }}"><button type="button" id="{{ m.undoId }}" onClick="{{ m.undo }}" aria-label="{{ m.undoAria }}" style="background:#2B1D14;color:#FBF4E8;border:0;border-radius:999px;padding:0 18px;min-height:44px;font-size:14px;font-weight:500;cursor:pointer">Undo</button></sc-if></div></sc-if>
+</article>
+</sc-for>
+</div>
+</section>
+
+<section aria-labelledby="hg-record-h" style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;flex-direction:column;gap:4px"><h2 id="hg-record-h" style="margin:0;font-weight:700;font-size:22px;letter-spacing:-.025em">Your consent record</h2><span style="font-weight:300;font-size:14px;line-height:1.55;color:#3d2e22;max-width:780px">Each time you turn a message on or off, or change how it reaches you, we write down what you agreed to, when and where. It is your proof, and ours, that we only message you when you said yes. Newest first.</span></div>
+<ol style="list-style:none;margin:0;padding:0;border:1px solid #efe3cf;border-radius:20px;overflow:hidden"><sc-for list="{{ ledger }}" as="l" hint-placeholder-count="6"><li style="{{ l.row }}"><span style="flex:0 0 180px;font:500 11px/1.7 'Spline Sans Mono',monospace;color:#6e5a4b">{{ l.t }}</span><span style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="font-weight:500;font-size:14.5px;line-height:1.45">{{ l.what }}</span><span style="font-weight:300;font-size:13.5px;line-height:1.5;color:#3d2e22">{{ l.where }}</span></span><span style="{{ l.tagStyle }}">{{ l.tag }}</span></li></sc-for></ol>
+</section>
+
+<section id="hg-email-sec" aria-labelledby="hg-email-h" style="border:1px solid #efe3cf;border-radius:20px;padding:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:12px 28px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:6px;min-width:0"><h2 id="hg-email-h" style="margin:0;font-weight:700;font-size:20px;letter-spacing:-.02em">Your email for messages</h2><span style="font-weight:300;font-size:14px;line-height:1.6;color:#3d2e22">{{ emailIntro }}</span></div>
+<form onSubmit="{{ sendEmail }}" noValidate="{{ true }}" style="display:flex;flex-direction:column;gap:8px;min-width:0"><label for="hg-email" style="font-weight:500;font-size:15px">{{ emailLabel }}</label><div style="display:flex;gap:8px;flex-wrap:wrap"><input id="hg-email" type="email" autoComplete="email" value="{{ emailInput }}" onChange="{{ onEmail }}" placeholder="you@example.com" aria-invalid="{{ emailInvalid }}" aria-describedby="{{ emailDesc }}" style="flex:1 1 220px;min-width:0;border:1.5px solid #e8dcc8;border-radius:12px;padding:0 14px;min-height:48px;font-size:15px;color:#2B1D14"><button type="submit" style="background:#2B1D14;color:#FBF4E8;border:0;border-radius:999px;padding:0 20px;min-height:48px;font-size:14.5px;font-weight:500;cursor:pointer">Send confirmation link</button></div>
+<span id="hg-email-help" style="font-weight:300;font-size:13px;line-height:1.5;color:#5a473a">We send one link to confirm it. Nothing changes until you open it. Your email is never shown or shared.</span>
+<sc-if value="{{ emailErr }}" hint-placeholder-val="{{ false }}"><span id="hg-email-err" role="alert" style="color:#B42318;font-size:14px;font-weight:500;line-height:1.5">{{ emailErr }}</span></sc-if>
+<sc-if value="{{ emailSent }}" hint-placeholder-val="{{ false }}"><div id="hg-email-status" tabIndex="-1" role="status" style="background:#E6F1EC;border-radius:14px;padding:10px 14px;display:flex;flex-direction:column;gap:4px;font-size:14px;line-height:1.5;color:#1E7A4F"><span>{{ emailSent }}</span><sc-if value="{{ canConfirmEmail }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ confirmEmail }}" style="align-self:flex-start;background:none;border:0;padding:0;min-height:44px;font:500 10.5px 'Spline Sans Mono',monospace;color:#0F766E;cursor:pointer;letter-spacing:.04em">PROTOTYPE: OPEN THE LINK →</button></sc-if></div></sc-if>
+</form>
+</section>
+
+<section aria-labelledby="hg-keep-h" style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;flex-direction:column;gap:4px"><h2 id="hg-keep-h" style="margin:0;font-weight:700;font-size:22px;letter-spacing:-.025em">What we keep about you, and why</h2><span style="font-weight:300;font-size:14px;line-height:1.55;color:#3d2e22;max-width:780px">Only what the site needs to work for you. Nothing else.</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start">
+<div style="border:1px solid #efe3cf;border-radius:20px;overflow:hidden;flex:2 1 560px;min-width:0"><sc-for list="{{ keepRows }}" as="k" hint-placeholder-count="6"><div style="{{ k.row }}"><div style="flex:1 1 220px;min-width:0;display:flex;flex-direction:column;gap:3px"><span style="font-weight:600;font-size:14.5px;line-height:1.4">{{ k.what }}</span><span style="font:400 11px/1.6 'Spline Sans Mono',monospace;color:#6e5a4b;overflow-wrap:anywhere">{{ k.value }}</span></div><div style="flex:1.4 1 260px;min-width:0;display:flex;flex-direction:column;gap:3px"><span style="font-size:14px;line-height:1.55"><b style="font-weight:500">Why:</b> {{ k.why }}</span><span style="font-weight:300;font-size:13.5px;line-height:1.5;color:#3d2e22"><b style="font-weight:500">Kept:</b> {{ k.how }}</span></div></div></sc-for></div>
+<div style="background:#FBF4E8;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:10px;flex:1 1 300px;min-width:0"><h3 style="margin:0;font-weight:600;font-size:16.5px">What we never keep</h3><sc-for list="{{ neverKeep }}" as="n" hint-placeholder-count="4"><div style="display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:1.5"><span aria-hidden="true" style="width:22px;height:22px;border-radius:50%;background:#fff;color:#2B1D14;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:11px;flex:none">✕</span><span>{{ n }}</span></div></sc-for><span style="font-weight:500;font-size:14px;line-height:1.5;border-top:1px solid #e8dcc8;padding-top:10px">We never sell your data, and never share it with doctors, hospitals or sponsors.</span></div>
+</div>
+</section>
+
+<section aria-labelledby="hg-control-h" style="display:flex;flex-direction:column;gap:12px">
+<h2 id="hg-control-h" style="margin:0;font-weight:700;font-size:22px;letter-spacing:-.025em">Download, sign out or delete</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px;align-items:start">
+<div style="border:1px solid #efe3cf;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0"><h3 style="margin:0;font-weight:600;font-size:16.5px">Download my data</h3><span style="font-weight:300;font-size:14px;line-height:1.55;color:#3d2e22">A copy of everything under “What we keep”: your masked number, saved items, follows, message settings, consent record, reviews, reports, events and dispute, as one file you can open.</span><button type="button" onClick="{{ download }}" style="align-self:flex-start;background:#2B1D14;color:#FBF4E8;border:0;border-radius:999px;padding:0 20px;min-height:48px;font-size:14.5px;font-weight:500;cursor:pointer">{{ downloadLabel }}</button><sc-if value="{{ dataReady }}" hint-placeholder-val="{{ false }}"><div role="status" style="background:#E6F1EC;border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.5;color:#1E7A4F"><span><b style="font-weight:600">✓ Your file is ready.</b> It was made just now, so it includes your latest changes.</span><a id="hg-dl-link" href="{{ dataHref }}" download="healthgurgaon-my-data.json" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;background:#0F766E;color:#fff;border-radius:999px;padding:0 18px;font-size:14px;font-weight:600;overflow-wrap:anywhere">Save healthgurgaon-my-data.json</a></div></sc-if></div>
+<div style="border:1px solid #efe3cf;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0"><h3 style="margin:0;font-weight:600;font-size:16.5px">Sign out</h3><span style="font-weight:300;font-size:14px;line-height:1.55;color:#3d2e22">Signs you out on this phone. Your saved items and message choices stay in your account for next time.</span><button type="button" onClick="{{ signOut }}" style="align-self:flex-start;background:#fff;border:1.5px solid #2B1D14;color:#2B1D14;border-radius:999px;padding:0 20px;min-height:48px;font-size:14.5px;font-weight:500;cursor:pointer">Sign out</button></div>
+<div style="border:1px solid #efe3cf;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0"><h3 style="margin:0;font-weight:600;font-size:16.5px;color:#B42318">Delete my account</h3><span style="font-weight:300;font-size:14px;line-height:1.55;color:#3d2e22">{{ delCardText }}</span><button type="button" id="hg-del-open" onClick="{{ openDelete }}" aria-expanded="{{ delOpenStr }}" style="align-self:flex-start;background:#fff;border:1.5px solid #B42318;color:#B42318;border-radius:999px;padding:0 20px;min-height:48px;font-size:14.5px;font-weight:500;cursor:pointer">Delete my account…</button></div>
+</div>
+<sc-if value="{{ delOpen }}" hint-placeholder-val="{{ false }}">
+<div id="hg-delete" role="group" aria-labelledby="hg-del-h" style="border:2px solid #B42318;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0">
+<h3 id="hg-del-h" tabIndex="-1" style="margin:0;font-weight:700;font-size:20px;letter-spacing:-.02em;color:#B42318">Delete your account?</h3>
+<span style="font-weight:600;font-size:15px">This is what will happen:</span>
+<ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px"><sc-for list="{{ delFacts }}" as="d" hint-placeholder-count="5"><li style="display:flex;gap:12px;align-items:baseline;font-size:14px;line-height:1.55"><span aria-hidden="true" style="width:7px;height:7px;border-radius:50%;background:#B42318;flex:none;transform:translateY(-2px)"></span>{{ d }}</li></sc-for></ul>
+<sc-if value="{{ hasPublished }}" hint-placeholder-val="{{ true }}"><fieldset id="hg-del-opts" tabIndex="-1" style="border:1.5px solid #e8dcc8;border-radius:16px;margin:0;padding:12px 14px 14px;display:flex;flex-direction:column;gap:8px;min-width:0"><legend style="font-weight:600;font-size:15px;padding:0 6px">Your published review of Dr. Ananya Rao</legend><span style="font-weight:300;font-size:14px;line-height:1.55;color:#3d2e22">{{ delPubIntro }}</span><sc-for list="{{ delOpts }}" as="o" hint-placeholder-count="2"><label style="{{ o.style }}"><input type="radio" name="hg-del" checked="{{ o.on }}" onChange="{{ o.pick }}" style="width:20px;height:20px;accent-color:#0F766E;margin:2px 0 0;flex:none"><span style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-weight:500;font-size:14.5px;line-height:1.4">{{ o.label }}</span><span style="font-weight:300;font-size:13.5px;line-height:1.5;color:#3d2e22">{{ o.d }}</span></span></label></sc-for></fieldset></sc-if>
+<sc-if value="{{ delErr }}" hint-placeholder-val="{{ false }}"><span role="alert" style="color:#B42318;font-size:14px;font-weight:500">{{ delErr }}</span></sc-if>
+<span style="font-weight:500;font-size:14.5px;line-height:1.55">This can’t be undone. You can sign in again any time with a new code, but you’ll start with an empty account.</span>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><button type="button" onClick="{{ confirmDelete }}" style="background:#B42318;color:#fff;border:0;border-radius:999px;padding:0 22px;min-height:50px;font-size:15px;font-weight:600;cursor:pointer">Yes, delete my account</button><button type="button" onClick="{{ closeDelete }}" style="background:#fff;border:1.5px solid #2B1D14;color:#2B1D14;border-radius:999px;padding:0 20px;min-height:50px;font-size:15px;font-weight:500;cursor:pointer">Cancel, keep my account</button></div>
+</div>
+</sc-if>
+</section>
+</div>
+</sc-if>
+
+<sc-if value="{{ isDeleted }}" hint-placeholder-val="{{ false }}">
+<div style="max-width:880px;margin:0 auto;padding:40px 24px 64px;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;gap:14px;align-items:center"><span aria-hidden="true" style="width:48px;height:48px;border-radius:50%;background:#1E7A4F;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;flex:none">✓</span><h1 id="hg-deleted-h" tabIndex="-1" style="margin:0;font-weight:700;font-size:34px;line-height:1.1;letter-spacing:-.04em">Your account is deleted</h1></div>
+<div role="status" style="border:1px solid #efe3cf;border-radius:20px;padding:18px 20px;display:flex;flex-direction:column;gap:8px"><sc-for list="{{ deletedLines }}" as="d" hint-placeholder-count="4"><span style="display:flex;gap:12px;align-items:baseline;font-size:15px;line-height:1.55"><span aria-hidden="true" style="color:#1E7A4F;font-weight:700;flex:none">✓</span>{{ d }}</span></sc-for></div>
+<span style="font-weight:300;font-size:15px;line-height:1.6;color:#3d2e22">You can still search and read everything without an account. If you sign in again with the same number, you’ll start with an empty account.</span>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><a href="Health%20Gurgaon%20Homepage.dc.html" style="display:inline-flex;align-items:center;min-height:48px;background:#2B1D14;color:#FBF4E8;border-radius:999px;padding:0 22px;font-size:15px;font-weight:500">Go to the homepage</a><button type="button" onClick="{{ restoreSample }}" style="background:#fff;border:1.5px solid #e8dcc8;color:#2B1D14;border-radius:999px;padding:0 20px;min-height:48px;font-size:14.5px;cursor:pointer">Prototype: restore the sample account</button></div>
+</div>
+</sc-if>
+
+</main>
+
+<footer style="background:#2B1D14;color:#c9b8a4;font-size:12.5px;font-weight:300"><div style="max-width:1240px;margin:0 auto;padding:22px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><span><b style="color:#FBF4E8;font-weight:700">Health<span style="color:#F0B43C">Gurgaon</span></b> · Information here is not medical advice. Emergency: 112.</span><span><a href="Health%20Gurgaon%20Content%20and%20Trust.dc.html#trust" style="color:#e8dccb">Trust centre</a> · <a href="Health%20Gurgaon%20Website%20Plan.dc.html" style="color:#e8dccb">Site plan</a></span></div></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const SCREENS = [['signin', 'Sign in'], ['saved', 'Saved & followed'], ['activity', 'My reviews & reports'], ['consent', 'WhatsApp & email']];
+// The sample resident: a parent in Sector 57 who first signed in on 20 Sep 2026. "Today" in the prototype is Tue 27 Oct 2026.
+// Their number is only ever shown masked (+91 98XXX XX321). The account pages always belong to whoever signed in last on this phone: their masked
+// number, their choices and their consent record (see lookup and verify).
+const SAMPLE_DIGITS = '9812345321', SAMPLE_EMAIL = 'a•••••@example.com', TODAY = '27 Oct 2026', TODAY_UP = '27 OCT 2026';
+const FC = 'Health%20Gurgaon%20Find%20Care.dc.html', LE = 'Health%20Gurgaon%20Local%20and%20Events.dc.html', CO = 'Health%20Gurgaon%20Community.dc.html', CT = 'Health%20Gurgaon%20Content%20and%20Trust.dc.html';
+// Locality follow card, from the Local and Events data (what each locality covers, and what is coming up there in November).
+const LOCINFO = {
+  'Sohna Road': { covers: 'Sectors 47–50, Malibu Town, Nirvana Country and the Sohna Road corridor', news: '2 events coming up: a blood donation drive on Sun 1 Nov (✓ verified) and diabetes and BP screening on Mon 9 Nov (awaiting review).', href: LE + '#locality' },
+  'Sector 56': { covers: 'Sectors 55–57, including Sushant Lok 2 and 3', news: '2 events coming up: the free eye check-up camp for senior citizens on Sun 15 Nov and a workshop on caring for a parent with dementia on Sun 29 Nov (both ✓ verified).', href: LE + '#localities' },
+  'Golf Course Road': { covers: 'Sikanderpur to Sector 54, including Sectors 42 and 53', news: '1 event coming up: a flu vaccination drive for adults over 60 on Sun 15 Nov (awaiting review).', href: LE + '#localities' },
+  'Golf Course Ext. Road': { covers: 'Sectors 58–65 along the extension road', news: '1 event coming up: a World Diabetes Day screening camp on Sat 14 Nov (✓ verified).', href: LE + '#localities' },
+  'DLF Phases 1–5': { covers: 'DLF Phases 1, 2, 3, 4 and 5', news: '1 workshop coming up: CPR and first aid for residents and guards on Sun 8 Nov (✓ verified, ₹200).', href: LE + '#localities' }
+};
+const LOCS = Object.keys(LOCINFO);
+// Saved places, changed ones first. Facts match Find Care: #lab (hours confirmed 9 Oct), #doctor (checked 12 Oct), #hospital (checked 7 Oct).
+const PROVS = [
+  { id: 'lab', kind: 'LAB', initials: 'PL', name: 'Prakash Path Labs', href: FC + '#lab', open: 'View lab', what: 'Diagnostic laboratory · Sector 56 market · home sample collection', badges: ['Facility checked', 'NABL accreditation seen'], checked: '9 OCT 2026', savedOn: '5 OCT 2026', spon: false, changed: true,
+    tag: 'CHANGED SINCE YOU SAVED IT', change: 'Sunday hours are now 7 am – 1 pm. They were 7 – 11 am.', src: 'Source: the lab manager, by phone, 9 Oct 2026.',
+    more: [['wait', 'Weekday hours are being re-checked after your report HG-3107. Other residents see “hours being re-checked” meanwhile.', 'Answer due by Thu 29 Oct']] },
+  { id: 'doc', kind: 'DOCTOR', initials: 'AR', name: 'Dr. Ananya Rao', href: FC + '#doctor', open: 'View profile', what: 'Paediatrician · MBBS, MD (Paediatrics) · Little Steps Clinic, Sushant Lok 1', badges: ['Registration checked', 'Clinic address checked'], checked: '12 OCT 2026', savedOn: '28 SEP 2026', spon: false, changed: false,
+    tag: 'RE-CONFIRMED · NO CHANGE', change: 'Fee still ₹800, with a free follow-up within 7 days. Hours unchanged.', src: 'Source: the clinic, 12 Oct 2026.',
+    more: [['warn', 'The Saturday evening hours you reported couldn’t be confirmed, so the checked hours stay: 9 am – 1 pm.', 'Clinic reception, by phone, 19 Oct 2026 · your report HG-2041']] },
+  { id: 'hosp', kind: 'HOSPITAL', initials: 'AH', name: 'Aravali Multispeciality Hospital', href: FC + '#hospital', open: 'View hospital', what: 'Multi-speciality hospital · Sector 51, near Golf Course Ext. Road', badges: ['Facility checked', 'Emergency details sourced'], checked: '7 OCT 2026', savedOn: '20 SEP 2026', spon: true, changed: false,
+    tag: 'RE-CONFIRMED · NO CHANGE', change: '24×7 emergency department confirmed. OPD 9 am – 5 pm, Mon–Sat.', src: 'Source: the hospital front desk, by phone, 7 Oct 2026.', more: [] }
+];
+// Following: the locality card is built from LOCINFO (it can change at first sign-in); the discussion and topic match the Community page.
+const FOLLOWS = [
+  { id: 'thread', type: 'replies', kind: 'DISCUSSION', name: 'Any 24-hour chemist near Golf Course Ext. Road that delivers at night?', short: 'the 24-hour chemist discussion', what: 'this discussion', scope: 'new replies in the 24-hour chemist discussion', href: CO + '#thread', sub: 'Pharmacy & after-hours · Golf Course Ext. Road · 6 replies · Resolved', since: '24 OCT 2026', news: '2 new replies since you followed on 24 Oct. Now resolved: a verified pharmacist’s answer was marked most helpful.', alerts: 'new replies in this discussion', freq: 'at most one message a day' },
+  { id: 'topic', type: 'replies', kind: 'TOPIC', name: 'Senior care', short: 'Senior care', what: 'Senior care', scope: 'new questions and replies in Senior care', href: CO + '#forum', sub: 'Community topic: home visits, physiotherapy and caring for parents', since: '2 OCT 2026', news: '1 new question, asked yesterday: a physiotherapist who does home visits for knee rehab, DLF Phases 1–5 (9 replies).', alerts: 'new questions and replies in Senior care', freq: 'at most one message a day' }
+];
+const TYPES = [
+  { k: 'weekly', name: 'Weekly Gurgaon Health Report', why: 'Free camps, new services and checked health advice across Gurugram, in one message.', often: 'Once a week, on Friday morning.', sponsor: true },
+  { k: 'camps', name: 'Gurugram camps & public-health alerts', why: 'Urgent advice from the district health department, such as dengue or heatwave warnings, and new free camps.', often: 'Only when something comes up. At most 2 a week.' },
+  { k: 'local', name: 'Locality alerts', why: 'New verified clinics and labs, changed hours and camps in the locality you follow.', often: 'One summary a week, only if something changed.' },
+  { k: 'replies', name: 'Replies to my questions', why: 'When someone answers a question you asked, or replies in a discussion or topic you follow.', often: 'At most one message a day. We group replies together.' },
+  { k: 'saved', name: 'Changes to things I saved', why: 'When a saved place changes its fee, hours or address, or a saved camp moves or is cancelled. Plus a reminder the day before a saved camp.', often: 'Only when something changes.' }
+];
+const RECORD0 = { weekly: 'Agreed 3 Oct 2026, 8:14 pm, on the homepage. You confirmed by replying YES.', camps: 'Agreed 24 Sep 2026 on the Health Report page. Stopped 2 Oct 2026, 7:30 am, when you replied STOP on WhatsApp.', local: 'Agreed 14 Oct 2026, 11:02 am, on the Sohna Road page, when you tapped Follow.', replies: 'Never turned on.', saved: 'Never turned on.' };
+const LAST0 = { weekly: 'Fri 23 Oct', camps: 'Tue 29 Sep', local: 'Tue 20 Oct' };
+const LEDGER0 = [
+  { t: '14 OCT 2026, 11:02 AM', what: 'Turned on: Locality alerts for Sohna Road', where: 'On the Sohna Road locality page. You tapped Follow and chose WhatsApp alerts.', tag: 'AGREED' },
+  { t: '3 OCT 2026, 8:20 PM', what: 'Confirmed your email address for messages: a•••••@example.com', where: 'From the link we sent. Nothing is sent there unless you choose Email for a message.', tag: 'SETTING' },
+  { t: '3 OCT 2026, 8:14 PM', what: 'Turned on: Weekly Gurgaon Health Report', where: 'On the homepage. You chose WhatsApp, then confirmed by replying YES.', tag: 'AGREED' },
+  { t: '2 OCT 2026, 7:30 AM', what: 'Stopped: Gurugram camps & public-health alerts', where: 'On WhatsApp. You replied STOP.', tag: 'STOPPED' },
+  { t: '24 SEP 2026, 9:12 AM', what: 'Turned on: Gurugram camps & public-health alerts', where: 'On the Health Report page, under a dengue advisory. You tapped Get alerts and confirmed.', tag: 'AGREED' },
+  { t: '20 SEP 2026, 6:05 PM', what: 'Chose English for messages and sign-in codes. No messages turned on.', where: 'At your first sign-in.', tag: 'SETTING' },
+  { t: '20 SEP 2026, 6:04 PM', what: 'Gave your mobile number, for sign-in codes only', where: 'On the sign-in page. The code came by SMS.', tag: 'SIGN-IN ONLY' }
+];
+const REVIEWS = [
+  { id: 'r3', name: 'Sai Medicos', sub: '24-hour chemist · Sector 56', href: FC + '#results', ref: 'HG-RV-8796', visited: 'Visited Oct 2026', sent: 'Sent 22 Oct 2026 · returned to you 23 Oct', text: 'Delivered my father’s blood pressure tablets (40 mg) at 1 am when we ran out. Call the owner directly on [number removed], very helpful.',
+    suggestion: 'You could write, for example: “Delivered our regular medicines at 1 am when we ran out. Very helpful.”' },
+  { id: 'r2', name: 'Prakash Path Labs', sub: 'Diagnostic laboratory · Sector 56 market', href: FC + '#lab', ref: 'HG-RV-8817', visited: 'Visited Oct 2026', sent: 'Sent Mon 26 Oct 2026, 7:40 pm', text: 'Home sample collection came at 7 am as booked. The collector was patient with my mother, and the results came the same evening.' },
+  { id: 'r1', name: 'Dr. Ananya Rao', sub: 'Paediatrician · Little Steps Clinic, Sushant Lok 1', href: FC + '#doctor', ref: 'HG-RV-8412', visited: 'Visited Sep 2026', sent: 'Published 2 Oct 2026', helpful: 12, text: 'Explained the vaccination schedule clearly and didn’t rush us. Waited about 25 minutes past our slot on a Saturday morning.', reply: 'Thank you. We’ve added a second Saturday session to reduce waiting.', replyWhen: '5 Oct 2026' }
+];
+const REPORTS = [
+  { ref: 'HG-3107', field: 'OPENING HOURS', item: 'Prakash Path Labs, Sector 56 market', note: '“The board outside now says they close at 6 pm on weekdays.”', pill: 'Checking', tone: 'wait',
+    steps: [['Received', 'Mon 26 Oct 2026. The listing now says “hours being re-checked”.', 'done'], ['Checking with the lab', 'An editor is calling the lab manager to confirm.', 'now'], ['Fixed, or couldn’t verify', 'Answer due by Thu 29 Oct, within 3 working days.', 'next']] },
+  { ref: 'HG-2041', field: 'TIMINGS', item: 'Little Steps Clinic, Sushant Lok 1 (Dr. Ananya Rao)', note: '“The clinic now closes at 7 pm on Saturdays.”', pill: 'Couldn’t verify', tone: 'warn',
+    steps: [['Received', 'Fri 16 Oct 2026.', 'done'], ['Checked with the clinic', 'Phone call with the clinic reception, Mon 19 Oct.', 'done'], ['Couldn’t verify', 'Tue 20 Oct, within 3 working days. The clinic says Saturday evenings are a trial for now, so we kept the checked hours (9 am – 1 pm). We’ll ask again on 16 Nov.', 'warn']] },
+  { ref: 'HG-1987', field: 'HOURS', item: 'Sai Medicos, Sector 56', note: '“They’re open all night now, not just till midnight.”', pill: '✓ Fixed', tone: 'ok', link: [CT + '#trust', 'See it in the public corrections log →'],
+    steps: [['Received', 'Tue 6 Oct 2026.', 'done'], ['Checked with the chemist', 'Phone call, and a Champion visited at night, Thu 8 Oct.', 'done'], ['Fixed', 'Fri 9 Oct, within 3 working days. “Open 24 hours” confirmed and the listing updated.', 'done']] }
+];
+const CONCERN_STEPS = [['Received', 'Fri 2 Oct 2026.', 'done'], ['Read by the separate review team', 'Tue 6 Oct. Not the editors who correct listings.', 'done'], ['Outcome', 'Fri 9 Oct. Noted on the listing’s private file. We can’t investigate billing or treatment ourselves; the offices below can.', 'done']];
+const MY_EVENTS = [
+  { ref: 'HG-EV-5190', title: 'Morning yoga and BP check for seniors', when: 'Sat 21 Nov 2026 · 7 – 8:30 am', where: 'Central park, Sector 57 · Free', pill: 'Changes requested', tone: 'act', action: ['Make the changes', LE + '#submit', 'primary'],
+    steps: [['Received', '22 Oct.', 'done'], ['Changes requested', '23 Oct: please tell us who will do the BP checks (for example a nurse or pharmacist), and the full venue address.', 'act'], ['Verified and shared', 'After your changes and a call with the organiser.', 'next']] },
+  { ref: 'HG-EV-5182', title: 'Diabetes and BP screening', when: 'Mon 9 Nov 2026 · 8 am – 12 pm', where: 'Community hall, Sector 49 · Sohna Road · Free', pill: 'Awaiting review', tone: 'wait', action: ['Update the organiser’s number', LE + '#submit', 'secondary'],
+    steps: [['Received', '14 Oct. Listed in the calendar as “Awaiting review”, clearly labelled.', 'done'], ['Organiser check', 'We called the organiser on 16 and 20 Oct but couldn’t get through. We’ll try again by Thu 29 Oct.', 'now'], ['Verified and shared', 'Marked verified, and added to the Weekly Gurgaon Health Report.', 'next']] },
+  { ref: 'HG-EV-5179', title: 'Caring for a parent with dementia', when: 'Sun 29 Nov 2026 · 5 pm', where: 'Sector 56 · Free · run by the caregivers’ support group', pill: '✓ Approved', tone: 'ok', action: ['See it in the calendar →', LE + '#calendar', 'link'],
+    steps: [['Received', 'Fri 9 Oct.', 'done'], ['Organiser check', 'We called the support group’s coordinator on Mon 12 Oct.', 'done'], ['Verified and shared', '12 Oct. In the calendar and the Weekly Gurgaon Health Report.', 'done']] }
+];
+const DISPUTE_STEPS = [['Received', 'Thu 15 Oct 2026. The scores stayed as published meanwhile.', 'done'], ['Editor review', 'Checked against the published method, within 5 working days.', 'done'], ['Outcome published: upheld', 'Thu 22 Oct. Three mentions were about a different dentist with a similar name. They were moved to the right profile and both scores recalculated.', 'done']];
+const DISPLAY = ['Parent of a 2-year-old · Sector 57', 'Parent · Sector 57', 'Resident · Gurugram'];
+const PREVIEW = {
+  en: 'Weekly Gurgaon Health Report · Fri 30 Oct\n• Free eye check-up camp for senior citizens: Sun 15 Nov, Sector 57 Community Centre\n• Dengue: what the district health department advises this month\n• Five health camps this week, and how to check one before you go\nSponsored by Aravali Multispeciality Hospital. Sponsors never see who gets this.\nReply STOP to stop these messages.',
+  hi: 'Weekly Gurgaon Health Report · शुक्रवार, 30 अक्टूबर\n• बुज़ुर्गों के लिए आँखों की मुफ़्त जाँच: रविवार, 15 नवंबर, सेक्टर 57 कम्युनिटी सेंटर\n• डेंगू: इस महीने ज़िला स्वास्थ्य विभाग की सलाह\n• इस हफ़्ते पाँच हेल्थ कैंप, और जाने से पहले उन्हें कैसे जाँचें\nप्रायोजक: अरावली मल्टीस्पेशियलिटी हॉस्पिटल। प्रायोजकों को कभी पता नहीं चलता कि यह किसे मिलता है।\nये संदेश बंद करने के लिए STOP लिखकर भेजें।'
+};
+// What a moderator looks for in a review. Medicine and condition words only get a warning, as on Content and Trust's review form, because naming a
+// service ("a diagnostic lab", "the diabetes clinic") is fine. A dose, such as "40 mg", always has to come out. Phone numbers are replaced automatically.
+const MED_WORDS = /blood pressure|\bBP\b|\bdiabet(?:es|ic)\b|\binsulin\b|\btablets?\b|\bcapsules?\b|\bsyrups?\b|\binjections?\b|\binhalers?\b|\bprescri\w*|\bdiagnos(?:e|es|ed|is)\b|\bdos(?:e|es|age)\b|\bCOPD\b|\basthma\b/gi;
+const DOSE = /\b\d+(?:\.\d+)?\s?(?:mg|mcg|ml)\b/gi;
+const MED = new RegExp(MED_WORDS.source + '|' + DOSE.source, 'gi');
+const PHONE_RE = /(?:\+91[\s-]?)?\b\d{5}[\s-]?\d{5}\b/g;
+const hitsOf = re => t => { const m = new Map(); (String(t).match(re) || []).forEach(x => { const k = x.toLowerCase(); if (!m.has(k)) m.set(k, x); }); return [...m.values()]; };
+const medHits = hitsOf(MED), wordHits = hitsOf(MED_WORDS), doseHits = hitsOf(DOSE);
+const hasPhone = t => new RegExp(PHONE_RE.source).test(String(t));
+const segsOf = t => { const re = new RegExp('\\[number removed\\]|' + MED.source, 'gi'), out = []; let last = 0, m;
+  const hi = { background: '#FFF4D6', boxShadow: 'inset 0 -2px 0 #C99A2E', fontWeight: 500, padding: '0 2px', borderRadius: 3 }, num = { font: "500 12px 'Spline Sans Mono',monospace", background: '#efe3cf', padding: '1px 5px', borderRadius: 5, color: '#3d2e22', whiteSpace: 'nowrap' };
+  while ((m = re.exec(t))) { if (m.index > last) out.push({ t: t.slice(last, m.index), style: {} }); out.push({ t: m[0], style: m[0] === '[number removed]' ? num : hi }); last = m.index + m[0].length; }
+  if (last < t.length) out.push({ t: t.slice(last), style: {} }); return out; };
+const maskNo = d => `+91 ${d.slice(0, 2)}XXX XX${d.slice(7)}`;
+const stamp = () => { const d = new Date(); let h = d.getHours(); const m = String(d.getMinutes()).padStart(2, '0'); const ap = h >= 12 ? 'PM' : 'AM'; h = h % 12 || 12; return `${TODAY_UP}, ${h}:${m} ${ap}`; };
+const stampText = () => stamp().replace('OCT', 'Oct').replace(' AM', ' am').replace(' PM', ' pm');
+const row = (what, where, tag) => ({ t: stamp(), what, where, tag, fresh: true });
+const SIGNIN0 = { step: 'phone', phone: '', phoneErr: '', via: 'sms', code: '', codeErr: '', tries: 3, wait: 0, resent: false, optWeekly: false, optLocal: false, optLoc: 'Sohna Road', optLang: 'en', signedIn: false, signedOutMsg: false, welcomeBack: false };
+// One account: everything that belongs to a number. acctDigits '' is the sample resident. blank marks an account with none of the sample's saved items,
+// follows, reviews or reports (a new account made after a deletion on this phone); noLoc means it follows no locality yet.
+const ACCOUNT0 = { deleted: false, empty: false, acctDigits: '', blank: false, noLoc: false, firstRun: null,
+  removed: [], eventRemoved: false, calAdded: false, unfollowed: [], unWasOn: {}, locName: 'Sohna Road', locSince: '14 OCT 2026', followAlert: { loc: true, thread: false, topic: false },
+  consents: { weekly: true, camps: false, local: true, replies: false, saved: false }, chan: { weekly: 'wa', camps: 'wa', local: 'wa', replies: 'wa', saved: 'wa' },
+  record: RECORD0, lastSent: LAST0, ledger: LEDGER0, lang: 'en', stopPrev: null, emailAddr: SAMPLE_EMAIL, emailPending: '',
+  rvStatus: { r1: 'published', r2: 'moderation', r3: 'changes' }, rvText: {}, rvPrev: {}, rvWithdrawn: [], display: 0, delChoice: '' };
+// A number this phone doesn't know gets an account of its own straight after the code: every message off, no email, and a consent record that starts
+// with this sign-in. Its saved items and history are the sample resident's (a prototype convenience), unless an account was deleted on this phone:
+// from then on a new account starts genuinely empty.
+const FRESH = { firstRun: null, lang: 'en', lastSent: {}, emailAddr: '', emailPending: '', stopPrev: null, followAlert: { loc: false, thread: false, topic: false },
+  consents: { weekly: false, camps: false, local: false, replies: false, saved: false }, chan: { weekly: 'wa', camps: 'wa', local: 'wa', replies: 'wa', saved: 'wa' },
+  record: { weekly: 'Never turned on.', camps: 'Never turned on.', local: 'Never turned on.', replies: 'Never turned on.', saved: 'Never turned on.' } };
+const BLANK = { ...ACCOUNT0, blank: true, noLoc: true, display: 0 };
+const snap = st => Object.fromEntries(Object.keys(ACCOUNT0).map(k => [k, st[k]]));
+// Transient UI: one status note at a time (so confirmations never pile up), open asks and editors. All cleared on navigation.
+const UI0 = { note: null, askOn: '', askFollow: '', askLoc: 'Sohna Road', rvEdit: '', rvDraft: '', rvErr: '', rvConfirm: '', delOpen: false, delErr: '', emailInput: '', emailErr: '' };
+class Component extends DCLogic {
+  // returning and fromProfile are the reviewer's preview toggles on Sign in. accounts holds the other accounts signed in to on this phone in this session
+  // (by number); wiped notes that an account was deleted here, so new accounts start empty.
+  state = { screen: 'signin', returning: false, fromProfile: false, cameFrom: '', accounts: {}, wiped: false, ...ACCOUNT0, ...UI0, ...SIGNIN0 };
+  componentDidMount() {
+    // The way back after signing in. The site's Sign in links carry no "next" address, and a referrer never includes the #screen, so arriving from
+    // another page of the site we offer the browser's own Back, which returns to exactly where you were. Opened directly (or from disk, where there is
+    // no referrer) the done step offers Saved & followed. The Dr. Ananya Rao example is the "arrived from" preview toggle.
+    let ref = '', from = '';
+    try { ref = String(document.referrer || ''); if (ref && new URL(ref).origin !== location.origin) ref = ''; from = decodeURIComponent(ref.split(/[?#]/)[0].split('/').pop()); } catch (e) { ref = ''; from = ''; }
+    if (/\.dc\.html$/.test(from) && from !== 'Health Gurgaon Account.dc.html') this.setState({ cameFrom: ref });
+    this._h = () => { const h = location.hash.slice(1); if (SCREENS.some(s => s[0] === h)) this.go(h, true); }; this._h(); window.addEventListener('hashchange', this._h); }
+  componentWillUnmount() { window.removeEventListener('hashchange', this._h); clearInterval(this._t); }
+  go(screen, fromHash, more, cb) {
+    clearInterval(this._t); this._t = null;
+    // The account screens show whoever signed in last (the sample resident to begin with). A deleted account stays deleted: only a new sign-in, or the
+    // prototype's "restore the sample account" button, brings an account back.
+    const extra = screen === 'signin' ? { ...UI0, ...SIGNIN0 } : { ...UI0, signedIn: !this.state.deleted };
+    this.setState({ screen, ...extra, ...(more || {}) }, cb); if (!fromHash) history.replaceState(null, '', '#' + screen); window.scrollTo(0, 0);
+  }
+  startWait() { clearInterval(this._t); this.setState({ wait: 30 }); this._t = setInterval(() => { const w = Math.max(0, (this.state.wait || 0) - 1); this.setState({ wait: w }); if (!w) { clearInterval(this._t); this._t = null; } }, 1000); }
+  // Move focus to an element after a change, and bring it into view below the sticky header.
+  focusEl(id) {
+    const el = document.getElementById(id); if (!el) return;
+    if (!/^(INPUT|TEXTAREA|SELECT|BUTTON|A)$/.test(el.tagName) && !el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+    el.focus({ preventScroll: true });
+    const lab = document.querySelector('label[for="' + id + '"]'), top = Math.min(el.getBoundingClientRect().top, lab ? lab.getBoundingClientRect().top : Infinity);
+    const hd = document.querySelector('header'), hh = hd ? hd.offsetHeight : 0, r = el.getBoundingClientRect();
+    if (top < hh + 8 || r.bottom > window.innerHeight - 8) window.scrollTo({ top: Math.max(0, top + window.scrollY - hh - 16), behavior: 'smooth' });
+  }
+  jump(id, focusId) {
+    const el = document.getElementById(id); if (!el) return;
+    const hd = document.querySelector('header'), y = el.getBoundingClientRect().top + window.scrollY - (hd ? hd.offsetHeight : 0) - 16;
+    window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+    const h = focusId ? document.getElementById(focusId) : el.querySelector('h2,h3'); if (h) { if (!/^(INPUT|TEXTAREA|SELECT|BUTTON|A)$/.test(h.tagName)) h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
+  }
+  // Turn a message type on or off, and write it to the consent record (per type) and the ledger, with today's date.
+  setConsent(k, on, where, extra, cb) {
+    const s = { ...this.state, ...(extra || {}) }, T = TYPES.find(t => t.k === k);
+    const label = k === 'local' ? 'Locality alerts for ' + s.locName : T.name;
+    const rec = (on ? 'Agreed ' : 'Stopped ') + stampText() + ', ' + where.charAt(0).toLowerCase() + where.slice(1);
+    this.setState({ ...(extra || {}), consents: { ...s.consents, [k]: on }, record: { ...s.record, [k]: rec }, ledger: [row((on ? 'Turned on: ' : 'Stopped: ') + label, where, on ? 'AGREED' : 'STOPPED'), ...s.ledger] }, cb);
+  }
+  renderVals() {
+    const s = this.state, note = s.note || {}, noteFor = k => note.k === k ? note.t : '';
+    const pill = on => ({ border: on ? '1.5px solid #2B1D14' : '1.5px solid #e8dcc8', background: on ? '#2B1D14' : '#fff', color: on ? '#FBF4E8' : '#2B1D14', borderRadius: 999, padding: '7px 13px', fontSize: 13, cursor: 'pointer', minHeight: 44, fontFamily: 'inherit' });
+    const TONE = { ok: ['#E6F1EC', '#1E7A4F', 0], wait: ['#FFF4D6', '#7A5200', '1px dashed #C99A2E'], warn: ['#FBF4E8', '#9A5418', '1px solid #e8dcc8'], act: ['#F0B43C', '#2B1D14', 0], off: ['#efe3cf', '#3d2e22', 0] };
+    const pillSt = tone => { const [bg, fg, bd] = TONE[tone]; return { background: bg, color: fg, border: bd || 0, borderRadius: 999, padding: '4px 11px', fontSize: 12.5, fontWeight: 600, whiteSpace: 'nowrap', alignSelf: 'flex-start', flex: 'none' }; };
+    const radioCard = on => ({ display: 'flex', alignItems: 'center', gap: 10, border: '1.5px solid ' + (on ? '#0F766E' : '#e8dcc8'), background: on ? '#E6F1EC' : '#fff', borderRadius: 14, padding: '0 16px', minHeight: 48, fontSize: 15, cursor: 'pointer', fontWeight: on ? 600 : 400, color: '#2B1D14' });
+    const seg = on => ({ background: on ? '#2B1D14' : '#fff', color: on ? '#FBF4E8' : '#2B1D14', border: '1.5px solid ' + (on ? '#2B1D14' : '#e8dcc8'), borderRadius: 999, padding: '0 16px', minHeight: 44, fontSize: 14, fontWeight: on ? 600 : 400, cursor: 'pointer', fontFamily: 'inherit' });
+    const sw = on => ({ label: on ? 'On' : 'Off',
+      btn: { display: 'inline-flex', alignItems: 'center', gap: 10, minHeight: 44, padding: '0 4px', background: 'none', border: 0, cursor: 'pointer', fontFamily: 'inherit', flex: 'none' },
+      track: { position: 'relative', display: 'block', width: 52, height: 30, borderRadius: 999, background: on ? '#0F766E' : '#fff', border: '2px solid ' + (on ? '#0F766E' : '#6e5a4b'), flex: 'none' },
+      knob: { position: 'absolute', display: 'block', top: 3, left: on ? 25 : 3, width: 20, height: 20, borderRadius: '50%', background: on ? '#fff' : '#6e5a4b' },
+      text: { fontSize: 14, fontWeight: 600, color: on ? '#0F766E' : '#5a473a', minWidth: 26, textAlign: 'left' } });
+    const BTN = {
+      primary: { display: 'inline-flex', alignItems: 'center', justifyContent: 'center', minHeight: 44, background: '#0F766E', color: '#fff', border: 0, borderRadius: 999, padding: '0 18px', fontSize: 14, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', textAlign: 'center', flex: 'none' },
+      dark: { display: 'inline-flex', alignItems: 'center', justifyContent: 'center', minHeight: 44, background: '#2B1D14', color: '#FBF4E8', border: 0, borderRadius: 999, padding: '0 18px', fontSize: 14, fontWeight: 500, cursor: 'pointer', fontFamily: 'inherit', textAlign: 'center', flex: 'none' },
+      outline: { display: 'inline-flex', alignItems: 'center', justifyContent: 'center', minHeight: 44, background: '#fff', color: '#2B1D14', border: '1.5px solid #2B1D14', borderRadius: 999, padding: '0 18px', fontSize: 14, fontWeight: 500, cursor: 'pointer', fontFamily: 'inherit', textAlign: 'center', flex: 'none' }
+    };
+    const DOT = { done: { background: '#1E7A4F', color: '#fff' }, warn: { background: '#9A5418', color: '#fff' }, act: { background: '#F0B43C', color: '#2B1D14' }, now: { background: '#fff', border: '3px solid #F0B43C', boxSizing: 'border-box' }, next: { background: '#fff', border: '2px solid #d9c6a5', boxSizing: 'border-box' } };
+    const stepRows = steps => steps.map(([t, d, st], i) => ({ t, d, icon: { done: '✓', warn: '!', act: '!' }[st] || '',
+      sr: { done: 'Done: ', warn: 'Done: ', act: 'Waiting for you: ', now: 'In progress: ', next: 'Not yet: ' }[st], tag: { now: 'IN PROGRESS', act: 'WAITING FOR YOU', next: 'NEXT' }[st] || '',
+      dot: { width: 24, height: 24, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12.5, fontWeight: 700, flex: 'none', ...DOT[st] },
+      line: { width: 2, flex: 1, minHeight: 12, margin: '3px 0', background: st === 'done' || st === 'warn' ? '#1E7A4F' : '#e8dcc8', display: i === steps.length - 1 ? 'none' : 'block' },
+      titleStyle: { fontWeight: 600, fontSize: 14.5, lineHeight: 1.4, color: st === 'next' ? '#6e5a4b' : st === 'act' || st === 'warn' ? '#9A5418' : '#2B1D14' },
+      tagStyle: { font: "500 10px 'Spline Sans Mono',monospace", letterSpacing: '.04em', color: st === 'act' || st === 'now' ? '#9A5418' : '#6e5a4b', display: st === 'now' || st === 'act' || st === 'next' ? 'inline' : 'none' } }));
+    const plural = (n, w, ws) => `${n} ${n === 1 ? w : (ws || w + 'S')}`;
+    const acctNo = maskNo(s.acctDigits || SAMPLE_DIGITS), nbNo = acctNo.replace(/ /g, ' ');
+    // Whether this account has an item at all. A blank account has none of the sample resident's, and follows a locality only once it chooses one.
+    const has = id => !s.blank || (id === 'loc' && !s.noLoc);
+    const followed = id => has(id) && !s.unfollowed.includes(id);
+    const chanName = k => s.chan[k] === 'em' && s.emailAddr ? 'email' : 'WhatsApp';
+    const dest = k => s.chan[k] === 'em' && s.emailAddr ? s.emailAddr : nbNo;
+    const L = LOCINFO[s.locName] || LOCINFO['Sohna Road'];
+    const FOL = [{ id: 'loc', type: 'local', kind: 'LOCALITY', name: s.locName, short: s.locName, what: s.locName, href: L.href, sub: 'Covers ' + L.covers, since: s.locSince, news: L.news, alerts: 'new verified clinics and labs, changed hours and camps there', freq: 'one summary a week, only if something changed' }, ...FOLLOWS];
+    const effOn = f => followed(f.id) && !!s.followAlert[f.id] && !!s.consents[f.type];
+    const stOf = id => s.rvWithdrawn.includes(id) ? 'withdrawn' : s.rvStatus[id];
+    // A published review stays on the profile while an edit of it waits for a moderator.
+    const liveOf = id => stOf(id) === 'published' || (stOf(id) === 'moderation' && s.rvPrev[id] === 'published');
+    const textOf = id => s.rvText[id] || REVIEWS.find(r => r.id === id).text;
+    // A blank account has no area or family details yet, so its reviews can only be signed "Resident · Gurugram".
+    const displays = s.blank ? DISPLAY.slice(-1) : DISPLAY, display = displays[s.display] || displays[0];
+    const myReviews = s.blank ? [] : REVIEWS, myReports = s.blank ? [] : REPORTS, myEventsList = s.blank ? [] : MY_EVENTS;
+    // "Replies to my questions" covers your own questions, plus each followed discussion or topic you chose alerts for.
+    const replyActs = (fa, unf) => FOL.filter(f => f.type === 'replies' && has(f.id) && !unf.includes(f.id) && !!fa[f.id]).map(f => f.short);
+
+    // ---------- sign in ----------
+    const d = s.phone, firstOk = !d || /^[6-9]/.test(d), phoneBad = !!s.phoneErr || !firstOk;
+    const viaName = s.via === 'sms' ? 'SMS' : 'WhatsApp', otherVia = s.via === 'sms' ? 'whatsapp' : 'sms';
+    const masked = d.length === 10 ? maskNo(d) : acctNo;
+    const locked = s.tries <= 0;
+    // Before the code is checked, the steps don't reveal whether a number already has an account on this phone; only the preview toggle changes them.
+    const backFlow = s.step === 'choices' || s.step === 'done' ? s.welcomeBack : s.returning;
+    const stepNames = backFlow ? ['Your number', 'Code', 'Done'] : ['Your number', 'Code', 'Choices'];
+    const stepIdx = { phone: 0, code: 1, choices: 2, done: backFlow ? 2 : 3 }[s.step];
+    // Who is signing in? This phone remembers each account signed in to on it in this session, starting with the sample resident's. The same number signs
+    // straight back in with everything kept; a different number never sees another person's account. A deleted account is gone for good.
+    const lookup = n => { const book = { ...s.accounts }; if (!s.deleted) book[s.acctDigits || SAMPLE_DIGITS] = snap(s);
+      const prev = book[n] || (s.returning && !s.deleted ? { ...ACCOUNT0 } : null); delete book[n]; return { prev, others: book }; };
+    const resend = via => () => { this.setState({ via, code: '', codeErr: '', tries: 3, resent: true }, () => this.focusEl('hg-code')); this.startWait(); };
+    const chosen = [s.optWeekly ? 'the Weekly Gurgaon Health Report' : '', s.optLocal ? `locality alerts for ${s.optLoc}` : ''].filter(Boolean);
+    const langWord = l => l === 'hi' ? 'Hindi' : 'English';
+    const fr = s.firstRun, isDone = s.step === 'done';
+    const onNames = TYPES.filter(t => s.consents[t.k]).map(t => t.k === 'local' ? 'locality alerts for ' + s.locName : t.k === 'weekly' ? 'the ' + t.name : t.name.charAt(0).toLowerCase() + t.name.slice(1));
+    const listText = a => a.length <= 1 ? a.join('') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1];
+
+    // ---------- activity (needed by the tab badge and Saved "What's new") ----------
+    const openEdit = id => this.setState({ rvEdit: id, rvDraft: textOf(id), rvErr: '', rvConfirm: '', note: null }, () => this.focusEl('hg-ed-' + id));
+    const attn = [];
+    if (!s.blank && stOf('r3') === 'changes') attn.push({ t: 'Fix your review of Sai Medicos', d: 'A moderator found a phone number and medicine details in it.', cta: 'Fix my review', isBtn: true, isLink: false, href: '', go: () => openEdit('r3') });
+    if (!s.blank) attn.push({ t: 'Make the changes to “Morning yoga and BP check for seniors”', d: 'Tell us who will do the BP checks, and the full venue address.', cta: 'Make the changes', isBtn: false, isLink: true, href: LE + '#submit', go: null });
+    const attnWhat = attn.map(a => a.cta === 'Fix my review' ? 'a review to fix' : 'an event to update').join(' and ');
+
+    // ---------- saved ----------
+    const provShown = PROVS.filter(p => has(p.id) && !s.removed.includes(p.id)).length, folShown = FOL.filter(f => followed(f.id)).length;
+    const CH = { warn: ['!', { background: '#9A5418', color: '#fff' }, '#9A5418'], wait: ['', { background: '#fff', border: '3px solid #F0B43C', boxSizing: 'border-box' }, '#7A5200'] };
+    const provs = PROVS.map(p => { const rem = s.removed.includes(p.id); return { name: p.name, kind: p.kind, initials: p.initials, href: p.href, open: p.open, what: p.what, badges: p.badges, checked: p.checked, savedOn: p.savedOn, tag: p.tag, change: p.change, src: p.src,
+      shown: !s.empty && has(p.id) && !rem, removed: !s.empty && has(p.id) && rem, anchor: 'sv-' + p.id, rmId: 'hg-rm-' + p.id, undoId: 'hg-undo-' + p.id,
+      card: { border: p.changed ? '2px solid #F0B43C' : '1px solid #efe3cf', borderRadius: 20, padding: p.changed ? 17 : 18, display: 'flex', flexDirection: 'column', gap: 12, minWidth: 0, background: '#fff' },
+      box: { background: p.changed ? '#FFF4D6' : '#E6F1EC', borderRadius: 14, padding: '10px 14px', display: 'flex', flexDirection: 'column', gap: 3 },
+      tagStyle: { font: "500 10.5px 'Spline Sans Mono',monospace", letterSpacing: '.06em', color: p.changed ? '#9A5418' : '#1E7A4F' },
+      label: p.spon ? 'SPONSOR OF THE WEEKLY HEALTH REPORT · DOES NOT AFFECT ORDER, RANKINGS OR REVIEWS' : 'Not sponsored',
+      labelStyle: p.spon ? { background: '#2B1D14', color: '#F0B43C', borderRadius: 6, padding: '3px 8px', font: "500 10px/1.5 'Spline Sans Mono',monospace" } : { background: '#fff', border: '1px solid #e8dcc8', borderRadius: 999, padding: '3px 10px', fontSize: 12, fontWeight: 500 },
+      more: p.more.map(([tone, t, src]) => ({ t, src, icon: CH[tone][0], dot: { width: 22, height: 22, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 700, flex: 'none', marginTop: 1, ...CH[tone][1] }, srcStyle: { font: "400 10.5px/1.6 'Spline Sans Mono',monospace", color: CH[tone][2], textTransform: 'uppercase' } })),
+      remove: () => this.setState({ removed: [...s.removed, p.id], note: null }, () => this.focusEl('hg-undo-' + p.id)),
+      undo: () => this.setState({ removed: s.removed.filter(x => x !== p.id) }, () => this.focusEl('hg-rm-' + p.id)), removeAria: `Remove ${p.name} from Saved`, undoAria: `Undo: put ${p.name} back in Saved` }; });
+    const news = [];
+    if (!s.empty && !s.blank) {
+      if (!s.removed.includes('lab')) news.push({ id: 'hg-new-lab', tone: '#F0B43C', t: 'Prakash Path Labs changed its Sunday hours', d: 'Now 7 am – 1 pm. They were 7 – 11 am. Confirmed by the lab manager, by phone, on 9 Oct 2026.', cta: 'See the change', btn: BTN.outline, go: () => this.jump('sv-lab') });
+      if (!s.eventRemoved) news.push(s.calAdded ? { id: 'hg-new-eye', tone: '#1E7A4F', t: 'Eye camp on Sun 15 Nov is in your calendar', d: s.consents.saved ? `We’ll remind you on ${chanName('saved')} the day before.` : 'Verified with the organiser on 14 Oct.', cta: 'See the camp', btn: BTN.outline, go: () => this.jump('sv-eye') }
+        : { id: 'hg-new-eye', tone: '#0F766E', t: 'Eye camp on Sun 15 Nov is now verified', d: 'You saved it while it was awaiting review. We called the organiser, the Sector 57 RWA secretary, on 14 Oct.', cta: 'Add to calendar', btn: BTN.primary, go: () => this.setState({ calAdded: true, note: { k: 'cal', t: '✓ Added to your calendar: Sun 15 Nov, 9 am – 1 pm, Sector 57 Community Centre.' } }, () => this.focusEl('hg-new-eye')) });
+      if (followed('thread')) news.push({ tone: '#0F766E', t: '2 new replies in a discussion you follow', d: '“Any 24-hour chemist near Golf Course Ext. Road…” is now resolved: a verified pharmacist’s answer was marked most helpful.', cta: 'Read the replies', btn: BTN.outline, href: CO + '#thread' });
+      if (attn.length) news.push({ id: 'hg-new-attn', tone: '#F0B43C', t: `${attn.length} ${attn.length === 1 ? 'thing needs' : 'things need'} you in My reviews & reports`, d: attnWhat.charAt(0).toUpperCase() + attnWhat.slice(1) + '.', cta: 'See what’s needed', btn: BTN.dark, go: () => this.go('activity') });
+    }
+    const lcFirst = t => t.charAt(0).toLowerCase() + t.slice(1);
+    const replyCovers = acts => 'Answers to questions you ask' + (acts.length ? ', and new replies in ' + listText(acts) : '');
+    const follows = FOL.map(f => { const un = !followed(f.id), wants = !!s.followAlert[f.id], allowed = !!s.consents[f.type], on = !un && wants && allowed, tName = TYPES.find(t => t.k === f.type).name, wasOn = !!(s.unWasOn && s.unWasOn[f.id]);
+      // While "Replies to my questions" is on, giving one more discussion or topic alerts (or taking them away) changes what that message covers, so the
+      // consent record notes it too: a row in the ledger, and the message's RECORD says what it covers now.
+      const scoped = (turnOn, where, patch) => { if (f.type !== 'replies' || !allowed) return patch;
+        const covers = lcFirst(replyCovers(replyActs(patch.followAlert || s.followAlert, patch.unfollowed || s.unfollowed)));
+        return { ...patch, record: { ...s.record, replies: s.record.replies.replace(/ Changed .*$/, '') + ` Changed ${stampText()}, on the Saved & followed page: now covers ${covers}.` },
+          ledger: [row(`Alerts ${turnOn ? 'on' : 'off'}: ${f.scope}`, where + (turnOn ? ' They come with “Replies to my questions”, which was already on.' : ` “Replies to my questions” still covers ${covers}.`), turnOn ? 'AGREED' : 'CHANGED'), ...s.ledger] }; };
+      return { kind: f.kind, name: f.name, what: f.what, href: f.href, sub: f.sub, since: f.since, news: f.news, shown: !s.empty && has(f.id) && !un, removed: !s.empty && has(f.id) && un,
+        anchor: 'fl-' + f.id, labelId: 'hg-al-' + f.id, offId: 'hg-off-' + f.id, onId: 'hg-on-' + f.id, unId: 'hg-unf-' + f.id, undoId: 'hg-fundo-' + f.id, askId: 'hg-ask-f-' + f.id,
+        isOn: on ? 'true' : 'false', isOff: on ? 'false' : 'true', offStyle: seg(!on), waStyle: seg(on),
+        note: on ? `On: ${f.alerts}, ${f.freq}, by ${chanName(f.type)} to ${dest(f.type)}.` : wants && !un ? `Off, because “${tName}” messages are stopped. Choose Send alerts to turn them back on.` : 'Off. It stays here, and nothing is sent to your phone.',
+        noteStyle: { fontSize: 13.5, lineHeight: 1.5, color: on ? '#1E7A4F' : wants ? '#9A5418' : '#5a473a', fontWeight: on ? 500 : 400 },
+        asking: s.askFollow === f.id && !on, askTitle: `Send alerts about ${f.short}?`,
+        askBody: `We’ll send ${f.alerts} by ${chanName(f.type)} to ${dest(f.type)}, ${f.freq}. This turns on “${tName}” in your messages, and we note it in your consent record with today’s date. Reply STOP to any message to stop.`,
+        msg: noteFor('f:' + f.id),
+        setOff: () => {
+          if (on && f.type === 'local') return this.setConsent('local', false, `On the Saved & followed page. You chose No alerts for ${f.short}.`, { followAlert: { ...s.followAlert, [f.id]: false }, askFollow: '', note: { k: 'f:' + f.id, t: `No alerts about ${f.short}. Locality alerts are now off, and that’s noted in your consent record.` } });
+          const patch = { followAlert: { ...s.followAlert, [f.id]: false }, askFollow: '', note: { k: 'f:' + f.id, t: `No alerts about ${f.short}.` + (on ? ' Noted in your consent record.' : '') + ' You can still see it here.' } };
+          this.setState(on ? scoped(false, `On the Saved & followed page. You chose No alerts for ${f.short}.`, patch) : patch);
+        },
+        setWa: () => { if (on) return;
+          if (allowed) return this.setState(scoped(true, `On the Saved & followed page. You chose Send alerts for ${f.short}.`, { followAlert: { ...s.followAlert, [f.id]: true }, askFollow: '', note: { k: 'f:' + f.id, t: `✓ Alerts on for ${f.short}.` + (f.type === 'replies' ? ' Noted in your consent record, with today’s date.' : '') } }));
+          this.setState({ askFollow: f.id, note: null }, () => this.focusEl('hg-ask-f-' + f.id)); },
+        confirm: () => this.setConsent(f.type, true, `On the Saved & followed page. You chose Send alerts for ${f.short} and confirmed.`, { followAlert: { ...s.followAlert, [f.id]: true }, askFollow: '', note: { k: 'f:' + f.id, t: '✓ Alerts on. Noted in your consent record, with today’s date.' } }, () => this.focusEl('hg-on-' + f.id)),
+        cancel: () => this.setState({ askFollow: '' }, () => this.focusEl('hg-on-' + f.id)),
+        goneText: `You’ve unfollowed ${f.short}.` + (!wasOn ? ' No more alerts about it.' : f.type === 'local' ? ' Locality alerts are off too, and that’s noted in your consent record.' : ' Its alerts are off too, and that’s noted in your consent record.'),
+        unfollow: () => { const patch = { unfollowed: [...s.unfollowed, f.id], askFollow: s.askFollow === f.id ? '' : s.askFollow, unWasOn: { ...s.unWasOn, [f.id]: on }, note: null }, cb = () => this.focusEl('hg-fundo-' + f.id);
+          if (on && f.type === 'local') return this.setConsent('local', false, `On the Saved & followed page. You unfollowed ${f.short}.`, patch, cb);
+          this.setState(on ? scoped(false, `On the Saved & followed page. You unfollowed ${f.short}.`, patch) : patch, cb); },
+        undo: () => { const patch = { unfollowed: s.unfollowed.filter(x => x !== f.id), unWasOn: { ...s.unWasOn, [f.id]: false } }, cb = () => this.focusEl('hg-unf-' + f.id), where = `On the Saved & followed page. You tapped Undo straight after unfollowing ${f.short}.`;
+          if (wasOn && f.type === 'local' && !s.consents.local) return this.setConsent('local', true, where, patch, cb);
+          this.setState(wasOn && wants && allowed ? scoped(true, where, patch) : patch, cb); },
+        unfollowAria: `Unfollow ${f.short}`, undoAria: `Undo: follow ${f.short} again` }; });
+
+    // ---------- reviews ----------
+    const rvNext = (st, prev) => st === 'published' ? 'It stays on the profile until you edit or withdraw it. If you edit it, a moderator checks the new version first.'
+      : st === 'moderation' ? (prev ? 'A moderator usually checks within 48 hours, so by Thu 29 Oct.' + (prev === 'published' ? ' Until then, your earlier version stays on the profile.' : ' Nothing is published before then.') : 'A moderator usually checks within 48 hours, so by Wed 28 Oct. Nothing is published before then.')
+      : st === 'changes' ? 'It isn’t published. Edit it and send it again, or withdraw it. A moderator checks the new version within 48 hours.'
+      : 'It isn’t on the profile any more. You can write a new review whenever you like.';
+    const reviews = myReviews.map(r => { const st = stOf(r.id), live = liveOf(r.id), prev = s.rvPrev[r.id] || '', text = textOf(r.id), editing = s.rvEdit === r.id && st !== 'withdrawn', confirming = s.rvConfirm === r.id && st !== 'withdrawn';
+      const P = { published: ['✓ Published', 'ok'], moderation: ['In moderation', 'wait'], changes: ['Needs your changes', 'act'], withdrawn: ['Withdrawn', 'off'] }[st];
+      const editLabel = st === 'changes' ? 'Fix and send again' : 'Edit', hits = medHits(text);
+      return { name: r.name, sub: r.sub, href: r.href, pill: P[0], pillStyle: pillSt(P[1]), meta: `${r.ref} · ${r.visited} · ${prev ? 'Edited and sent again 27 Oct 2026' : r.sent}`.toUpperCase(),
+        anchor: 'rv-' + r.id, showText: !editing, segs: st === 'changes' ? segsOf(text) : [{ t: text, style: {} }],
+        shownAs: st === 'published' ? `Shown on the profile as “${display}” · ${r.helpful} people found it helpful` : st === 'withdrawn' ? 'Only you can see this copy.' : `Will be shown as “${display}”`,
+        hasReply: st === 'published' && !!r.reply, reply: r.reply || '', replyWhen: r.replyWhen || '',
+        hasReasons: st === 'changes' && !editing, reasons: ['A phone number was removed automatically. Reviews never show phone numbers.', `It mentions your father’s medicine and dose: ${hits.join(', ')} (highlighted). Reviews describe the service, not anyone’s treatment.`], suggestion: r.suggestion || '',
+        next: rvNext(st, prev), editing, confirming, withdrawn: st === 'withdrawn', showActions: st !== 'withdrawn' && !editing && !confirming,
+        hasNote: !!noteFor('rv:' + r.id), note: noteFor('rv:' + r.id), noteId: 'hg-rvnote-' + r.id,
+        card: { border: st === 'changes' ? '2px solid #F0B43C' : st === 'withdrawn' ? '1.5px dashed #d9c6a5' : '1px solid #efe3cf', borderRadius: 20, padding: st === 'changes' ? 17 : 18, display: 'flex', flexDirection: 'column', gap: 12, minWidth: 0, background: '#fff' },
+        edId: 'hg-ed-' + r.id, edHintId: 'hg-edh-' + r.id, edErrId: 'hg-ede-' + r.id, edDesc: 'hg-edh-' + r.id + (s.rvErr ? ' hg-ede-' + r.id : ''),
+        editBtnId: 'hg-edit-' + r.id, wdBtnId: 'hg-wdb-' + r.id, wdHId: 'hg-wdh-' + r.id, undoId: 'hg-rvundo-' + r.id,
+        editLabel, editAria: `${editLabel}: your review of ${r.name}`,
+        editStyle: st === 'changes' ? { ...BTN.primary } : { ...BTN.outline },
+        editNote: st === 'published' ? 'Your current review stays on the profile until a moderator approves the edit.' : st === 'changes' ? 'Nothing is published until a moderator approves it.' : 'Editing restarts the moderator check.' + (live ? ' Your earlier version stays on the profile meanwhile.' : ''),
+        edit: () => openEdit(r.id),
+        cancelEdit: () => this.setState({ rvEdit: '', rvErr: '' }, () => this.focusEl('hg-edit-' + r.id)),
+        send: () => { const t0 = s.rvDraft.trim(), dose = doseHits(t0), words = wordHits(t0);
+          if (dose.length) return this.setState({ rvErr: `Not sent. Please take out the dose first: ${dose.join(', ')}.` }, () => this.focusEl('hg-ed-' + r.id));
+          if (t0.length < 40) return this.setState({ rvErr: 'Please write at least 40 characters about your experience.' }, () => this.focusEl('hg-ed-' + r.id));
+          const t = t0.replace(PHONE_RE, '[number removed]'), swapped = t !== t0;
+          this.setState({ rvText: { ...s.rvText, [r.id]: t }, rvStatus: { ...s.rvStatus, [r.id]: 'moderation' }, rvPrev: { ...s.rvPrev, [r.id]: live ? 'published' : st }, rvEdit: '', rvErr: '',
+            note: { k: 'rv:' + r.id, t: '✓ Sent to a moderator. You’ll see the result here, usually within 48 hours.' + (swapped ? ' We replaced a phone number with “[number removed]”.' : '') + (words.length ? ` It mentions ${listText(words)}, so the moderator will check that it describes the service, not anyone’s health.` : '') } }, () => this.focusEl('hg-rvnote-' + r.id)); },
+        askWithdraw: () => this.setState({ rvConfirm: r.id, rvEdit: '', note: null }, () => this.focusEl('hg-wdh-' + r.id)), withdrawAria: `Withdraw your review of ${r.name}`,
+        withdrawText: st === 'published' ? `It comes off ${r.name}’s profile within an hour, and the clinic’s reply goes with it. You can write a new review later.` : live ? `Your edit is deleted, and the earlier version comes off ${r.name}’s profile within an hour, with the clinic’s reply. You can write a new review later.` : 'It will be deleted before anyone sees it. You can write a new review later.',
+        withdraw: () => this.setState({ rvWithdrawn: [...s.rvWithdrawn, r.id], rvConfirm: '' }, () => this.focusEl('hg-rvundo-' + r.id)),
+        keep: () => this.setState({ rvConfirm: '' }, () => this.focusEl('hg-wdb-' + r.id)),
+        undo: () => this.setState({ rvWithdrawn: s.rvWithdrawn.filter(x => x !== r.id) }, () => this.focusEl('hg-wdb-' + r.id)), undoAria: `Undo: restore your review of ${r.name}` }; });
+    const dDose = doseHits(s.rvDraft), dWords = wordHits(s.rvDraft), dLen = s.rvDraft.trim().length, dPhone = hasPhone(s.rvDraft), dWarn = dDose.length > 0 || dWords.length > 0 || dPhone;
+
+    // ---------- WhatsApp & email ----------
+    const nPlaces = provShown, nEvents = has('eye') && !s.eventRemoved ? 1 : 0;
+    const coversOf = k => k === 'local' ? (followed('loc') && s.followAlert.loc ? s.locName : '') : k === 'replies' ? replyCovers(replyActs(s.followAlert, s.unfollowed)) : k === 'saved' ? `${plural(nPlaces, 'saved place', 'saved places')} and ${plural(nEvents, 'saved event', 'saved events')}` : '';
+    const msgTypes = TYPES.map(T => { const k = T.k, on = !!s.consents[k], nk = 'type:' + k, last = s.lastSent[k] || '';
+      const covers = on ? coversOf(k) : '';
+      const viaEm = s.chan[k] === 'em' && !!s.emailAddr;
+      return { name: T.name, why: T.why, often: T.often, covers, hasCovers: !!covers, on, record: s.record[k], hasSponsor: !!T.sponsor,
+        hasLast: on || !!last, last: on ? (last ? last + (s.record[k].indexOf(TODAY) >= 0 ? '. Nothing new sent since you changed it today.' : '.') : 'Nothing sent yet.') : last ? `${last}. Nothing since you stopped it.` : '',
+        state: on ? `● On · by ${viaEm ? 'email' : 'WhatsApp'}` : 'Off', stateStyle: pillSt(on ? 'ok' : 'off'),
+        tgId: 'hg-tg-' + k, askId: 'hg-ask-' + k, undoId: 'hg-nu-' + k,
+        btnLabel: on ? 'Turn off' : 'Turn on', aria: `${on ? 'Turn off' : 'Turn on'}: ${T.name}`,
+        btnStyle: { background: on ? '#fff' : '#0F766E', border: '1.5px solid ' + (on ? '#2B1D14' : '#0F766E'), color: on ? '#2B1D14' : '#fff', borderRadius: 999, padding: '0 20px', minHeight: 44, fontSize: 14.5, fontWeight: 600, cursor: 'pointer', flex: 'none' },
+        card: { border: on ? '2px solid #0F766E' : '1px solid #efe3cf', borderRadius: 20, padding: on ? 17 : 18, display: 'flex', flexDirection: 'column', gap: 12, minWidth: 0, background: '#fff' },
+        hasEmail: !!s.emailAddr, noEmail: !s.emailAddr, chanAria: `How you get ${T.name}`, destText: 'To ' + (viaEm ? s.emailAddr : nbNo),
+        chanOpts: [['wa', 'WhatsApp'], ['em', 'Email']].map(([c, label]) => { const sel = (viaEm ? 'em' : 'wa') === c; return { label, on: sel ? 'true' : 'false', style: seg(sel),
+          pick: () => { if (sel) return; this.setState({ chan: { ...s.chan, [k]: c }, ledger: [row(`Changed how you get “${T.name}”: now by ${c === 'em' ? 'email' : 'WhatsApp'}`, 'On the WhatsApp & email page.', 'CHANGED'), ...s.ledger], note: { k: nk, t: `✓ “${T.name}” will now come by ${c === 'em' ? 'email to ' + s.emailAddr : 'WhatsApp to ' + nbNo}. Noted in your consent record.` } }); } }; }),
+        useEmail: () => this.jump('hg-email-sec', 'hg-email'),
+        toggle: () => {
+          if (on) { const ex = { askOn: '', note: { k: nk, t: `Stopped. You won’t get “${T.name}” any more.`, undo: true } }; if (k === 'local') ex.followAlert = { ...s.followAlert, loc: false };
+            return this.setConsent(k, false, 'On the WhatsApp & email page. You tapped Turn off.', ex, () => this.focusEl('hg-nu-' + k)); }
+          this.setState({ askOn: k, askLoc: s.locName, note: null }, () => this.focusEl('hg-ask-' + k)); },
+        asking: s.askOn === k && !on, askTitle: `Turn on “${T.name}”?`, askSelect: k === 'local' && !followed('loc'),
+        askBody: `We’ll send it by ${chanName(k)} to ${dest(k)}` + (k === 'local' && followed('loc') ? `, about ${s.locName}` : '') + `. ${T.often} Every message ends with “Reply STOP to stop”, and today’s date goes in your consent record.`,
+        confirm: () => { const ex = { askOn: '', note: { k: nk, t: '✓ Turned on, and noted in your consent record below.', undo: true } };
+          if (k === 'local') { const fresh = !followed('loc'); Object.assign(ex, { followAlert: { ...s.followAlert, loc: true }, unfollowed: s.unfollowed.filter(x => x !== 'loc') }, fresh ? { locName: s.askLoc, locSince: TODAY_UP, noLoc: false } : {}); }
+          this.setConsent(k, true, 'On the WhatsApp & email page. You tapped Turn on and confirmed.', ex, () => this.focusEl('hg-nu-' + k)); },
+        cancel: () => this.setState({ askOn: '' }, () => this.focusEl('hg-tg-' + k)),
+        msg: noteFor(nk), canUndo: note.k === nk && !!note.undo, undoAria: `Undo the change to ${T.name}`,
+        undo: () => { const ex = { note: null }; if (k === 'local') ex.followAlert = { ...s.followAlert, loc: !on };
+          this.setConsent(k, !on, 'On the WhatsApp & email page. You tapped Undo.', ex, () => this.focusEl('hg-tg-' + k)); } }; });
+    const onKeys = TYPES.filter(t => s.consents[t.k]).map(t => t.k), waKeys = onKeys.filter(k => !(s.chan[k] === 'em' && s.emailAddr)), emKeys = onKeys.filter(k => !waKeys.includes(k));
+    const nameOf = k => TYPES.find(t => t.k === k).name + (k === 'local' ? ` (${s.locName})` : '');
+    // Deleting the account asks about the published review even while an edit of it waits for a moderator, because the earlier version is still live.
+    const hasPub = !s.blank && liveOf('r1'), pubPending = hasPub && stOf('r1') !== 'published';
+    const exportData = () => ({
+      exported: TODAY, note: 'Prototype sample. A real export also includes your full mobile number.',
+      account: { mobile: acctNo, email: s.emailAddr || null, area: s.blank ? null : 'Sector 57', reviews_signed_as: display, message_language: langWord(s.lang) },
+      saved_places: PROVS.filter(p => has(p.id) && !s.removed.includes(p.id)).map(p => ({ name: p.name, saved: p.savedOn, last_checked: p.checked })),
+      saved_events: nEvents ? [{ name: 'Free eye check-up camp for senior citizens', when: 'Sun 15 Nov 2026, 9 am – 1 pm', in_your_calendar: s.calAdded }] : [],
+      following: FOL.filter(f => followed(f.id)).map(f => ({ name: f.name, alerts: effOn(f) })),
+      messages: TYPES.map(t => ({ type: t.name, on: !!s.consents[t.k], channel: s.consents[t.k] ? chanName(t.k) : null, record: s.record[t.k] })),
+      consent_record: s.ledger.map(l => ({ when: l.t, what: l.what, where: l.where })),
+      reviews: myReviews.map(r => ({ about: r.name, status: stOf(r.id), text: textOf(r.id) })),
+      reports: s.blank ? [] : [...REPORTS.map(r => ({ ref: r.ref, about: r.item, status: r.pill })), { ref: 'HG-CC-0112', about: 'A concern about billing (separate review path)', status: 'Closed' }],
+      events_submitted: myEventsList.map(e => ({ ref: e.ref, title: e.title, status: e.pill })),
+      dispute: s.blank ? null : { ref: 'HG-DS-0402', about: 'Mentions counted for a dentist in Sector 56', status: 'Upheld' }
+    });
+
+    return {
+      screens: SCREENS.map(([id, label]) => ({ label, onClick: () => this.go(id), style: { ...pill(s.screen === id), padding: '5px 11px', fontSize: 12.5, minHeight: 30 } })),
+      acctLabel: s.signedIn ? 'My account' : 'Sign in', acctHref: s.signedIn ? '#saved' : '#signin',
+      // Sign in
+      isSignin: s.screen === 'signin', returning: s.returning, toggleReturning: () => this.setState({ returning: !s.returning }),
+      fromDoc: s.fromProfile, toggleFromDoc: () => this.setState({ fromProfile: !s.fromProfile }),
+      heroTitle: isDone ? (s.welcomeBack ? 'Welcome back' : 'You’re signed in') : s.step === 'choices' ? 'You’re signed in' : 'Sign in with your mobile number',
+      heroSub: isDone ? (s.welcomeBack ? 'Your saved places, follows and message choices are where you left them.' : 'Your account is ready. You can now save, follow, review and report.') : s.step === 'choices' ? 'One last step, and it’s optional: choose whether you’d like any messages.' : 'No password to remember. We send a one-time code to your phone by SMS or WhatsApp.',
+      signedOutMsg: s.signedOutMsg, showFromDoc: s.fromProfile && !s.signedOutMsg && (s.step === 'phone' || s.step === 'code'),
+      showFromPage: !s.fromProfile && !!s.cameFrom && !s.signedOutMsg && (s.step === 'phone' || s.step === 'code'),
+      steps: stepNames.map((n, i) => ({ t: `${i + 1} · ${n}`, current: i === stepIdx ? 'step' : 'false', bar: { display: 'block', height: 6, borderRadius: 3, background: i <= stepIdx ? '#0F766E' : '#efe3cf' }, label: { fontSize: 12.5, lineHeight: 1.3, fontWeight: i === stepIdx ? 600 : 400, color: i <= stepIdx ? '#2B1D14' : '#6e5a4b' } })),
+      stepPhone: s.step === 'phone', stepCode: s.step === 'code', stepChoices: s.step === 'choices', stepDone: isDone,
+      phone: d, onPhone: e => { let v = e.target.value.replace(/\D/g, ''); if (v.length > 10 && v.startsWith('91')) v = v.slice(2); if (v.length > 10 && v.startsWith('0')) v = v.slice(1); this.setState({ phone: v.slice(0, 10), phoneErr: '' }); },
+      phoneInvalid: phoneBad ? 'true' : 'false', phoneDesc: s.phoneErr ? 'hg-phone-err' : 'hg-phone-help', noPhoneErr: !s.phoneErr, phoneErr: s.phoneErr,
+      phoneBox: { display: 'flex', alignItems: 'stretch', border: '1.5px solid ' + (phoneBad ? '#B42318' : '#2B1D14'), borderRadius: 14, background: '#fff', maxWidth: 420, width: '100%' },
+      phoneHint: !d ? 'Ten digits, starting with 6, 7, 8 or 9.' : !firstOk ? 'Indian mobile numbers start with 6, 7, 8 or 9.' : d.length < 10 ? `${d.length} of 10 digits` : '✓ That looks right.',
+      phoneHintStyle: { fontSize: 13.5, lineHeight: 1.5, fontWeight: phoneBad ? 500 : 400, color: phoneBad ? '#B42318' : d.length === 10 ? '#1E7A4F' : '#5a473a' },
+      viaOpts: [['sms', 'SMS'], ['whatsapp', 'WhatsApp']].map(([k, label]) => ({ label, on: s.via === k, pick: () => this.setState({ via: k }), style: radioCard(s.via === k) })),
+      viaNote: s.via === 'sms' ? 'A text message. Works on any mobile phone, even without internet.' : 'Choosing WhatsApp only sends this code. It does not sign you up for any messages.',
+      sendLabel: s.via === 'sms' ? 'Send code by SMS' : 'Send code on WhatsApp',
+      sendCode: e => { if (e && e.preventDefault) e.preventDefault();
+        if (!/^[6-9]\d{9}$/.test(d)) return this.setState({ phoneErr: !d ? 'Please enter your mobile number.' : !firstOk ? 'This doesn’t look like an Indian mobile number. It should start with 6, 7, 8 or 9.' : `Please enter all 10 digits. You’ve typed ${d.length}.` }, () => this.jump('hg-phone-field', 'hg-phone'));
+        this.setState({ step: 'code', code: '', codeErr: '', tries: 3, resent: false, phoneErr: '', signedOutMsg: false }, () => this.focusEl('hg-code')); this.startWait(); },
+      masked, sentLead: s.resent ? `We sent a new code by ${viaName} to` : `We sent it by ${viaName} to`, sentTail: s.resent ? '. Earlier codes no longer work.' : '. It works for 10 minutes.',
+      changeNumber: () => { clearInterval(this._t); this._t = null; this.setState({ step: 'phone', code: '', codeErr: '', resent: false, wait: 0 }, () => this.focusEl('hg-phone')); },
+      code: s.code, onCode: e => this.setState({ code: e.target.value.replace(/\D/g, '').slice(0, 6), codeErr: '' }), codeInvalid: s.codeErr ? 'true' : 'false', codeErr: s.codeErr,
+      codeDesc: 'hg-code-sent hg-code-hint' + (s.codeErr ? ' hg-code-err' : ''),
+      codeStyle: { border: '1.5px solid ' + (s.codeErr ? '#B42318' : '#2B1D14'), borderRadius: 14, padding: '0 16px', minHeight: 58, fontSize: 26, letterSpacing: '.35em', fontWeight: 500, width: '100%', maxWidth: 280, color: '#2B1D14', background: '#fff' },
+      locked, verifyStyle: { alignSelf: 'flex-start', background: locked ? '#efe3cf' : '#0F766E', color: locked ? '#6e5a4b' : '#fff', border: 0, borderRadius: 999, padding: '0 26px', minHeight: 52, fontSize: 16, fontWeight: 600, cursor: locked ? 'default' : 'pointer' },
+      verify: e => { if (e && e.preventDefault) e.preventDefault(); if (locked) return;
+        if (s.code.length < 6) return this.setState({ codeErr: 'Please enter all 6 digits of the code.' }, () => this.focusEl('hg-code'));
+        if (s.code === '000000') { const t = s.tries - 1; if (t <= 0) { clearInterval(this._t); this._t = null; }
+          return this.setState({ tries: t, code: '', wait: t <= 0 ? 0 : s.wait, codeErr: t > 0 ? `That code doesn’t match. Check the latest message and try again. ${t} ${t === 1 ? 'try' : 'tries'} left.` : 'That code didn’t match 3 times, so it has stopped working. Ask for a new code below.' }, () => this.focusEl('hg-code')); }
+        clearInterval(this._t); this._t = null;
+        // A number this phone knows (by its full digits, never its mask) signs straight back in and keeps everything; the account it replaces waits in the book.
+        // Any other number, including one whose account was deleted, gets an account of its own with every message off, then the first-sign-in choices.
+        const w = lookup(d), acct = w.prev || { ...(s.wiped ? BLANK : ACCOUNT0), ...FRESH, ledger: [row('Gave your mobile number, for sign-in codes only', `On the sign-in page. The code came by ${viaName}.`, 'SIGN-IN ONLY')] };
+        this.setState({ ...acct, acctDigits: d, accounts: w.others, step: w.prev ? 'done' : 'choices', welcomeBack: !!w.prev, signedIn: true, codeErr: '', wait: 0, signedOutMsg: false }, () => this.focusEl('hg-step-title')); },
+      waiting: s.wait > 0, canResend: s.wait === 0, waitText: `0:${String(s.wait).padStart(2, '0')}`,
+      resendSame: resend(s.via), resendOther: resend(otherVia), resendSameLabel: `Send a new code by ${viaName}`, resendOtherLabel: `Send it by ${otherVia === 'sms' ? 'SMS' : 'WhatsApp'} instead`,
+      optList: [['optWeekly', 'Weekly Gurgaon Health Report on WhatsApp', 'free camps, new services and checked health advice across Gurugram.', 'one message, every Friday morning.'], ['optLocal', 'Alerts for one locality', 'new verified clinics and labs, changed hours and camps in that area.', 'one summary a week, only if something changed.']].map(([k, name, why, often]) => ({ name, why, often, on: s[k], toggle: () => this.setState({ [k]: !s[k] }),
+        style: { display: 'flex', gap: 14, alignItems: 'flex-start', border: '1.5px solid ' + (s[k] ? '#0F766E' : '#e8dcc8'), background: s[k] ? '#E6F1EC' : '#fff', borderRadius: 16, padding: 14, cursor: 'pointer' } })),
+      optLocal: s.optLocal, optLoc: s.optLoc, onOptLoc: e => this.setState({ optLoc: e.target.value }), locOptions: LOCS,
+      optLangOpts: [['en', 'English'], ['hi', 'हिंदी']].map(([k, label]) => ({ label, lang: k, on: s.optLang === k, pick: () => this.setState({ optLang: k }), style: radioCard(s.optLang === k), font: k === 'hi' ? { fontFamily: "'Mukta',sans-serif", fontSize: 17, fontWeight: 500, lineHeight: 1.2 } : {} })),
+      finishLabel: chosen.length ? 'Save my choices and continue' : 'Continue without messages',
+      finishChoices: e => { if (e && e.preventDefault) e.preventDefault();
+        const ln = langWord(s.optLang), tt = stampText(), rows = [];
+        rows.push(row(`Chose ${ln} for messages and sign-in codes` + (chosen.length ? '' : '. No messages turned on.'), 'At your first sign-in.', 'SETTING'));
+        if (s.optLocal) rows.push(row('Turned on: Locality alerts for ' + s.optLoc, 'At your first sign-in. You ticked the box and chose the locality.', 'AGREED'));
+        if (s.optWeekly) rows.push(row('Turned on: Weekly Gurgaon Health Report', 'At your first sign-in. You ticked the box.', 'AGREED'));
+        const rec = (on, how) => on ? `Agreed ${tt}, at your first sign-in. ${how}` : 'Never turned on.';
+        // Only a new number reaches this step, and verify has already given it an account of its own: a consent record that starts with this sign-in,
+        // every message off and no email. These are its first choices.
+        this.setState({ step: 'done', firstRun: { weekly: s.optWeekly, local: s.optLocal, loc: s.optLoc, lang: s.optLang }, lang: s.optLang, ledger: [...rows, ...s.ledger],
+          consents: { ...s.consents, weekly: s.optWeekly, local: s.optLocal }, record: { ...s.record, weekly: rec(s.optWeekly, 'You ticked the box.'), local: rec(s.optLocal, `You chose ${s.optLoc}.`) },
+          followAlert: { ...s.followAlert, loc: s.optLocal }, ...(s.optLocal ? { locName: s.optLoc, locSince: TODAY_UP, noLoc: false, unfollowed: s.unfollowed.filter(x => x !== 'loc') } : {}) }, () => this.focusEl('hg-step-title')); },
+      doneLines: s.welcomeBack ? [onNames.length ? `Messages you get: ${listText(onNames)}. Change them any time in WhatsApp & email.` : 'You get no messages from us. You can turn some on in WhatsApp & email.']
+        : fr && (fr.weekly || fr.local) ? [`Messages: ${listText([fr.weekly ? 'the Weekly Gurgaon Health Report' : '', fr.local ? 'locality alerts for ' + fr.loc : ''].filter(Boolean))}, by WhatsApp, in ${langWord(fr.lang)}.`, 'We’ve noted what you agreed to, with today’s date, in your consent record.']
+        : [`Messages: none. Sign-in codes come in ${langWord(fr ? fr.lang : s.lang)}.`, 'We’ve noted your choices, with today’s date, in your consent record. You can turn messages on later in WhatsApp & email.'],
+      showChips: isDone && !s.welcomeBack && !!fr,
+      doneChips: fr ? [[`Weekly report: ${fr.weekly ? 'on' : 'off'}`, fr.weekly], [`Locality alerts: ${fr.local ? fr.loc : 'off'}`, fr.local], [`Language: ${langWord(fr.lang)}`, true]].map(([t, on]) => ({ t, style: { background: on ? '#E6F1EC' : '#FBF4E8', color: on ? '#1E7A4F' : '#3d2e22', borderRadius: 999, padding: '6px 12px', fontSize: 13, fontWeight: 500 } })) : [],
+      backDone: s.fromProfile || !!s.cameFrom, noBackDone: !s.fromProfile && !s.cameFrom, backToDoc: s.fromProfile, backByHistory: !s.fromProfile && !!s.cameFrom,
+      goBack: () => { if (history.length > 1) history.back(); else location.assign(s.cameFrom); },
+      goSaved: () => this.go('saved'), goActivity: () => this.go('activity'), goActivityLabel: attn.length ? `See what needs you (${attn.length})` : 'My reviews & reports', showGoActivity: !s.blank,
+      protoNote: s.blank ? 'PROTOTYPE: AN ACCOUNT WAS DELETED ON THIS PHONE, SO NEW ACCOUNTS START EMPTY. RELOAD THE PAGE TO SEE THE SAMPLE RESIDENT AGAIN.'
+        : s.welcomeBack && !fr ? 'PROTOTYPE: THE ACCOUNT PAGES SHOW A SAMPLE RESIDENT’S SAVED ITEMS AND HISTORY, WITH THE NUMBER YOU ENTERED.' : 'PROTOTYPE: YOUR NUMBER AND CHOICES CARRY THROUGH. SAVED ITEMS AND HISTORY BELONG TO A SAMPLE RESIDENT.',
+      numberPromises: ['Used only to send your sign-in code, and any messages you choose to turn on.', 'Never shown publicly. Your reviews are signed with a label like “Parent · Sector 57”.', 'Never shared with doctors, hospitals, labs or sponsors.', 'No password to remember, or to leak. Each code works once, for 10 minutes.', 'We never ask for medical records. Not to sign in, not ever.', 'You can download or delete everything, any time.'],
+      whyList: ['Save doctors, hospitals, labs and events', 'Follow a locality, topic or discussion', 'Write a review', 'Report a mistake, and follow what happens to it', 'Submit a health event', 'Get only the alerts you choose'],
+      // Account shell
+      acctHead: s.screen !== 'signin' && !s.deleted, acctNo, screenLabel: (SCREENS.find(x => x[0] === s.screen) || ['', ''])[1], pageTitle: { saved: 'Saved & followed', activity: 'My reviews & reports', consent: 'WhatsApp & email messages' }[s.screen] || '',
+      areaNote: s.blank ? '' : ' · your area: Sector 57',
+      // Signing out keeps the account for its own number: signing in again with that number brings everything back, and any other number gets its own.
+      signOut: () => this.go('signin', false, { signedOutMsg: true, fromProfile: false, cameFrom: '' }, () => this.focusEl('hg-signedout')),
+      acctTabs: SCREENS.slice(1).map(([id, label]) => { const on = s.screen === id, b = id === 'activity' && attn.length ? String(attn.length) : '';
+        return { label, href: '#' + id, current: on ? 'page' : 'false', badge: b, hasBadge: !!b, aria: b ? `${label}, ${attn.length} ${attn.length === 1 ? 'thing needs' : 'things need'} you` : label,
+          style: { display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: '2px 6px', minHeight: 52, padding: '6px 8px', textAlign: 'center', fontSize: 14.5, lineHeight: 1.25, fontWeight: on ? 600 : 400, color: '#2B1D14', borderBottom: '3px solid ' + (on ? '#0F766E' : 'transparent') } }; }),
+      // Saved & followed
+      isSaved: s.screen === 'saved' && !s.deleted, empty: s.empty, toggleEmpty: () => this.setState({ empty: !s.empty, note: null }), showEmptyToggle: !s.blank,
+      news: news.map(n => ({ id: n.id || '', t: n.t, d: n.d, cta: n.cta, btn: n.btn, isLink: !!n.href, isBtn: !n.href, href: n.href || '', go: n.go || null, dot: { width: 12, height: 12, borderRadius: '50%', background: n.tone, flex: 'none', alignSelf: 'flex-start', marginTop: 5 } })), noNews: !news.length,
+      savedSwOn: !!s.consents.saved, swSaved: sw(!!s.consents.saved), savedSwTitle: `Tell me on ${chanName('saved')} when something I saved changes`,
+      savedSwNote: s.consents.saved ? `On. We message ${dest('saved')} only when a saved place changes its fee, hours or address, or a saved camp moves. Plus a reminder the day before a saved camp.` : 'Off. You’ll still see every change on this page. If you turn it on, we message you only when something you saved changes.',
+      toggleSavedSw: () => { const on = !s.consents.saved; this.setConsent('saved', on, on ? 'On the Saved & followed page. You switched on “Tell me when something I saved changes”.' : 'On the Saved & followed page. You switched it off.', { note: { k: 'savedsw', t: on ? `✓ On. Noted in your consent record, with today’s date. Reply STOP to any message to stop.` : 'Off. Noted in your consent record. You’ll still see changes here.' } }); },
+      swMsg: noteFor('savedsw'),
+      provCount: s.empty ? 0 : provShown, provs, hasProvs: !s.empty && provShown > 0, noProvs: s.empty || provShown === 0,
+      eventCount: s.empty ? 0 : nEvents, eventShown: !s.empty && has('eye') && !s.eventRemoved, eventRemovedRow: !s.empty && has('eye') && s.eventRemoved, noEvents: s.empty || !nEvents,
+      calPressed: s.calAdded ? 'true' : 'false', calLabel: s.calAdded ? '✓ Added to calendar' : 'Add to calendar', calMsg: noteFor('cal'),
+      toggleCal: () => this.setState({ calAdded: !s.calAdded, note: { k: 'cal', t: s.calAdded ? 'Removed from your calendar.' : '✓ Added to your calendar: Sun 15 Nov, 9 am – 1 pm, Sector 57 Community Centre.' } }),
+      calStyle: { background: s.calAdded ? '#E6F1EC' : '#0F766E', color: s.calAdded ? '#1E7A4F' : '#fff', border: '1.5px solid ' + (s.calAdded ? '#1E7A4F' : '#0F766E'), borderRadius: 999, padding: '0 18px', minHeight: 44, fontSize: 14, fontWeight: 600, cursor: 'pointer' },
+      removeEvent: () => this.setState({ eventRemoved: true, calAdded: false, note: null }, () => this.focusEl('hg-undo-eye')), undoEvent: () => this.setState({ eventRemoved: false }, () => this.focusEl('hg-rm-eye')),
+      followCount: s.empty ? 0 : folShown, follows, noFollows: s.empty || folShown === 0,
+      // My reviews & reports
+      isActivity: s.screen === 'activity' && !s.deleted, attn: attn.map((a, i) => ({ ...a, n: String(i + 1) })), noAttn: attn.length === 0, attnTitle: attn.length ? `${attn.length} ${attn.length === 1 ? 'thing needs' : 'things need'} you` : s.blank ? 'Nothing needs you' : 'You’re all done',
+      noAttnText: s.blank ? 'If a moderator or editor asks you for something, it shows here first.' : 'Nothing needs you right now. If a moderator or editor asks you for something, it shows here first.',
+      attnFoot: s.blank ? 'When you send a review, a report or an event, you can follow every step of it on this page.' : 'Everything else is with us. Updates show up here first.',
+      displayOpts: displays.map((label, i) => ({ label, on: s.display === i, pick: () => this.setState({ display: i, note: { k: 'display', t: `Saved. Your reviews and posts will show “${label}” within an hour.` } }), style: { ...radioCard(s.display === i), padding: '8px 14px', lineHeight: 1.35, fontSize: 14 } })),
+      displayMsg: noteFor('display'),
+      jumps: [['hg-reviews', `Reviews (${myReviews.length})`], ['hg-reports', `Reports (${s.blank ? 0 : REPORTS.length + 1})`], ['hg-events', `Events (${myEventsList.length})`], ['hg-dispute', s.blank ? 'Disputes (0)' : 'Dispute (1)'], ['hg-who', 'Who sees your details']].map(([id, label]) => ({ label, go: () => this.jump(id) })),
+      reviewCount: myReviews.length, noReviews: !myReviews.length, reviews, rvDraft: s.rvDraft, onRvDraft: e => this.setState({ rvDraft: e.target.value, rvErr: '' }), rvErr: s.rvErr, rvInvalid: s.rvErr ? 'true' : 'false',
+      draftCheck: dDose.length ? `Please take out the dose: ${dDose.join(', ')}. Reviews never say how much of a medicine anyone takes.` + (dWords.length ? ` It also mentions ${listText(dWords)}: describe the service, not anyone’s health.` : '')
+        : dWords.length ? `Please check: ${dWords.join(', ')}. Reviews describe the service, not anyone’s health or medicines, so a moderator may send it back. Naming a service, like “the diabetes clinic”, is fine.` + (dPhone ? ' We’ll also replace the phone number with “[number removed]”.' : '')
+        : dLen < 40 ? 'A little more, please: at least 40 characters.' : dPhone ? 'There’s a phone number in it. We’ll replace it with “[number removed]” when you send.' : '✓ No phone numbers or medical details found. Ready to send.',
+      draftCheckStyle: dWarn ? { background: '#FFF4D6', border: '1.5px dashed #C99A2E', borderRadius: 12, padding: '8px 12px', fontSize: 13.5, color: '#5a3d00', lineHeight: 1.5 } : { fontSize: 13.5, color: dLen < 40 ? '#5a473a' : '#1E7A4F', lineHeight: 1.5 },
+      draftBox: { border: '1.5px solid ' + (s.rvErr ? '#B42318' : dWarn ? '#C99A2E' : '#e8dcc8'), borderRadius: 14, padding: 12, fontSize: 15, fontWeight: 300, lineHeight: 1.6, resize: 'vertical', width: '100%', color: '#2B1D14' },
+      // The billing concern (separate review path) counts as one of the reports.
+      reportCount: s.blank ? 0 : REPORTS.length + 1, reportLinkLabel: s.blank ? 'Report a mistake →' : 'Report something else →', hasConcern: !s.blank, noReports: s.blank,
+      myEventCount: myEventsList.length, noMyEvents: !myEventsList.length, disputeHead: s.blank ? 'My disputes' : 'My dispute', disputeCount: s.blank ? 0 : 1, hasDispute: !s.blank, noDispute: s.blank,
+      reports: myReports.map(r => ({ ref: r.ref, field: r.field, item: r.item, note: r.note, pill: r.pill, pillStyle: pillSt(r.tone), steps: stepRows(r.steps), hasLink: !!r.link, linkHref: r.link ? r.link[0] : '', linkLabel: r.link ? r.link[1] : '' })),
+      concernSteps: stepRows(CONCERN_STEPS), disputeSteps: stepRows(DISPUTE_STEPS),
+      myEvents: myEventsList.map(e => ({ ref: e.ref, title: e.title, when: e.when, where: e.where, pill: e.pill, pillStyle: pillSt(e.tone), steps: stepRows(e.steps), actionLabel: e.action[0], actionHref: e.action[1],
+        card: { border: e.tone === 'act' ? '2px solid #F0B43C' : '1px solid #efe3cf', borderRadius: 20, padding: e.tone === 'act' ? 17 : 18, display: 'flex', flexDirection: 'column', gap: 12, minWidth: 0 },
+        actionStyle: e.action[2] === 'primary' ? { ...BTN.primary, alignSelf: 'flex-start' } : e.action[2] === 'secondary' ? { ...BTN.outline, alignSelf: 'flex-start' } : { alignSelf: 'flex-start', display: 'inline-flex', alignItems: 'center', minHeight: 44, fontSize: 14, fontWeight: 500 } })),
+      whoRows: [['Other residents', 'never', `They see your reviews and posts signed “${display}”, and nothing more.`], ['Doctors, hospitals, labs and chemists', 'never', 'They can reply to your review in public, but never learn who wrote it or who reported them.'], ['Sponsors', 'never', 'Sponsors never get any resident’s details.'], ['Community Health Champions and RWA reps', 'never', 'They check listings and run events. They don’t see accounts.'], ['Moderators', 'needed', 'Only for something you sent, once it is assigned to them, for example to check that a report is genuine.'], ['Editors and admins', 'handling', 'While checking your reports and handling your dispute, for example to ask you a question about it.']]
+        .map(([who, kind, dd]) => ({ who, d: dd, badge: { never: 'Never', needed: 'Only when needed', handling: 'To handle your items' }[kind], badgeStyle: pillSt(kind === 'never' ? 'ok' : 'warn') })),
+      sla: [['WRONG INFORMATION', '3 working days'], ['REVIEWS', 'Usually 48 hours'], ['EVENTS', 'Organiser called within 2 working days'], ['DISPUTES', '5 working days'], ['CONCERNS ABOUT CARE', 'Handled separately, no fixed time']].map(([k, v]) => ({ k, v })),
+      // WhatsApp & email
+      isConsentLive: s.screen === 'consent' && !s.deleted, isDeleted: s.screen !== 'signin' && s.deleted,
+      onCount: onKeys.length, anyWa: waKeys.length > 0, noneWa: waKeys.length === 0 && note.k !== 'stopall',
+      onSummary: onKeys.length ? `${onKeys.length} of 5 message types are on: ${onKeys.map(nameOf).join(', ')}.` + (waKeys.length ? ` ${emKeys.length ? waKeys.length + ' by WhatsApp to ' + nbNo + ', ' + emKeys.length + ' by email.' : 'All by WhatsApp to ' + nbNo + '.'}` : ' All by email.') : 'All five message types are off.',
+      stopAll: () => { const keys = waKeys; if (!keys.length) return; const rec = { ...s.record }, nc = { ...s.consents }; keys.forEach(k => { rec[k] = `Stopped ${stampText()}, with “Stop all WhatsApp messages” on the WhatsApp & email page.`; nc[k] = false; });
+        this.setState({ consents: nc, record: rec, ledger: [row(`Stopped all WhatsApp messages (${keys.length})`, 'On the WhatsApp & email page. You tapped Stop all WhatsApp messages.', 'STOPPED'), ...s.ledger], stopPrev: keys, askOn: '',
+          note: { k: 'stopall', t: `Done. All WhatsApp messages have stopped. Nothing more will be sent to ${nbNo}.` + (emKeys.length ? ` ${plural(emKeys.length, 'message type', 'message types')} by email carr${emKeys.length === 1 ? 'ies' : 'y'} on; turn ${emKeys.length === 1 ? 'it' : 'them'} off below.` : ''), undo: true } }, () => this.focusEl('hg-nu-stopall')); },
+      stopAllMsg: noteFor('stopall'),
+      undoStopAll: () => { const keys = s.stopPrev || [], rec = { ...s.record }, nc = { ...s.consents }; keys.forEach(k => { rec[k] = `Agreed again ${stampText()}, when you tapped Undo on the WhatsApp & email page.`; nc[k] = true; });
+        this.setState({ consents: nc, record: rec, ledger: [row(`Turned back on: ${keys.map(nameOf).join(', ')}`, 'On the WhatsApp & email page. You tapped Undo straight after stopping.', 'AGREED'), ...s.ledger], stopPrev: null, note: null }, () => this.focusEl('hg-stopall')); },
+      langOpts: [['en', 'English'], ['hi', 'हिंदी']].map(([k, label]) => ({ label, lang: k, on: s.lang === k, style: radioCard(s.lang === k), font: k === 'hi' ? { fontFamily: "'Mukta',sans-serif", fontSize: 17, fontWeight: 500, lineHeight: 1.2 } : {},
+        pick: () => { if (s.lang === k) return; this.setState({ lang: k, ledger: [row(`Chose ${langWord(k)} for messages and sign-in codes`, 'On the WhatsApp & email page.', 'SETTING'), ...s.ledger], note: { k: 'lang', t: `Saved. Messages and sign-in codes will now be in ${langWord(k)}. Noted in your consent record.` } }); } })),
+      langMsg: noteFor('lang'), previewLang: s.lang, previewText: PREVIEW[s.lang],
+      previewStyle: { whiteSpace: 'pre-line', fontSize: s.lang === 'hi' ? 16.5 : 14, lineHeight: 1.6, fontFamily: s.lang === 'hi' ? "'Mukta',sans-serif" : 'inherit', color: '#2B1D14', overflowWrap: 'anywhere' },
+      msgTypes, askLoc: s.askLoc, onAskLoc: e => this.setState({ askLoc: e.target.value }), locOptions: LOCS,
+      ledger: s.ledger.map((l, i) => ({ t: l.t, what: l.what, where: l.where, tag: l.tag,
+        tagStyle: { flex: 'none', alignSelf: 'flex-start', font: "500 10.5px 'Spline Sans Mono',monospace", letterSpacing: '.04em', borderRadius: 999, padding: '4px 10px', whiteSpace: 'nowrap', ...(l.tag === 'AGREED' ? { background: '#E6F1EC', color: '#1E7A4F' } : l.tag === 'STOPPED' ? { background: '#efe3cf', color: '#3d2e22' } : { background: '#FBF4E8', color: '#6e5a4b' }) },
+        row: { display: 'flex', flexWrap: 'wrap', gap: '4px 18px', alignItems: 'flex-start', padding: '12px 16px', borderTop: i ? '1px solid #efe3cf' : 0, background: l.fresh ? '#FFFBF0' : '#fff' } })),
+      emailIntro: s.emailAddr ? `Messages you switch to email go to ${s.emailAddr}. Nothing is sent there unless you choose Email for a message.` : 'You can get any message by email instead of WhatsApp. Add an address here, then choose Email on that message.',
+      emailLabel: s.emailAddr ? 'Change to a new email address' : 'Email address', emailInput: s.emailInput, onEmail: e => this.setState({ emailInput: e.target.value, emailErr: '' }),
+      emailInvalid: s.emailErr ? 'true' : 'false', emailErr: s.emailErr, emailDesc: s.emailErr ? 'hg-email-help hg-email-err' : 'hg-email-help',
+      sendEmail: e => { if (e && e.preventDefault) e.preventDefault(); const v = s.emailInput.trim();
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) return this.setState({ emailErr: 'Please check the email address. It should look like name@example.com.', note: null }, () => this.focusEl('hg-email'));
+        const [u, dom] = v.split('@'), m = u.charAt(0) + '•••••@' + dom;
+        this.setState({ emailErr: '', emailInput: '', emailPending: m, note: { k: 'email', t: `✓ We’ve sent a link to ${m}. Nothing changes until you open it. The link works for 24 hours.` + (s.emailAddr ? ` Until then, we keep using ${s.emailAddr}.` : '') } }); },
+      emailSent: noteFor('email'), canConfirmEmail: note.k === 'email' && !!s.emailPending,
+      confirmEmail: () => this.setState({ emailAddr: s.emailPending, emailPending: '', ledger: [row(`Confirmed your email address for messages: ${s.emailPending}`, 'From the link we sent. Nothing is sent there unless you choose Email for a message.', 'SETTING'), ...s.ledger], note: { k: 'email', t: `✓ Email confirmed: ${s.emailPending}. Choose Email on any message above to use it.` } }, () => this.focusEl('hg-email-status')),
+      keepRows: [['Your mobile number', acctNo, 'To send your sign-in codes, and only the messages you turn on.', 'until you delete your account.'], ['Your email address', s.emailAddr || 'NONE GIVEN', 'Only for messages you choose to get by email.', 'until you change it or delete your account.'], ['The area you chose', s.blank ? 'NONE CHOSEN' : 'SECTOR 57', 'To show what’s near you first. We never track where you are.', 'until you change it or delete your account.'],
+        ['Saved places, events and follows', `${plural(provShown, 'PLACE')} · ${plural(nEvents, 'EVENT')} · ${plural(folShown, 'FOLLOW')}`, 'So you can find them again and see what changed.', 'until you remove them.'],
+        ['Your reviews, reports, events and dispute', s.blank ? 'NONE YET' : '3 REVIEWS · 4 REPORTS · 3 EVENTS · 1 DISPUTE', 'To show you their progress, and to publish the reviews you send.', 'until you withdraw them or delete your account.'],
+        ['Your message choices and consent record', plural(s.ledger.length, 'ENTRY', 'ENTRIES'), 'Proof of what you agreed to, so we only message you when you said yes.', 'until you delete your account.']]
+        .map(([what, value, why, how], i) => ({ what, value, why, how, row: { display: 'flex', flexWrap: 'wrap', gap: '6px 24px', padding: '14px 16px', borderTop: i ? '1px solid #efe3cf' : 0 } })),
+      neverKeep: ['Medical records, prescriptions or test reports. If one reaches us, we delete it.', 'Your phone contacts.', 'Your location history. We only use the area you choose.', 'Payment details. HealthGurgaon never takes payments.'],
+      download: () => this.setState({ note: { k: 'download', t: 'ready' }, delOpen: false }, () => this.focusEl('hg-dl-link')), downloadLabel: note.k === 'download' ? 'Make the file again' : 'Download my data', dataReady: note.k === 'download',
+      dataHref: note.k === 'download' ? 'data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(exportData(), null, 2)) : '',
+      delOpen: s.delOpen, delOpenStr: s.delOpen ? 'true' : 'false', hasPublished: hasPub, delErr: s.delErr,
+      delCardText: 'Removes your number and everything linked to it.' + (hasPub ? ' You decide what happens to your published review.' : ''),
+      delPubIntro: pubPending ? 'Your edit is still waiting for a moderator, so other parents still read the earlier version. Please choose what happens to it:' : 'Other parents read it. Please choose what happens to it:',
+      delFacts: ['Your number, your email, your area, and your saved places, events and follows are deleted straight away.', 'All messages stop at once. We keep only a note that this number said stop, for one year, so it is never messaged by mistake.', 'Reviews waiting for a moderator, or for your changes, are deleted.', 'Reports, events and the dispute you sent stay, without your details, because they changed public information.'].slice(0, s.blank ? 2 : 4),
+      delOpts: (pubPending ? [['keep', 'Keep the published version, with no link to me', 'It stays on the profile signed “Former resident”, with the clinic’s reply. Your edit, not yet checked, is deleted.'], ['remove', 'Delete it too', 'The published version comes off Dr. Ananya Rao’s profile within an hour, with the clinic’s reply. Your edit is deleted.']]
+        : [['keep', 'Keep my review, with no link to me', 'It stays on the profile signed “Former resident”, with the clinic’s reply.'], ['remove', 'Delete my review too', 'It comes off Dr. Ananya Rao’s profile within an hour, with the clinic’s reply.']]).map(([k, label, dd]) => ({ label, d: dd, on: s.delChoice === k, pick: () => this.setState({ delChoice: k, delErr: '' }),
+        style: { display: 'flex', gap: 12, alignItems: 'flex-start', border: '1.5px solid ' + (s.delChoice === k ? '#2B1D14' : '#e8dcc8'), background: s.delChoice === k ? '#FBF4E8' : '#fff', borderRadius: 14, padding: '12px 14px', cursor: 'pointer', minHeight: 48 } })),
+      openDelete: () => this.setState({ delOpen: true, delErr: '', note: null }, () => this.jump('hg-delete', 'hg-del-h')),
+      closeDelete: () => this.setState({ delOpen: false, delChoice: '', delErr: '' }, () => this.focusEl('hg-del-open')),
+      confirmDelete: () => { if (hasPub && !s.delChoice) return this.setState({ delErr: 'Please choose what happens to your published review first.' }, () => this.focusEl('hg-del-opts'));
+        this.setState({ deleted: true, wiped: true, delOpen: false, signedIn: false, fromProfile: false, cameFrom: '', returning: false, note: null }, () => { window.scrollTo(0, 0); this.focusEl('hg-deleted-h'); }); },
+      deletedLines: ['Your number, your email and everything linked to them are deleted.', 'All messages have stopped. We sent one last SMS to confirm.', !hasPub ? 'You had no published reviews.' : s.delChoice === 'keep' ? (pubPending ? 'The published version of your review of Dr. Ananya Rao stays on the profile, signed “Former resident”. Your edit, not yet checked, is deleted.' : 'Your review of Dr. Ananya Rao stays on the profile, signed “Former resident”.') : 'Your review of Dr. Ananya Rao comes off the profile within an hour.', 'Reports and events you sent stay, without your details.'].slice(0, s.blank ? 3 : 4),
+      // Only this prototype button brings the sample resident back: it starts the whole session again, as if the page had just been opened.
+      restoreSample: () => this.setState({ ...ACCOUNT0, accounts: {}, wiped: false }, () => this.go(s.screen))
+    };
+  }
+}
+</script>
+</body>
+</html>

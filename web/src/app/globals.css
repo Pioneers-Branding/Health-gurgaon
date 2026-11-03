@@ -1,0 +1,304 @@
+@import "tailwindcss";
+/* Never scan the SQLite database: reading prisma/dev.db-shm while SQLite holds it locked made
+   Turbopack panic and the dev server crash. */
+@source not "../../prisma";
+
+/*
+ * HealthGurgaon design tokens (Tailwind CSS v4, CSS-first config).
+ * Source of truth: the clickable prototype (*.dc.html in the repo root).
+ * docs/FRONTEND.md explains how to map prototype pixel values to these classes:
+ *   font-size 13.5px  -> text-13.5      border-radius 20px -> rounded-20
+ *   padding 18px      -> p-4.5          letter-spacing -.035em -> tracking-h2
+ * Sizes are rem-based so "Larger text" (html[data-text="large"]) and the
+ * reader's own browser font size scale the whole page.
+ */
+
+/* Variants for the reader's preferences and for Hindi pages. */
+@custom-variant hc (&:where([data-contrast="high"] *));
+@custom-variant large-text (&:where([data-text="large"] *));
+@custom-variant hi (&:where(:lang(hi)));
+
+@theme static {
+  /* Colours: the default Tailwind palette is removed on purpose. */
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-ink: #2b1d14;
+  --color-ink-soft: #3d2e22;
+  --color-muted: #5a473a;
+  --color-subtle: #6e5a4b;
+  --color-cream: #fbf4e8;
+  --color-cream-deep: #f4e8d4;
+  --color-sand: #f6ecdc;
+  --color-stone: #ece6da;
+  --color-line: #efe3cf;
+  --color-line-strong: #e8dcc8;
+  --color-phase: #d9c6a5;
+  --color-teal: #0f766e;
+  --color-teal-dark: #0b5e57;
+  --color-teal-tint: #d8efea;
+  --color-saffron: #f0b43c;
+  --color-saffron-soft: #f7d58a;
+  --color-emergency: #b42318;
+  --color-emergency-tint: #fbedeb;
+  --color-success: #1e7a4f;
+  --color-success-tint: #e6f1ec;
+  --color-caution: #9a5418;
+  --color-pending: #7a5200;
+  --color-pending-tint: #fff4d6;
+  --color-sponsored: #c99a2e;
+  --color-sponsored-tint: #fffbf0;
+  --color-gov: #2c4f9e;
+  --color-gov-tint: #e8ecf7;
+  /* PPP (public-private partnership): the ownership badge. */
+  --color-olive: #5e6b1f;
+  /* On dark (ink) surfaces: top strip, footer, menu sheet, dark bands. */
+  --color-on-dark: #e8dccb;
+  --color-on-dark-muted: #c9b8a4;
+  --color-night-raise: #3a2a1e;
+  --color-night-line: #4a3a2e;
+  --color-night-edge: #5a473a;
+
+  /* Type scale: the name is the prototype's px value at 100% text size. */
+  --text-*: initial;
+  --text-9\.5: 0.59375rem;
+  --text-10: 0.625rem;
+  --text-10\.5: 0.65625rem;
+  --text-11: 0.6875rem;
+  --text-11\.5: 0.71875rem;
+  --text-12: 0.75rem;
+  --text-12\.5: 0.78125rem;
+  --text-13: 0.8125rem;
+  --text-13\.5: 0.84375rem;
+  --text-14: 0.875rem;
+  --text-14\.5: 0.90625rem;
+  --text-15: 0.9375rem;
+  --text-15\.5: 0.96875rem;
+  --text-16: 1rem;
+  --text-16\.5: 1.03125rem;
+  --text-17: 1.0625rem;
+  --text-17\.5: 1.09375rem;
+  --text-18: 1.125rem;
+  --text-19: 1.1875rem;
+  --text-20: 1.25rem;
+  --text-21: 1.3125rem;
+  --text-22: 1.375rem;
+  --text-23: 1.4375rem;
+  --text-24: 1.5rem;
+  --text-26: 1.625rem;
+  --text-28: 1.75rem;
+  --text-30: 1.875rem;
+  --text-32: 2rem;
+  --text-36: 2.25rem;
+  --text-38: 2.375rem;
+  --text-44: 2.75rem;
+  --text-52: 3.25rem;
+  --text-56: 3.5rem;
+
+  /* Letter-spacing used by the prototype. */
+  --tracking-display: -0.045em; /* 52-56px hero, wordmark */
+  --tracking-h1: -0.04em; /* 32-38px page titles */
+  --tracking-h2: -0.035em; /* 30px section titles */
+  --tracking-h3: -0.03em; /* 22-26px */
+  --tracking-title: -0.02em; /* 19px card titles */
+  --tracking-card: -0.015em; /* 16-17.5px names */
+  --tracking-snug: -0.01em;
+  --tracking-mono: 0.06em; /* small uppercase mono labels */
+
+  /* Radii: the name is the px value. */
+  --radius-*: initial;
+  --radius-3: 3px;
+  --radius-4: 4px;
+  --radius-5: 5px;
+  --radius-6: 6px;
+  --radius-7: 7px;
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-14: 14px;
+  --radius-16: 16px;
+  --radius-18: 18px;
+  --radius-20: 20px;
+  --radius-22: 22px;
+  --radius-24: 24px;
+  --radius-28: 28px;
+  --radius-44: 44px;
+  --radius-card: 20px;
+  --radius-pill: 999px;
+
+  /* Layout */
+  --container-page: 77.5rem; /* 1240px content column */
+  --container-form: 51.25rem; /* 820px single-column forms */
+  --container-reading: 45rem; /* 720px reading width */
+
+  --shadow-float: 0 12px 30px -12px rgb(43 29 20 / 0.35);
+  --shadow-menu: 0 18px 40px -16px rgb(43 29 20 / 0.45);
+
+  /* Families. next/font defines --font-lexend etc. on <html> (src/app/fonts.ts). */
+  --font-*: initial;
+  --font-sans: var(--font-lexend), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-spline-mono), var(--font-mukta), ui-monospace, monospace;
+  --font-hindi: var(--font-mukta), var(--font-lexend), ui-sans-serif, system-ui, sans-serif;
+}
+
+/*
+ * Small uppercase mono label: font 500 'Spline Sans Mono', .06em, uppercase.
+ * Size is separate on purpose: write `mono-label text-10.5` (the prototype's
+ * default), `text-10`, `text-11`… so two font-size utilities never compete.
+ */
+@utility mono-label {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+
+/* Diagonal stripes used for photo and map placeholders. */
+@utility bg-stripes {
+  background-image: repeating-linear-gradient(135deg, var(--color-line) 0 12px, var(--color-sand) 12px 24px);
+}
+@utility bg-stripes-sm {
+  background-image: repeating-linear-gradient(135deg, var(--color-line) 0 8px, var(--color-sand) 8px 16px);
+}
+
+/* Inside dark (ink) regions the focus ring switches to saffron. */
+@utility on-dark {
+  --focus-color: var(--color-saffron);
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --focus-color: var(--color-teal);
+  }
+
+  html {
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* "A+ Larger text": everything is rem-based, so this scales the page. */
+  html[data-text="large"] {
+    font-size: 115%;
+  }
+
+  body {
+    background-color: var(--color-white);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html[lang="hi"] body {
+    font-family: var(--font-hindi);
+  }
+
+  a {
+    color: var(--color-teal);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-ink);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  summary {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--color-white);
+  }
+
+  ::selection {
+    background-color: var(--color-saffron);
+    color: var(--color-ink);
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary {
+    list-style: none;
+  }
+
+  dialog {
+    max-width: none;
+    max-height: none;
+  }
+  dialog::backdrop {
+    background: rgb(43 29 20 / 0.55);
+  }
+  html:has(dialog[open]:modal) {
+    overflow: hidden;
+  }
+
+  /* High contrast: darker text, visible hairlines, stronger focus. */
+  html[data-contrast="high"] {
+    --color-ink-soft: #2b1d14;
+    --color-muted: #3d2e22;
+    --color-subtle: #3d2e22;
+    --color-line: #9c8672;
+    --color-line-strong: #7a6656;
+    --color-phase: #8a7462;
+    --color-teal: #0b5e57;
+    --color-success: #145c3a;
+    --color-caution: #7a4210;
+    --color-pending: #5c3d00;
+    --color-sponsored: #8c6a1c;
+    --color-on-dark: #ffffff;
+    --color-on-dark-muted: #f3ead9;
+    --color-night-line: #8a7462;
+    --color-night-edge: #9a8574;
+  }
+  html[data-contrast="high"] :focus-visible {
+    outline-width: 4px;
+  }
+  html[data-contrast="high"] :where(p, dd) a {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+}
+
+/*
+ * Devanagari needs room: no negative tracking and looser headings on Hindi pages.
+ * Deliberately unlayered so it wins over tracking-* / leading-* utilities.
+ * :lang(hi) matches the element's own language, so lang="en" fragments (the
+ * wordmark, code) keep their English styling.
+ */
+:lang(hi) {
+  letter-spacing: normal;
+}
+:where(h1, h2, h3):lang(hi) {
+  line-height: 1.25;
+}
+/* Spline Sans Mono has no Devanagari (and its wide spaces break Hindi words):
+   small labels and stamps switch to Mukta at a readable size. */
+:is(.mono-label, .font-mono):lang(hi) {
+  font-family: var(--font-hindi);
+  font-size: 0.78125rem;
+  text-transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
